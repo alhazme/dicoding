@@ -25,19 +25,11 @@ class MainActivity : AppCompatActivity() {
      *
      */
 
-    /*
     private fun initView() {
         val list = findViewById<RecyclerView>(R.id.club_list)
         initData()
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = RecyclerViewAdapter(this, items)
-    }
-    */
-
-    private fun initView() {
-        initData()
-        club_list.layoutManager = LinearLayoutManager(this)
-        club_list.adapter = RecyclerViewAdapter(this, items)
     }
 
     /**
