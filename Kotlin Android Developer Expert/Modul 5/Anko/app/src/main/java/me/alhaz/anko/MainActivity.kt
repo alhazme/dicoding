@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
                 }.lparams(width = matchParent){
                     topMargin = dip(5)
                 }
-
             }
         }
     }
