@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">FootballClub</string>
+
     <string-array name="club_name">
         <item>Barcelona FC</item>
         <item>Real Madrid FC</item>
@@ -26,10 +28,11 @@
         <item>Futbol Club Barcelona, known simply as Barcelona and colloquially as Barça, is a professional football club based in Barcelona, Catalonia, Spain.</item>
         <item>Commonly known as Real Madrid, is a professional football club based in Madrid, Spain.</item>
         <item>It is best known for its professional football team, which plays in the Bundesliga, the top tier of the German football league system, and is the most successful club in German football history, having won a record 28 national titles and 18 national cups. FC</item>
-        <item>Founded in 1880 as St. Mark's (West Gorton), it became Ardwick Association Football Club in 1887 and Manchester City in 1894. The club's home ground is the City of Manchester Stadium in east Manchester, to which it moved in 2003, having played at Maine Road since 1923.</item>
+        <item>Founded in 1880 as St. Mark\'s (West Gorton), it became Ardwick Association Football Club in 1887 and Manchester City in 1894. The club\'s home ground is the City of Manchester Stadium in east Manchester, to which it moved in 2003, having played at Maine Road since 1923.</item>
         <item>Manchester United Football Club, commonly known as Man. United or simply United, is a professional football club based in Old Trafford, Greater Manchester, England, that competes in the Premier League, the top flight of English football. Nicknamed "the Red Devils", the club was founded as Newton Heath LYR Football Club in 1878, changed its name to Manchester United in 1902 and moved to its current stadium, Old Trafford, in 1910.Manchester United FC</item>
-        <item>Chelsea Football Club is a professional football club in London, England, that competes in the Premier League. Founded in 1905, the club's home ground since then has been Stamford Bridge.Chelsea FC</item>
+        <item>Chelsea Football Club is a professional football club in London, England, that competes in the Premier League. Founded in 1905, the club\'s home ground since then has been Stamford Bridge.Chelsea FC</item>
         <item>Commonly referred to as A.C. Milan or simply Milan, is a professional football club in Milan, Italy, founded in 1899.C Milan FC</item>
-        <item>Arsenal Football Club is a professional football club based in Islington, London, England, that plays in the Premier League, the top flight of English football. The club has won 13 League titles, a record 13 FA Cups, two League Cups, the League Centenary Trophy, 15 FA Community Shields, one UEFA Cup Winners' Cup and one Inter-Cities Fairs Cup</item>
+        <item>Arsenal Football Club is a professional football club based in Islington, London, England, that plays in the Premier League, the top flight of English football. The club has won 13 League titles, a record 13 FA Cups, two League Cups, the League Centenary Trophy, 15 FA Community Shields, one UEFA Cup Winners\' Cup and one Inter-Cities Fairs Cup</item>
     </string-array>
+
 </resources>
