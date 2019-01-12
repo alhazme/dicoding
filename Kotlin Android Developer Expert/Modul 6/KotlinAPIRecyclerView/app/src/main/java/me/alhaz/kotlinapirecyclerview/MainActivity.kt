@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // User Interface Anko
+        
         linearLayout {
             lparams (width = matchParent, height = wrapContent)
             orientation = LinearLayout.VERTICAL
