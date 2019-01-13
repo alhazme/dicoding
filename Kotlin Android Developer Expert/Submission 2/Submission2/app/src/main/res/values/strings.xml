@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Submission2</string>
+    <string name="title_prev">Prev Match</string>
+    <string name="title_next">Next Match</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
