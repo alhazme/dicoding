@@ -23,9 +23,16 @@ class NextPresenter : NextContract.Presenter {
                     Log.d("tag", "responsennya ${responseData}")
 
                     var data = arrayListOf<Event>()
-                    if (responseData?.events!!.isNotEmpty()) {
-                        responseData?.events?.forEach {
-                            data.add(it)
+                    responseData?.let {
+                        val eventResponse: EventResponse = it
+                        eventResponse.events?.let {
+                            val events: List<Event> = it
+                            if (events.isNotEmpty()) {
+                                events.forEach {
+                                    val event: Event = it
+                                    data.add(event)
+                                }
+                            }
                         }
                     }
                     view?.showDatas(data)

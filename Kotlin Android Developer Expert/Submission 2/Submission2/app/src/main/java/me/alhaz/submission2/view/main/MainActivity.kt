@@ -7,7 +7,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import me.alhaz.submission2.view.fragment.next.NextFragment
 import me.alhaz.submission2.view.fragment.previous.PreviousFragment
 import me.alhaz.submission2.R
-import me.alhaz.submission2.model.Event
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,19 +24,23 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_prev -> {
-                val manager = supportFragmentManager
-                val transaction = manager.beginTransaction()
-                transaction.replace(R.id.fragment_container, previousFragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                previousFragment?.let {
+                    val manager = supportFragmentManager
+                    val transaction = manager.beginTransaction()
+                    transaction.replace(R.id.fragment_container, it)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_next -> {
-                val manager = supportFragmentManager
-                val transaction = manager.beginTransaction()
-                transaction.replace(R.id.fragment_container, nextFragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                nextFragment?.let {
+                    val manager = supportFragmentManager
+                    val transaction = manager.beginTransaction()
+                    transaction.replace(R.id.fragment_container, it)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -49,10 +52,12 @@ class MainActivity : AppCompatActivity() {
         previousFragment = PreviousFragment()
         nextFragment = NextFragment()
 
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_container, previousFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        previousFragment?.let {
+            val manager = supportFragmentManager
+            val transaction = manager.beginTransaction()
+            transaction.replace(R.id.fragment_container, it)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 }
