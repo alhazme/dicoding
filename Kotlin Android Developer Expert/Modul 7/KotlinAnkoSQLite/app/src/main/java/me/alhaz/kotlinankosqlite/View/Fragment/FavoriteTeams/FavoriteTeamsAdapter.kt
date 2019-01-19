@@ -11,7 +11,7 @@ import me.alhaz.kotlinankosqlite.Model.Database.Favorite
 import me.alhaz.kotlinankosqlite.R.id.team_badge
 import me.alhaz.kotlinankosqlite.R.id.team_name
 import org.jetbrains.anko.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
 class FavoriteTeamsAdapter(private val favorite: List<Favorite>, private val listener: (Favorite) -> Unit)
     : RecyclerView.Adapter<FavoriteViewHolder>() {
