@@ -31,9 +31,16 @@ class DetailPresenter: DetailContract.Presenter {
                     Log.d("tag", "responsennya ${responseData}")
 
                     var data = arrayListOf<Event>()
-                    if (responseData?.events!!.isNotEmpty()) {
-                        responseData?.events?.forEach {
-                            data.add(it)
+                    responseData?.let {
+                        val eventResponse: EventResponse = it
+                        eventResponse.events?.let {
+                            val events: List<Event> = it
+                            if (events.isNotEmpty()) {
+                                events.forEach {
+                                    val event: Event = it
+                                    data.add(event)
+                                }
+                            }
                         }
                     }
                     view?.showEventData(data)
@@ -56,9 +63,16 @@ class DetailPresenter: DetailContract.Presenter {
                     Log.d("tag", "responsennya ${responseData}")
 
                     var data = arrayListOf<Team>()
-                    if (responseData?.teams!!.isNotEmpty()) {
-                        responseData?.teams?.forEach {
-                            data.add(it)
+                    responseData?.let {
+                        val teamResponse: TeamResponse = it
+                        teamResponse.teams?.let {
+                            val teams: List<Team> = it
+                            if (teams.isNotEmpty()) {
+                                teams.forEach {
+                                    val team: Team = it
+                                    data.add(team)
+                                }
+                            }
                         }
                     }
                     view?.showEventTeam(data, type)

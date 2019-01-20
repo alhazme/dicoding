@@ -26,28 +26,34 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_prev -> {
-                val manager = supportFragmentManager
-                val transaction = manager.beginTransaction()
-                transaction.replace(R.id.fragment_container, previousFragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
-                return@OnNavigationItemSelectedListener true
+                previousFragment?.let {
+                    val manager = supportFragmentManager
+                    val transaction = manager.beginTransaction()
+                    transaction.replace(R.id.fragment_container, it)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                    return@OnNavigationItemSelectedListener true
+                }
             }
             R.id.navigation_next -> {
-                val manager = supportFragmentManager
-                val transaction = manager.beginTransaction()
-                transaction.replace(R.id.fragment_container, nextFragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
-                return@OnNavigationItemSelectedListener true
+                nextFragment?.let {
+                    val manager = supportFragmentManager
+                    val transaction = manager.beginTransaction()
+                    transaction.replace(R.id.fragment_container, it)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                    return@OnNavigationItemSelectedListener true
+                }
             }
             R.id.navigation_favorites -> {
-                val manager = supportFragmentManager
-                val transaction = manager.beginTransaction()
-                transaction.replace(R.id.fragment_container, favoriteFragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
-                return@OnNavigationItemSelectedListener true
+                favoriteFragment?.let {
+                    val manager = supportFragmentManager
+                    val transaction = manager.beginTransaction()
+                    transaction.replace(R.id.fragment_container, it)
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                    return@OnNavigationItemSelectedListener true
+                }
             }
         }
         false
@@ -59,10 +65,12 @@ class MainActivity : AppCompatActivity() {
         nextFragment = NextFragment()
         favoriteFragment = FavoriteFragment()
 
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_container, previousFragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        previousFragment?.let {
+            val manager = supportFragmentManager
+            val transaction = manager.beginTransaction()
+            transaction.replace(R.id.fragment_container, it)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 }
