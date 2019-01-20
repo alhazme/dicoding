@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/vw_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sen, 05 Mar 2018"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp"/>
+
+                    <!-- Team -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_home"
+                                android:layout_width="85dp"
+                                android:layout_height="85dp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_home"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Arema"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20dp"/>
+
+                            <TextView
+                                android:id="@+id/tv_home_formations"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1-2-3"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="16dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tv_home_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_vs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="VS"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="16dp"/>
+
+                            <TextView
+                                android:id="@+id/tv_away_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="0"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/iv_away"
+                                android:layout_width="85dp"
+                                android:layout_height="85dp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_away"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Persebaya"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20dp"/>
+
+                            <TextView
+                                android:id="@+id/tv_away_formations"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1-2-3"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="16dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Divider -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Goals -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_goals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="69':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_goals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Goals"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_goals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="33':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Shots -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_shots"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_shots"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Shots"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_shots"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Divider -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorDivider"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Lineups -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lineups"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Goal Keeper -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_goalkeeper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_goalkeeper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Goal Keeper"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_goalkeeper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Defence -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_defence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="69':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_defence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Defence"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_defence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="33':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Midfields -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_midfields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="69':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_midfields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Midfields"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_midfields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="33':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Forwards -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_forward"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="69':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_forward"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Forward"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_forward"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="33':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Subtitutes -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_home_subtitutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="69':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_subtitutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Subtitues"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_away_subtitutes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="33':Own  Jonjo Shelvey"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
