@@ -253,8 +253,7 @@ class DetailActivity : AppCompatActivity(), DetailContract.View {
 
     private fun favoriteState() {
         presenter?.let {
-            var favorite = it.isFavorite(this, eventId)
-            isFavorite = if (favorite != null) favorite else false
+            isFavorite = it.isFavorite(this, eventId)
         }
     }
 

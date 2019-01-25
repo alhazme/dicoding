@@ -10,25 +10,22 @@ class PreviousPresenter(private val apiRepository: APIRepository) : PreviousCont
 
     override fun loadEvent(id: String) {
         view?.showProgress()
-        apiRepository.getPreviousEvent(id, object: APICallback<EventResponse?>{
+        apiRepository.getPreviousEvent(id, object: APICallback<EventResponse>{
             override fun onDataError(message: String?) {
                 view?.let {
                     it.hideProgress()
                     it.showAlert(message)
                 }
             }
-            override fun onDataLoaded(data: EventResponse?) {
-                data?.let {
-                    var events = arrayListOf<Event>()
-                    data.events?.let {
-                        events.addAll(it)
-                        view?.showDatas(events)
-                        view?.hideProgress()
-                    }
+            override fun onDataLoaded(data: EventResponse) {
+                var events = arrayListOf<Event>()
+                data.events?.let {
+                    events.addAll(it)
+                    view?.showDatas(events)
+                    view?.hideProgress()
                 }
             }
         })
-
     }
 
     override fun takeView(view: PreviousContract.View) {

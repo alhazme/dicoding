@@ -36,7 +36,7 @@ class MainActivityTest {
         onView(withId(navigation_prev)).perform(click())
         Thread.sleep(5000)
         onView(withId(list_layout)).check(matches(isDisplayed()))
-        Espresso.onView(withText("Arsenal")).perform(click())
+        Espresso.onView(withText("Man City")).perform(click()) // Change name of team by yourself
 //        onView(withId(list_layout)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(0))
 //        onView(withId(list_layout)).perform(RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(0, click()))
         Thread.sleep(5000)

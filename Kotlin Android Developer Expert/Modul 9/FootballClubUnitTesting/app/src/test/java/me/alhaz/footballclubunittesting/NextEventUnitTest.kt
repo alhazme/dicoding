@@ -39,7 +39,7 @@ class NextEventUnitTest {
     fun getNextEventTest() {
         val id = "4328"
         presenter.loadEvent(id)
-        argumentCaptor<APICallback<EventResponse?>>().apply {
+        argumentCaptor<APICallback<EventResponse>>().apply {
             verify(apiRepository).getNextEvent(eq(id), capture())
             firstValue.onDataLoaded(response)
         }
@@ -52,7 +52,7 @@ class NextEventUnitTest {
     fun getNextEventErrorTest() {
         val id = ""
         presenter.loadEvent(id)
-        argumentCaptor<APICallback<EventResponse?>>().apply {
+        argumentCaptor<APICallback<EventResponse>>().apply {
             verify(apiRepository).getNextEvent(eq(""), capture())
             firstValue.onDataError("ID Not Found")
         }

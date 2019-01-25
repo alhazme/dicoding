@@ -38,7 +38,7 @@ class PreviousEventUnitTest {
     fun getPreviousEventTest() {
         val id = "4328"
         presenter.loadEvent(id)
-        argumentCaptor<APICallback<EventResponse?>>().apply {
+        argumentCaptor<APICallback<EventResponse>>().apply {
             verify(apiRepository).getPreviousEvent(eq(id), capture())
             firstValue.onDataLoaded(response)
         }
@@ -51,7 +51,7 @@ class PreviousEventUnitTest {
     fun getPreviousEventErrorTest() {
         val id = ""
         presenter.loadEvent(id)
-        argumentCaptor<APICallback<EventResponse?>>().apply {
+        argumentCaptor<APICallback<EventResponse>>().apply {
             verify(apiRepository).getPreviousEvent(eq(""), capture())
             firstValue.onDataError("ID Not Found")
         }

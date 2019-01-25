@@ -10,7 +10,10 @@ class Internet {
     fun connectionAvailable(context: Context):Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
-        val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == true
+        var isConnected: Boolean = false
+        activeNetwork?.let {
+            isConnected = it.isConnected == true
+        }
         return isConnected
     }
 
