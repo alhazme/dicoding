@@ -1,0 +1,9 @@
+User
+Name: John
+Age: 23
+Address: St. Petersburg
+
+New User
+Name: John
+Age: 25
+Address: Saint Petersburg

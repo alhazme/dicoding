@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-07-14T11:14:27" hostname="Alterra-Gadget-MacBook-Air.local" time="0.009">
+  <properties/>
+  <testcase name="testSum1" classname="Test" time="0.002"/>
+  <testcase name="testSum2" classname="Test" time="0.0"/>
+  <testcase name="testSum3" classname="Test" time="0.001"/>
+  <testcase name="testMultiple1" classname="Test" time="0.004"/>
+  <testcase name="testMultiple2" classname="Test" time="0.0"/>
+  <testcase name="testMultiple3" classname="Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

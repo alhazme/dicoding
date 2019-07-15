@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="00b6c545-c431-4122-8bce-09aa1345eaaa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Memulai_Pemrograman_dengan_Kotlin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_40.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_40.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_3_40.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_3_40.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Break/Control_Flow-Break_and_Continue-Break.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Break/Control_Flow-Break_and_Continue-Break_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Break/Control_Flow-Break_and_Continue-Break_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Continue/Control_Flow-Break_and_Continue-Continue.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Continue/Control_Flow-Break_and_Continue-Continue_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Continue/Control_Flow-Break_and_Continue-Continue_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Labels/Control_Flow-Break_and_Continue-Labels.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Labels/Control_Flow-Break_and_Continue-Labels_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Break and Continue/Labels/Control_Flow-Break_and_Continue-Labels_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/All of Enum Object/Control_Flow-Enumeration-All_of_Enum_Object.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/All of Enum Object/Control_Flow-Enumeration-All_of_Enum_Object_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/All of Enum Object/Control_Flow-Enumeration-All_of_Enum_Object_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Anonymous Class in Enumeration/Control_Flow-Enumeration-Anonymous_Class_in_Enumeration.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Anonymous Class in Enumeration/Control_Flow-Enumeration-Anonymous_Class_in_Enumeration_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Anonymous Class in Enumeration/Control_Flow-Enumeration-Anonymous_Class_in_Enumeration_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enum Object Value/Control_Flow-Enumeration-Enum_Object_Value.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enum Object Value/Control_Flow-Enumeration-Enum_Object_Value_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enum Object Value/Control_Flow-Enumeration-Enum_Object_Value_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enum Position/Control_Flow-Enumeration-Enum_Position.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enum Position/Control_Flow-Enumeration-Enum_Position_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enum Position/Control_Flow-Enumeration-Enum_Position_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enumeration with When Expression/Control_Flow-Enumeration-Enumeration_with_When_Expression.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enumeration with When Expression/Control_Flow-Enumeration-Enumeration_with_When_Expression_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enumeration with When Expression/Control_Flow-Enumeration-Enumeration_with_When_Expression_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enumeration/Control_Flow-Enumeration-Enumeration.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enumeration/Control_Flow-Enumeration-Enumeration_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/Enumeration/Control_Flow-Enumeration-Enumeration_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/enumValues()/Control_Flow-Enumeration-enumValues().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/enumValues()/Control_Flow-Enumeration-enumValues()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/enumValues()/Control_Flow-Enumeration-enumValues()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/valueOf()/Control_Flow-Enumeration-valueOf().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/valueOf()/Control_Flow-Enumeration-valueOf()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Enumeration/valueOf()/Control_Flow-Enumeration-valueOf()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Expression and Statement/Expression/Control_Flow-Expression_and_Statement-Expression.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Expression and Statement/Expression/Control_Flow-Expression_and_Statement-Expression_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Expression and Statement/Expression/Control_Flow-Expression_and_Statement-Expression_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Expression and Statement/Statement/Control_Flow-Expression_and_Statement-Statement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Expression and Statement/Statement/Control_Flow-Expression_and_Statement-Statement_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Expression and Statement/Statement/Control_Flow-Expression_and_Statement-Statement_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 1/Control_Flow-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 1/Control_Flow-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 1/Control_Flow-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 2/Control_Flow-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 2/Control_Flow-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 2/Control_Flow-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 3/Control_Flow-Latihan-Latihan_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 3/Control_Flow-Latihan-Latihan_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Latihan/Latihan 3/Control_Flow-Latihan-Latihan_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop Index/Control_Flow-Range_and_For_loop-For_Loop_Index.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop Index/Control_Flow-Range_and_For_loop-For_Loop_Index_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop Index/Control_Flow-Range_and_For_loop-For_Loop_Index_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop with Range/Control_Flow-Range_and_For_loop-For_Loop_with_Range.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop with Range/Control_Flow-Range_and_For_loop-For_Loop_with_Range_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop with Range/Control_Flow-Range_and_For_loop-For_Loop_with_Range_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop with Step Extension/Control_Flow-Range_and_For_loop-For_Loop_with_Step_Extension.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop with Step Extension/Control_Flow-Range_and_For_loop-For_Loop_with_Step_Extension_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop with Step Extension/Control_Flow-Range_and_For_loop-For_Loop_with_Step_Extension_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop/Control_Flow-Range_and_For_loop-For_Loop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop/Control_Flow-Range_and_For_loop-For_Loop_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/For Loop/Control_Flow-Range_and_For_loop-For_Loop_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/ForEach/Control_Flow-Range_and_For_loop-ForEach.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/ForEach/Control_Flow-Range_and_For_loop-ForEach_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/ForEach/Control_Flow-Range_and_For_loop-ForEach_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/ForEachIndexed/Control_Flow-Range_and_For_loop-ForEachIndexed.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/ForEachIndexed/Control_Flow-Range_and_For_loop-ForEachIndexed_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/ForEachIndexed/Control_Flow-Range_and_For_loop-ForEachIndexed_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range ForEach/Control_Flow-Range_and_For_loop-Range_ForEach.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range ForEach/Control_Flow-Range_and_For_loop-Range_ForEach_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range ForEach/Control_Flow-Range_and_For_loop-Range_ForEach_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range with `!in` Operator/Control_Flow-Range_and_For_loop-Range_with_`!in`_Operator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range with `!in` Operator/Control_Flow-Range_and_For_loop-Range_with_`!in`_Operator_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range with `!in` Operator/Control_Flow-Range_and_For_loop-Range_with_`!in`_Operator_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range with `in` Operator/Control_Flow-Range_and_For_loop-Range_with_`in`_Operator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range with `in` Operator/Control_Flow-Range_and_For_loop-Range_with_`in`_Operator_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range with `in` Operator/Control_Flow-Range_and_For_loop-Range_with_`in`_Operator_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range/Control_Flow-Range_and_For_loop-Range.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range/Control_Flow-Range_and_For_loop-Range_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/Range and For loop/Range/Control_Flow-Range_and_For_loop-Range_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/Multiple statement in Condition block/Control_Flow-When_Expression-Multiple_statement_in_Condition_block.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/Multiple statement in Condition block/Control_Flow-When_Expression-Multiple_statement_in_Condition_block_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/Multiple statement in Condition block/Control_Flow-When_Expression-Multiple_statement_in_Condition_block_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When as a Expression/Control_Flow-When_Expression-When_as_a_Expression.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When as a Expression/Control_Flow-When_Expression-When_as_a_Expression_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When as a Expression/Control_Flow-When_Expression-When_as_a_Expression_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When subject/Control_Flow-When_Expression-When_subject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When subject/Control_Flow-When_Expression-When_subject_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When subject/Control_Flow-When_Expression-When_subject_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with Else block/Control_Flow-When_Expression-When_with_Else_block.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with Else block/Control_Flow-When_Expression-When_with_Else_block_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with Else block/Control_Flow-When_Expression-When_with_Else_block_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with Range as a Condition/Control_Flow-When_Expression-When_with_Range_as_a_Condition.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with Range as a Condition/Control_Flow-When_Expression-When_with_Range_as_a_Condition_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with Range as a Condition/Control_Flow-When_Expression-When_with_Range_as_a_Condition_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with `is` operator/Control_Flow-When_Expression-When_with_`is`_operator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with `is` operator/Control_Flow-When_Expression-When_with_`is`_operator_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When with `is` operator/Control_Flow-When_Expression-When_with_`is`_operator_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When/Control_Flow-When_Expression-When.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When/Control_Flow-When_Expression-When_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/When Expression/When/Control_Flow-When_Expression-When_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/Do While/Control_Flow-While_and_Do_While-Do_While.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/Do While/Control_Flow-While_and_Do_While-Do_While_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/Do While/Control_Flow-While_and_Do_While-Do_While_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/Infinite While/Control_Flow-While_and_Do_While-Infinite_While.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/Infinite While/Control_Flow-While_and_Do_While-Infinite_While_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/Infinite While/Control_Flow-While_and_Do_While-Infinite_While_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/While/Control_Flow-While_and_Do_While-While.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/While/Control_Flow-While_and_Do_While-While_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Control Flow/While and Do While/While/Control_Flow-While_and_Do_While-While_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Channels/Contoh/Coroutines-Channels-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Channels/Contoh/Coroutines-Channels-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Channels/Contoh/Coroutines-Channels-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.Default/Coroutines-Coroutine_Dispatcher-Dispatcher.Default.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.Default/Coroutines-Coroutine_Dispatcher-Dispatcher.Default_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.Default/Coroutines-Coroutine_Dispatcher-Dispatcher.Default_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.IO/Coroutines-Coroutine_Dispatcher-Dispatcher.IO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.IO/Coroutines-Coroutine_Dispatcher-Dispatcher.IO_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.IO/Coroutines-Coroutine_Dispatcher-Dispatcher.IO_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/Coroutines-Coroutine_Dispatcher-Dispatcher.Unconfined.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/Coroutines-Coroutine_Dispatcher-Dispatcher.Unconfined_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/Coroutines-Coroutine_Dispatcher-Dispatcher.Unconfined_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Single Thread Context/Coroutines-Coroutine_Dispatcher-Single_Thread_Context.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Single Thread Context/Coroutines-Coroutine_Dispatcher-Single_Thread_Context_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Single Thread Context/Coroutines-Coroutine_Dispatcher-Single_Thread_Context_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Thread Pool/Coroutines-Coroutine_Dispatcher-Thread_Pool.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Thread Pool/Coroutines-Coroutine_Dispatcher-Thread_Pool_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Coroutine Dispatcher/Thread Pool/Coroutines-Coroutine_Dispatcher-Thread_Pool_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 1/Coroutines-Job_dan_Deferred_(1)-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 1/Coroutines-Job_dan_Deferred_(1)-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 1/Coroutines-Job_dan_Deferred_(1)-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 2/Coroutines-Job_dan_Deferred_(1)-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 2/Coroutines-Job_dan_Deferred_(1)-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 2/Coroutines-Job_dan_Deferred_(1)-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 3/Coroutines-Job_dan_Deferred_(1)-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 3/Coroutines-Job_dan_Deferred_(1)-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 3/Coroutines-Job_dan_Deferred_(1)-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 4/Coroutines-Job_dan_Deferred_(1)-Contoh_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 4/Coroutines-Job_dan_Deferred_(1)-Contoh_4_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 4/Coroutines-Job_dan_Deferred_(1)-Contoh_4_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 5/Coroutines-Job_dan_Deferred_(1)-Contoh_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 5/Coroutines-Job_dan_Deferred_(1)-Contoh_5_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred (1)/Contoh 5/Coroutines-Job_dan_Deferred_(1)-Contoh_5_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 1/Coroutines-Job_dan_Deferred-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 1/Coroutines-Job_dan_Deferred-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 1/Coroutines-Job_dan_Deferred-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 2/Coroutines-Job_dan_Deferred-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 2/Coroutines-Job_dan_Deferred-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 2/Coroutines-Job_dan_Deferred-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 3/Coroutines-Job_dan_Deferred-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 3/Coroutines-Job_dan_Deferred-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 3/Coroutines-Job_dan_Deferred-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 4/Coroutines-Job_dan_Deferred-Contoh_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 4/Coroutines-Job_dan_Deferred-Contoh_4_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 4/Coroutines-Job_dan_Deferred-Contoh_4_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 5/Coroutines-Job_dan_Deferred-Contoh_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 5/Coroutines-Job_dan_Deferred-Contoh_5_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Job dan Deferred/Contoh 5/Coroutines-Job_dan_Deferred-Contoh_5_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Latihan/Latihan 1/Coroutines-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Latihan/Latihan 1/Coroutines-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Latihan/Latihan 1/Coroutines-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Latihan/Latihan 2/Coroutines-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Latihan/Latihan 2/Coroutines-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Latihan/Latihan 2/Coroutines-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 1/Coroutines-Memulai_Coroutine-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 1/Coroutines-Memulai_Coroutine-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 1/Coroutines-Memulai_Coroutine-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 2/Coroutines-Memulai_Coroutine-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 2/Coroutines-Memulai_Coroutine-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 2/Coroutines-Memulai_Coroutine-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 3/Coroutines-Memulai_Coroutine-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 3/Coroutines-Memulai_Coroutine-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Coroutines/Memulai Coroutine/Contoh 3/Coroutines-Memulai_Coroutine-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/count()/Data_Class_dan_Collections-Collections_Operations-count().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/count()/Data_Class_dan_Collections-Collections_Operations-count()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/count()/Data_Class_dan_Collections-Collections_Operations-count()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/filter() and filterNot()/Data_Class_dan_Collections-Collections_Operations-filter()_and_filterNot().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/filter() and filterNot()/Data_Class_dan_Collections-Collections_Operations-filter()_and_filterNot()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/filter() and filterNot()/Data_Class_dan_Collections-Collections_Operations-filter()_and_filterNot()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/find()/Data_Class_dan_Collections-Collections_Operations-find().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/find()/Data_Class_dan_Collections-Collections_Operations-find()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/find()/Data_Class_dan_Collections-Collections_Operations-find()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/first()/Data_Class_dan_Collections-Collections_Operations-first().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/first()/Data_Class_dan_Collections-Collections_Operations-first()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/first()/Data_Class_dan_Collections-Collections_Operations-first()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/map()/Data_Class_dan_Collections-Collections_Operations-map().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/map()/Data_Class_dan_Collections-Collections_Operations-map()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/map()/Data_Class_dan_Collections-Collections_Operations-map()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/sorted()/Data_Class_dan_Collections-Collections_Operations-sorted().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/sorted()/Data_Class_dan_Collections-Collections_Operations-sorted()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/sorted()/Data_Class_dan_Collections-Collections_Operations-sorted()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/sum()/Data_Class_dan_Collections-Collections_Operations-sum().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/sum()/Data_Class_dan_Collections-Collections_Operations-sum()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections Operations/sum()/Data_Class_dan_Collections-Collections_Operations-sum()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Collections/Data_Class_dan_Collections-Collections-Collections.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Collections/Data_Class_dan_Collections-Collections-Collections_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Collections/Data_Class_dan_Collections-Collections-Collections_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Maps/Data_Class_dan_Collections-Collections-Maps.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Maps/Data_Class_dan_Collections-Collections-Maps_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Maps/Data_Class_dan_Collections-Collections-Maps_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Sets/Data_Class_dan_Collections-Collections-Sets.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Sets/Data_Class_dan_Collections-Collections-Sets_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Collections/Sets/Data_Class_dan_Collections-Collections-Sets_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Comparing data class/Data_Class_dan_Collections-Data_Class-Comparing_data_class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Comparing data class/Data_Class_dan_Collections-Data_Class-Comparing_data_class_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Comparing data class/Data_Class_dan_Collections-Data_Class-Comparing_data_class_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Copying data class objects/Data_Class_dan_Collections-Data_Class-Copying_data_class_objects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Copying data class objects/Data_Class_dan_Collections-Data_Class-Copying_data_class_objects_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Copying data class objects/Data_Class_dan_Collections-Data_Class-Copying_data_class_objects_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Create variables based on data class objects/Data_Class_dan_Collections-Data_Class-Create_variables_based_on_data_class_objects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Create variables based on data class objects/Data_Class_dan_Collections-Data_Class-Create_variables_based_on_data_class_objects_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Create variables based on data class objects/Data_Class_dan_Collections-Data_Class-Create_variables_based_on_data_class_objects_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Data Class/Data_Class_dan_Collections-Data_Class-Data_Class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Data Class/Data_Class_dan_Collections-Data_Class-Data_Class_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Data Class/Data_Class_dan_Collections-Data_Class-Data_Class_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Destructuring Declarations/Data_Class_dan_Collections-Data_Class-Destructuring_Declarations.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Destructuring Declarations/Data_Class_dan_Collections-Data_Class-Destructuring_Declarations_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Destructuring Declarations/Data_Class_dan_Collections-Data_Class-Destructuring_Declarations_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Different data class with class/Data_Class_dan_Collections-Data_Class-Different_data_class_with_class.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Different data class with class/Data_Class_dan_Collections-Data_Class-Different_data_class_with_class_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Different data class with class/Data_Class_dan_Collections-Data_Class-Different_data_class_with_class_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Modify the data class object/Data_Class_dan_Collections-Data_Class-Modify_the_data_class_object.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Modify the data class object/Data_Class_dan_Collections-Data_Class-Modify_the_data_class_object_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Data Class/Modify the data class object/Data_Class_dan_Collections-Data_Class-Modify_the_data_class_object_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Latihan/Latihan 1/Data_Class_dan_Collections-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Latihan/Latihan 1/Data_Class_dan_Collections-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Latihan/Latihan 1/Data_Class_dan_Collections-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Latihan/Latihan 2/Data_Class_dan_Collections-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Latihan/Latihan 2/Data_Class_dan_Collections-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Data Class dan Collections/Latihan/Latihan 2/Data_Class_dan_Collections-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 1/Functional-Extensions-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 1/Functional-Extensions-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 1/Functional-Extensions-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 2/Functional-Extensions-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 2/Functional-Extensions-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 2/Functional-Extensions-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 3/Functional-Extensions-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 3/Functional-Extensions-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 3/Functional-Extensions-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 4/Functional-Extensions-Contoh_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 4/Functional-Extensions-Contoh_4_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Extensions/Contoh 4/Functional-Extensions-Contoh_4_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 1/Functional-Function_Type-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 1/Functional-Function_Type-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 1/Functional-Function_Type-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 2/Functional-Function_Type-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 2/Functional-Function_Type-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 2/Functional-Function_Type-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 3/Functional-Function_Type-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 3/Functional-Function_Type-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Function Type/Contoh 3/Functional-Function_Type-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 1/Functional-Lambda-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 1/Functional-Lambda-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 1/Functional-Lambda-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 2/Functional-Lambda-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 2/Functional-Lambda-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 2/Functional-Lambda-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 3/Functional-Lambda-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 3/Functional-Lambda-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 3/Functional-Lambda-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 4/Functional-Lambda-Contoh_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 4/Functional-Lambda-Contoh_4_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 4/Functional-Lambda-Contoh_4_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 5/Functional-Lambda-Contoh_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 5/Functional-Lambda-Contoh_5_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Lambda/Contoh 5/Functional-Lambda-Contoh_5_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 1/Functional-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 1/Functional-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 1/Functional-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 2/Functional-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 2/Functional-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 2/Functional-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 3/Functional-Latihan-Latihan_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 3/Functional-Latihan-Latihan_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Latihan/Latihan 3/Functional-Latihan-Latihan_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/also()/Functional-Library_Helper-also().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/also()/Functional-Library_Helper-also()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/also()/Functional-Library_Helper-also()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/apply()/Functional-Library_Helper-apply().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/apply()/Functional-Library_Helper-apply()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/apply()/Functional-Library_Helper-apply()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/let()/Functional-Library_Helper-let().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/let()/Functional-Library_Helper-let()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/let()/Functional-Library_Helper-let()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/run()/Functional-Library_Helper-run().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/run()/Functional-Library_Helper-run()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/run()/Functional-Library_Helper-run()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/with()/Functional-Library_Helper-with().iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/with()/Functional-Library_Helper-with()_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Library Helper/with()/Functional-Library_Helper-with()_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 1/Functional-Named_and_Default_Argument-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 1/Functional-Named_and_Default_Argument-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 1/Functional-Named_and_Default_Argument-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 2/Functional-Named_and_Default_Argument-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 2/Functional-Named_and_Default_Argument-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 2/Functional-Named_and_Default_Argument-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 3/Functional-Named_and_Default_Argument-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 3/Functional-Named_and_Default_Argument-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 3/Functional-Named_and_Default_Argument-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 4/Functional-Named_and_Default_Argument-Contoh_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 4/Functional-Named_and_Default_Argument-Contoh_4_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Named and Default Argument/Contoh 4/Functional-Named_and_Default_Argument-Contoh_4_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 1/Functional-Vararg_Argument-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 1/Functional-Vararg_Argument-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 1/Functional-Vararg_Argument-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 2/Functional-Vararg_Argument-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 2/Functional-Vararg_Argument-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 2/Functional-Vararg_Argument-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 3/Functional-Vararg_Argument-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 3/Functional-Vararg_Argument-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Functional/Vararg Argument/Contoh 3/Functional-Vararg_Argument-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 1/Generics-Generics-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 1/Generics-Generics-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 1/Generics-Generics-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 2/Generics-Generics-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 2/Generics-Generics-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 2/Generics-Generics-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 3/Generics-Generics-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 3/Generics-Generics-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Generics/Contoh 3/Generics-Generics-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Latihan/Latihan 1/Generics-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Latihan/Latihan 1/Generics-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Latihan/Latihan 1/Generics-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Variance/Contoh/Generics-Variance-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Variance/Contoh/Generics-Variance-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Generics/Variance/Contoh/Generics-Variance-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Conjuction/Kotlin_Fundamental-Boolean-Conjuction.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Conjuction/Kotlin_Fundamental-Boolean-Conjuction_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Conjuction/Kotlin_Fundamental-Boolean-Conjuction_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Disjunction/Kotlin_Fundamental-Boolean-Disjunction.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Disjunction/Kotlin_Fundamental-Boolean-Disjunction_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Disjunction/Kotlin_Fundamental-Boolean-Disjunction_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Negation/Kotlin_Fundamental-Boolean-Negation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Negation/Kotlin_Fundamental-Boolean-Negation_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Boolean/Negation/Kotlin_Fundamental-Boolean-Negation_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Array Initialization/Kotlin_Fundamental-Data_Type-Array_Initialization.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Array Initialization/Kotlin_Fundamental-Data_Type-Array_Initialization_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Array Initialization/Kotlin_Fundamental-Data_Type-Array_Initialization_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Char in String/Kotlin_Fundamental-Data_Type-Char_in_String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Char in String/Kotlin_Fundamental-Data_Type-Char_in_String_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Char in String/Kotlin_Fundamental-Data_Type-Char_in_String_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Character/Kotlin_Fundamental-Data_Type-Character.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Character/Kotlin_Fundamental-Data_Type-Character_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Character/Kotlin_Fundamental-Data_Type-Character_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Escaped String/Kotlin_Fundamental-Data_Type-Escaped_String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Escaped String/Kotlin_Fundamental-Data_Type-Escaped_String_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Escaped String/Kotlin_Fundamental-Data_Type-Escaped_String_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Raw String/Kotlin_Fundamental-Data_Type-Raw_String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Raw String/Kotlin_Fundamental-Data_Type-Raw_String_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Raw String/Kotlin_Fundamental-Data_Type-Raw_String_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/String/Kotlin_Fundamental-Data_Type-String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/String/Kotlin_Fundamental-Data_Type-String_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/String/Kotlin_Fundamental-Data_Type-String_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Unicode String/Kotlin_Fundamental-Data_Type-Unicode_String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Unicode String/Kotlin_Fundamental-Data_Type-Unicode_String_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Unicode String/Kotlin_Fundamental-Data_Type-Unicode_String_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Update Array/Kotlin_Fundamental-Data_Type-Update_Array.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Update Array/Kotlin_Fundamental-Data_Type-Update_Array_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Data Type/Update Array/Kotlin_Fundamental-Data_Type-Update_Array_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Function/Function Initilization/Kotlin_Fundamental-Function-Function_Initilization.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Function/Function Initilization/Kotlin_Fundamental-Function-Function_Initilization_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Function/Function Initilization/Kotlin_Fundamental-Function-Function_Initilization_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 1/Kotlin_Fundamental-Hello_Kotlin-Hello_Kotlin_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 1/Kotlin_Fundamental-Hello_Kotlin-Hello_Kotlin_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 1/Kotlin_Fundamental-Hello_Kotlin-Hello_Kotlin_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 2/Kotlin_Fundamental-Hello_Kotlin-Hello_Kotlin_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 2/Kotlin_Fundamental-Hello_Kotlin-Hello_Kotlin_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 2/Kotlin_Fundamental-Hello_Kotlin-Hello_Kotlin_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If Else If/Kotlin_Fundamental-If_Expression-If_Else_If.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If Else If/Kotlin_Fundamental-If_Expression-If_Else_If_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If Else If/Kotlin_Fundamental-If_Expression-If_Else_If_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If Else/Kotlin_Fundamental-If_Expression-If_Else.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If Else/Kotlin_Fundamental-If_Expression-If_Else_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If Else/Kotlin_Fundamental-If_Expression-If_Else_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If as a Expression/Kotlin_Fundamental-If_Expression-If_as_a_Expression.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If as a Expression/Kotlin_Fundamental-If_Expression-If_as_a_Expression_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If as a Expression/Kotlin_Fundamental-If_Expression-If_as_a_Expression_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If/Kotlin_Fundamental-If_Expression-If.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If/Kotlin_Fundamental-If_Expression-If_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/If Expression/If/Kotlin_Fundamental-If_Expression-If_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 1/Kotlin_Fundamental-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 1/Kotlin_Fundamental-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 1/Kotlin_Fundamental-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 2/Kotlin_Fundamental-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 2/Kotlin_Fundamental-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 2/Kotlin_Fundamental-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 3/Kotlin_Fundamental-Latihan-Latihan_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 3/Kotlin_Fundamental-Latihan-Latihan_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Latihan/Latihan 3/Kotlin_Fundamental-Latihan-Latihan_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Nullable Types/Nullable Types/Kotlin_Fundamental-Nullable_Types-Nullable_Types.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Nullable Types/Nullable Types/Kotlin_Fundamental-Nullable_Types-Nullable_Types_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Nullable Types/Nullable Types/Kotlin_Fundamental-Nullable_Types-Nullable_Types_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number Initilization/Kotlin_Fundamental-Numbers-Number_Initilization.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number Initilization/Kotlin_Fundamental-Numbers-Number_Initilization_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number Initilization/Kotlin_Fundamental-Numbers-Number_Initilization_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number operation/Kotlin_Fundamental-Numbers-Number_operation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number operation/Kotlin_Fundamental-Numbers-Number_operation_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number operation/Kotlin_Fundamental-Numbers-Number_operation_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number with max and min values/Kotlin_Fundamental-Numbers-Number_with_max_and_min_values.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number with max and min values/Kotlin_Fundamental-Numbers-Number_with_max_and_min_values_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/Number with max and min values/Kotlin_Fundamental-Numbers-Number_with_max_and_min_values_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/String to Number/Kotlin_Fundamental-Numbers-String_to_Number.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/String to Number/Kotlin_Fundamental-Numbers-String_to_Number_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Numbers/String to Number/Kotlin_Fundamental-Numbers-String_to_Number_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Safe Call and Elvis Operator/Elvis Operator/Kotlin_Fundamental-Safe_Call_and_Elvis_Operator-Elvis_Operator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Safe Call and Elvis Operator/Elvis Operator/Kotlin_Fundamental-Safe_Call_and_Elvis_Operator-Elvis_Operator_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Safe Call and Elvis Operator/Elvis Operator/Kotlin_Fundamental-Safe_Call_and_Elvis_Operator-Elvis_Operator_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Safe Call and Elvis Operator/Safe Call Operator/Kotlin_Fundamental-Safe_Call_and_Elvis_Operator-Safe_Call_Operator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Safe Call and Elvis Operator/Safe Call Operator/Kotlin_Fundamental-Safe_Call_and_Elvis_Operator-Safe_Call_Operator_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/Safe Call and Elvis Operator/Safe Call Operator/Kotlin_Fundamental-Safe_Call_and_Elvis_Operator-Safe_Call_Operator_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/String Template/String Template/Kotlin_Fundamental-String_Template-String_Template.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/String Template/String Template/Kotlin_Fundamental-String_Template-String_Template_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Kotlin Fundamental/String Template/String Template/Kotlin_Fundamental-String_Template-String_Template_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/Membangun_dan_Menjalankan_Program_Kotlin-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/Membangun_dan_Menjalankan_Program_Kotlin-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/Membangun_dan_Menjalankan_Program_Kotlin-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/Membangun_dan_Menjalankan_Program_Kotlin-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/Membangun_dan_Menjalankan_Program_Kotlin-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/Membangun_dan_Menjalankan_Program_Kotlin-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Program Pertama Kotlin/Hello Kotlin/Membangun_dan_Menjalankan_Program_Kotlin-Program_Pertama_Kotlin-Hello_Kotlin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Program Pertama Kotlin/Hello Kotlin/Membangun_dan_Menjalankan_Program_Kotlin-Program_Pertama_Kotlin-Hello_Kotlin_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Membangun dan Menjalankan Program Kotlin/Program Pertama Kotlin/Hello Kotlin/Membangun_dan_Menjalankan_Program_Kotlin-Program_Pertama_Kotlin-Hello_Kotlin_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Abstract Class/Contoh/Object-Oriented-Abstract_Class-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Abstract Class/Contoh/Object-Oriented-Abstract_Class-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Abstract Class/Contoh/Object-Oriented-Abstract_Class-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Classes/Contoh/Object-Oriented-Classes-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Classes/Contoh/Object-Oriented-Classes-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Classes/Contoh/Object-Oriented-Classes-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 1/Object-Oriented-Constructor-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 1/Object-Oriented-Constructor-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 1/Object-Oriented-Constructor-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 2/Object-Oriented-Constructor-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 2/Object-Oriented-Constructor-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 2/Object-Oriented-Constructor-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 3/Object-Oriented-Constructor-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 3/Object-Oriented-Constructor-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 3/Object-Oriented-Constructor-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 4/Object-Oriented-Constructor-Contoh_4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 4/Object-Oriented-Constructor-Contoh_4_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Constructor/Contoh 4/Object-Oriented-Constructor-Contoh_4_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 1/Object-Oriented-Exception_Handling-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 1/Object-Oriented-Exception_Handling-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 1/Object-Oriented-Exception_Handling-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 2/Object-Oriented-Exception_Handling-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 2/Object-Oriented-Exception_Handling-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 2/Object-Oriented-Exception_Handling-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 3/Object-Oriented-Exception_Handling-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 3/Object-Oriented-Exception_Handling-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Exception Handling/Contoh 3/Object-Oriented-Exception_Handling-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Extension Properties/Contoh/Object-Oriented-Extension_Properties-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Extension Properties/Contoh/Object-Oriented-Extension_Properties-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Extension Properties/Contoh/Object-Oriented-Extension_Properties-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 1/Object-Oriented-Import_dan_Packages-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 1/Object-Oriented-Import_dan_Packages-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 1/Object-Oriented-Import_dan_Packages-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 2/Object-Oriented-Import_dan_Packages-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 2/Object-Oriented-Import_dan_Packages-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 2/Object-Oriented-Import_dan_Packages-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 3/Object-Oriented-Import_dan_Packages-Contoh_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 3/Object-Oriented-Import_dan_Packages-Contoh_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Import dan Packages/Contoh 3/Object-Oriented-Import_dan_Packages-Contoh_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Inheritances/Contoh/Object-Oriented-Inheritances-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Inheritances/Contoh/Object-Oriented-Inheritances-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Inheritances/Contoh/Object-Oriented-Inheritances-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Interfaces/Contoh/Object-Oriented-Interfaces-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Interfaces/Contoh/Object-Oriented-Interfaces-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Interfaces/Contoh/Object-Oriented-Interfaces-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 1/Object-Oriented-Latihan-Latihan_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 1/Object-Oriented-Latihan-Latihan_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 1/Object-Oriented-Latihan-Latihan_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 2/Object-Oriented-Latihan-Latihan_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 2/Object-Oriented-Latihan-Latihan_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 2/Object-Oriented-Latihan-Latihan_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 3/Object-Oriented-Latihan-Latihan_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 3/Object-Oriented-Latihan-Latihan_3_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Latihan/Latihan 3/Object-Oriented-Latihan-Latihan_3_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Object Everywhere/Contoh 1/Object-Oriented-Object_Everywhere-Contoh_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Object Everywhere/Contoh 1/Object-Oriented-Object_Everywhere-Contoh_1_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Object Everywhere/Contoh 1/Object-Oriented-Object_Everywhere-Contoh_1_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Object Everywhere/Contoh 2/Object-Oriented-Object_Everywhere-Contoh_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Object Everywhere/Contoh 2/Object-Oriented-Object_Everywhere-Contoh_2_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Object Everywhere/Contoh 2/Object-Oriented-Object_Everywhere-Contoh_2_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Overloading/Contoh/Object-Oriented-Overloading-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Overloading/Contoh/Object-Oriented-Overloading-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Overloading/Contoh/Object-Oriented-Overloading-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Properties/Contoh/Object-Oriented-Properties-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Properties/Contoh/Object-Oriented-Properties-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Properties/Contoh/Object-Oriented-Properties-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Property Delegation/Contoh/Object-Oriented-Property_Delegation-Contoh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Property Delegation/Contoh/Object-Oriented-Property_Delegation-Contoh_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Property Delegation/Contoh/Object-Oriented-Property_Delegation-Contoh_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/internal/Object-Oriented-Visibility_Modifiers-internal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/internal/Object-Oriented-Visibility_Modifiers-internal_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/internal/Object-Oriented-Visibility_Modifiers-internal_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/private/Object-Oriented-Visibility_Modifiers-private.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/private/Object-Oriented-Visibility_Modifiers-private_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/private/Object-Oriented-Visibility_Modifiers-private_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/protected/Object-Oriented-Visibility_Modifiers-protected.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/protected/Object-Oriented-Visibility_Modifiers-protected_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/protected/Object-Oriented-Visibility_Modifiers-protected_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/public/Object-Oriented-Visibility_Modifiers-public.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/public/Object-Oriented-Visibility_Modifiers-public_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Object-Oriented/Visibility Modifiers/public/Object-Oriented-Visibility_Modifiers-public_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/util/util.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/study_project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Break/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Break/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Continue/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Continue/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Labels/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Labels/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/All of Enum Object/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/All of Enum Object/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Anonymous Class in Enumeration/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Anonymous Class in Enumeration/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enum Object Value/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enum Object Value/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enum Position/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enum Position/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration with When Expression/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration with When Expression/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/enumValues()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/enumValues()/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/valueOf()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/valueOf()/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Expression and Statement/Expression/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Expression and Statement/Expression/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Expression and Statement/Statement/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Expression and Statement/Statement/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 3/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop Index/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop Index/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop with Range/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop with Range/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop with Step Extension/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop with Step Extension/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/ForEach/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/ForEach/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/ForEachIndexed/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/ForEachIndexed/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range ForEach/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range ForEach/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range with `!in` Operator/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range with `!in` Operator/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range with `in` Operator/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range with `in` Operator/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/Multiple statement in Condition block/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/Multiple statement in Condition block/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When as a Expression/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When as a Expression/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When subject/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When subject/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with `is` operator/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with `is` operator/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with Else block/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with Else block/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with Range as a Condition/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with Range as a Condition/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/Do While/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/Do While/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/Infinite While/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/Infinite While/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/While/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/While/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Channels/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Channels/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Default/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Default/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.IO/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.IO/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Single Thread Context/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Single Thread Context/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Thread Pool/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Thread Pool/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 4/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 4/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 5/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 5/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 4/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 4/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 5/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 5/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Collections/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Collections/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Maps/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Maps/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Sets/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Sets/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/count()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/count()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/filter() and filterNot()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/filter() and filterNot()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/find()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/find()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/first()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/first()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/map()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/map()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/sorted()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/sorted()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/sum()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/sum()/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Comparing data class/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Comparing data class/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Copying data class objects/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Copying data class objects/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Create variables based on data class objects/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Create variables based on data class objects/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Data Class/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Data Class/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Destructuring Declarations/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Destructuring Declarations/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Different data class with class/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Different data class with class/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Modify the data class object/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Modify the data class object/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 4/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 4/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 4/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 4/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 5/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 5/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 3/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/also()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/also()/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/apply()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/apply()/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/let()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/let()/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/run()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/run()/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/with()/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/with()/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 4/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 4/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Generics/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Generics/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Generics/Variance/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Generics/Variance/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Conjuction/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Conjuction/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Disjunction/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Disjunction/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Negation/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Negation/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Array Initialization/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Array Initialization/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Char in String/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Char in String/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Character/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Character/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Escaped String/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Escaped String/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Raw String/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Raw String/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/String/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/String/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Unicode String/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Unicode String/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Update Array/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Update Array/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Function/Function Initilization/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Function/Function Initilization/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 1/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 2/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If as a Expression/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If as a Expression/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If Else/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If Else/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If Else If/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If Else If/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 3/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Nullable Types/Nullable Types/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Nullable Types/Nullable Types/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number Initilization/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number Initilization/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number operation/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number operation/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number with max and min values/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number with max and min values/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/String to Number/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/String to Number/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Safe Call and Elvis Operator/Elvis Operator/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Safe Call and Elvis Operator/Elvis Operator/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Safe Call and Elvis Operator/Safe Call Operator/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Safe Call and Elvis Operator/Safe Call Operator/build/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/String Template/String Template/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/String Template/String Template/build/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Program Pertama Kotlin/Hello Kotlin/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Program Pertama Kotlin/Hello Kotlin/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Abstract Class/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Abstract Class/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Classes/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Classes/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 4/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 4/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Extension Properties/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Extension Properties/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 3/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Inheritances/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Inheritances/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Interfaces/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Interfaces/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 1/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 2/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 3/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 3/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 1/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 1/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 2/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 2/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Overloading/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Overloading/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Properties/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Properties/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Property Delegation/Contoh/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Property Delegation/Contoh/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/internal/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/internal/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/private/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/private/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/protected/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/protected/build/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/public/.gradle/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/public/build/" />
+    <ignored path="$PROJECT_DIR$/util/.gradle/" />
+    <ignored path="$PROJECT_DIR$/util/build/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Break/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Continue/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Break and Continue/Labels/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/All of Enum Object/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Anonymous Class in Enumeration/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enum Object Value/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enum Position/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration with When Expression/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/enumValues()/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Enumeration/valueOf()/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Expression and Statement/Expression/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Expression and Statement/Statement/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Latihan/Latihan 3/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop Index/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop with Range/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/For Loop with Step Extension/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/ForEach/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/ForEachIndexed/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range ForEach/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range with `!in` Operator/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/Range and For loop/Range with `in` Operator/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/Multiple statement in Condition block/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When as a Expression/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When subject/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with `is` operator/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with Else block/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/When Expression/When with Range as a Condition/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/Do While/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/Infinite While/out/" />
+    <ignored path="$PROJECT_DIR$/Control Flow/While and Do While/While/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Channels/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Default/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.IO/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Single Thread Context/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Thread Pool/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 4/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 5/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 4/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Job dan Deferred (1)/Contoh 5/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Collections/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Maps/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections/Sets/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/count()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/filter() and filterNot()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/find()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/first()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/map()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/sorted()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Collections Operations/sum()/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Comparing data class/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Copying data class objects/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Create variables based on data class objects/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Data Class/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Destructuring Declarations/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Different data class with class/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Data Class/Modify the data class object/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Extensions/Contoh 4/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Function Type/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 4/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Lambda/Contoh 5/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Latihan/Latihan 3/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/also()/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/apply()/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/let()/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/run()/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Library Helper/with()/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Named and Default Argument/Contoh 4/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Functional/Vararg Argument/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Generics/Generics/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Generics/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Generics/Variance/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Conjuction/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Disjunction/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Boolean/Negation/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Array Initialization/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Char in String/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Character/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Escaped String/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Raw String/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/String/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Unicode String/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Data Type/Update Array/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Function/Function Initilization/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 1/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Hello Kotlin/Hello Kotlin 2/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If as a Expression/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If Else/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/If Expression/If Else If/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 3/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Nullable Types/Nullable Types/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number Initilization/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number operation/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/Number with max and min values/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Numbers/String to Number/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Safe Call and Elvis Operator/Elvis Operator/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/Safe Call and Elvis Operator/Safe Call Operator/out/" />
+    <ignored path="$PROJECT_DIR$/Kotlin Fundamental/String Template/String Template/out/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Program Pertama Kotlin/Hello Kotlin/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Abstract Class/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Classes/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 4/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Extension Properties/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 3/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Inheritances/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Interfaces/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 1/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 2/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 3/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 1/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 2/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Overloading/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Properties/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Property Delegation/Contoh/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/internal/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/private/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/protected/out/" />
+    <ignored path="$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/public/out/" />
+    <ignored path="$PROJECT_DIR$/util/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Membangun dan Menjalankan Program Kotlin/Latihan/Latihan 2/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Kotlin Fundamental/Function/Function Initilization/src/App.kt" />
+        <option value="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 2/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Kotlin Fundamental/Latihan/Latihan 3/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Control Flow/Enumeration/Enumeration/src/App.kt" />
+        <option value="$PROJECT_DIR$/Control Flow/Enumeration/valueOf()/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Control Flow/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Control Flow/Latihan/Latihan 2/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Control Flow/Latihan/Latihan 3/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Data Class dan Collections/Latihan/Latihan 2/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Functional/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Functional/Latihan/Latihan 2/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Functional/Latihan/Latihan 3/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 2/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 3/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Generics/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Coroutines/Latihan/Latihan 1/src/Task.kt" />
+        <option value="$PROJECT_DIR$/Coroutines/Latihan/Latihan 2/src/Task.kt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="796" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Course" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Course">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Memulai_Pemrograman_dengan_Kotlin" type="a264ea2a:RootNode" />
+              <item name="Memulai Pemrograman dengan Kotlin" type="ed842865:CourseNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="show.inlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="AppKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="Control_Flow-When_Expression-When_as_a_Expression_main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="AppKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.AppKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00b6c545-c431-4122-8bce-09aa1345eaaa" name="Default Changelist" comment="" />
+      <created>1563100813432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563100813432</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Tests_in_'Kotlin_Fundamental-Latihan-Latihan_1_test' - 2019.07.14 at 18h 11m 10s.xml">
+      <configuration name="Tests in 'Kotlin_Fundamental-Latihan-Latihan_1_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Kotlin_Fundamental-Latihan-Latihan_1_test' - 2019.07.14 at 18h 12m 27s.xml">
+      <configuration name="Tests in 'Kotlin_Fundamental-Latihan-Latihan_1_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Kotlin_Fundamental-Latihan-Latihan_2_test' - 2019.07.14 at 18h 14m 27s.xml">
+      <configuration name="Tests in 'Kotlin_Fundamental-Latihan-Latihan_2_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Kotlin_Fundamental-Latihan-Latihan_3_test' - 2019.07.14 at 18h 17m 56s.xml">
+      <configuration name="Tests in 'Kotlin_Fundamental-Latihan-Latihan_3_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Control_Flow-Latihan-Latihan_1_test' - 2019.07.14 at 18h 57m 24s.xml">
+      <configuration name="Tests in 'Control_Flow-Latihan-Latihan_1_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Functional-Latihan-Latihan_1_test' - 2019.07.14 at 21h 28m 05s.xml">
+      <configuration name="Tests in 'Functional-Latihan-Latihan_1_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Functional-Latihan-Latihan_2_test' - 2019.07.14 at 21h 31m 47s.xml">
+      <configuration name="Tests in 'Functional-Latihan-Latihan_2_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Functional-Latihan-Latihan_3_test' - 2019.07.14 at 21h 37m 47s.xml">
+      <configuration name="Tests in 'Functional-Latihan-Latihan_3_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Tests_in_'Generics-Latihan-Latihan_1_test' - 2019.07.15 at 17h 18m 37s.xml">
+      <configuration name="Tests in 'Generics-Latihan-Latihan_1_test'" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="796" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32954547" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" weight="0.3806818" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32954547" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="11" weight="0.32954547" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Task" order="4" visible="true" weight="0.3297568" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Functional/Lambda/Contoh 3/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="150">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functional/Latihan/Latihan 2/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="60">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functional/Latihan/Latihan 3/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="270">
+              <caret line="18" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Object Everywhere/Contoh 2/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Classes/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="-1" />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 2/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 3/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="-53" />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Constructor/Contoh 4/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Abstract Class/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/public/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/private/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/protected/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Visibility Modifiers/internal/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 2/src/com/dicoding/oop/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Import dan Packages/Contoh 3/src/com/dicoding/oop/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 2/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Exception Handling/Contoh 3/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Overloading/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Extension Properties/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Interfaces/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Property Delegation/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="-48" />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Properties/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="270">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 1/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="375">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Inheritances/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 2/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="315">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object-Oriented/Latihan/Latihan 3/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="45">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generics/Generics/Contoh 2/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generics/Generics/Contoh 3/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generics/Variance/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generics/Generics/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="210">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generics/Latihan/Latihan 1/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="105">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 2/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 3/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="-93" />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 2/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 3/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 5/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Default/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.IO/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Dispatcher.Unconfined/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Single Thread Context/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Coroutine Dispatcher/Thread Pool/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Channels/Contoh/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Latihan/Latihan 1/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="360">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Memulai Coroutine/Contoh 1/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState />
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Job dan Deferred/Contoh 4/src/App.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="195">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coroutines/Latihan/Latihan 2/src/Task.kt">
+      <provider selected="true" editor-type-id="StudyEditor">
+        <state>
+          <EduEditorState>
+            <MainEditorState relative-caret-position="165">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </MainEditorState>
+          </EduEditorState>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Kotlin SDK</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
