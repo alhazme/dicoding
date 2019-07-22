@@ -23,7 +23,7 @@ class MovieDetailActivityTest {
     @JvmField var activityRule: ActivityTestRule<MovieDetailActivity> =
         object : ActivityTestRule<MovieDetailActivity>(MovieDetailActivity::class.java) {
             override fun getActivityIntent(): Intent {
-                val targetContext = InstrumentationRegistry.getInstrumentation().getTargetContext()
+                val targetContext = InstrumentationRegistry.getInstrumentation().targetContext
                 val result = Intent(targetContext, MovieDetailActivity::class.java)
                 result.putExtra("movie_id", dummyMovie.id)
                 return result

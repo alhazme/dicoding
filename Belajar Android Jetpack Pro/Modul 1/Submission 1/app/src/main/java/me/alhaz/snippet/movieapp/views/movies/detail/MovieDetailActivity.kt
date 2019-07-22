@@ -37,7 +37,7 @@ class MovieDetailActivity : AppCompatActivity() {
         }
     }
 
-    fun showDetailData(movieID: Int) {
+    private fun showDetailData(movieID: Int) {
         title = "Detail"
         getSupportActionBar()?.let {
             it.setDisplayHomeAsUpEnabled(true)

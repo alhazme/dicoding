@@ -21,7 +21,7 @@ class TVShowDetailActivityTest {
     @JvmField var activityRule: ActivityTestRule<TVShowDetailActivity> =
         object : ActivityTestRule<TVShowDetailActivity>(TVShowDetailActivity::class.java) {
             override fun getActivityIntent(): Intent {
-                val targetContext = InstrumentationRegistry.getInstrumentation().getTargetContext()
+                val targetContext = InstrumentationRegistry.getInstrumentation().targetContext
                 val result = Intent(targetContext, TVShowDetailActivity::class.java)
                 result.putExtra("tvshow_id", dummyTVShow.id)
                 return result
