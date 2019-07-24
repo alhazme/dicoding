@@ -14,7 +14,7 @@ import org.junit.Test
 
 class TVShowDetailActivityTest {
 
-    var dummyTVShow: TVShow = DataDummy.listTVShows().get(2)
+    var dummyTVShow: TVShow = DataDummy.generateTVShows().get(0)
 
     @Rule
     @JvmField var activityRule: ActivityTestRule<TVShowDetailActivity> =
@@ -31,16 +31,16 @@ class TVShowDetailActivityTest {
     fun loadTVShowDetail() {
         Espresso.onView(ViewMatchers.withId(R.id.tv_title)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(ViewMatchers.withId(R.id.tv_title))
-            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.title)))
+            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.name)))
         Espresso.onView(ViewMatchers.withId(R.id.tv_year)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(ViewMatchers.withId(R.id.tv_year))
-            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.year.toString())))
+            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.firstAirDate.split("-").get(0))))
         Espresso.onView(ViewMatchers.withId(R.id.tv_rating)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(ViewMatchers.withId(R.id.tv_rating))
-            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.score.toString())))
+            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.voteAverage.toString())))
         Espresso.onView(ViewMatchers.withId(R.id.tv_runtime)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(ViewMatchers.withId(R.id.tv_runtime))
-            .check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.runtime)))
+            .check(ViewAssertions.matches(ViewMatchers.withText("${dummyTVShow.numberOfEpisodes} Episodes")))
     }
 
 }

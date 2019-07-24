@@ -19,9 +19,10 @@ class TVShowListViewModel: ViewModel() {
         return tvShows
     }
 
-    fun getTVShowList() {
+    fun getTVShowList(): MutableLiveData<ArrayList<TVShow>> {
         tvShowRepository?.let {
             tvShows = it.getListTVShow()
         }
+        return tvShows
     }
 }

@@ -31,8 +31,7 @@ class TVShowListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(TVShowListViewModel::class.java)
-        viewModel.getTVShowList()
-        viewModel.getTVShows().observe(this, Observer {
+        viewModel.getTVShowList().observe(this, Observer {
             tvShows.addAll(it)
             activity?.let {
                 showData(it)

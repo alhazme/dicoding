@@ -9,7 +9,6 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
-import kotlin.math.ceil
 
 class MovieDetailActivity : AppCompatActivity() {
 
@@ -39,8 +38,7 @@ class MovieDetailActivity : AppCompatActivity() {
 
     private fun setupViewModel() {
         viewModel = ViewModelProviders.of(this).get(MovieDetailViewModel::class.java)
-        viewModel.getMovieDetail(movieID)
-        viewModel.getMovie().observe(this, Observer {
+        viewModel.getMovieDetail(movieID).observe(this, Observer {
             showDetailData(it)
             ly_loading.setVisibility(View.GONE)
             ly_content.setVisibility(View.VISIBLE)
@@ -60,7 +58,7 @@ class MovieDetailActivity : AppCompatActivity() {
         Glide.with(this).load("https://image.tmdb.org/t/p/w300_and_h450_bestv2" + movie.posterPath).into(iv_photo)
         tv_year.text = movie.releaseDate.split("-").get(0)
         tv_title.text = movie.title
-        tv_rating.text = movie.voteAverage.toString()
+        tv_rating.text = "${movie.voteAverage}"
         tv_runtime.text = getRuntime(movie.runtime)
         tv_description.text = movie.overview
     }

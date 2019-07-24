@@ -5,362 +5,538 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 
 object DataDummy {
 
-    /*
-    fun listMovies(): ArrayList<Movie> {
+    fun generateListMovie(): ArrayList<Movie> {
+
         val movies = ArrayList<Movie>()
-        movies.add(Movie(1,
-            "A Star Is Born",
-            "Seasoned musician Jackson Maine discovers — and falls in love with — struggling artist Ally. She has just about given up on her dream to make it big as a singer — until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.",
-            2018,
-            75,
-            "1h 59m",
-            "poster_a_start_is_born"))
-        movies.add(Movie(2,
-            "Alita: Battle Angle",
-            "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.",
-            2019,
-            68,
-            "1h 59m",
-            "poster_alita"))
-        movies.add(Movie(3,
-            "Aquaman",
-            "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne.",
-            2018,
-            68,
-            "1h 59m",
-            "poster_aquaman"))
-        movies.add(Movie(4,
-            "Bohemian Rhapsody",
-            "Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock 'n' roll band Queen in 1970. Hit songs become instant classics. When Mercury's increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet – finding a way to keep the band together amid the success and excess.",
-            2018,
-            81,
-            "1h 59m",
-            "poster_bohemian"))
-        movies.add(Movie(5,
-            "Cold Pursuit",
-            "The quiet family life of Nels Coxman, a snowplow driver, is upended after his son's murder. Nels begins a vengeful hunt for Viking, the drug lord he holds responsible for the killing, eliminating Viking's associates one by one. As Nels draws closer to Viking, his actions bring even more unexpected and violent consequences, as he proves that revenge is all in the execution.",
-            2019,
-            54,
-            "1h 59m",
-            "poster_cold_persuit"))
-        movies.add(Movie(6,
-            "Fantastic Beasts: The Crimes of Grindelwald",
-            "Gellert Grindelwald has escaped imprisonment and has begun gathering followers to his cause—elevating wizards above all non-magical beings. The only one capable of putting a stop to him is the wizard he once called his closest friend, Albus Dumbledore. However, Dumbledore will need to seek help from the wizard who had thwarted Grindelwald once before, his former student Newt Scamander, who agrees to help, unaware of the dangers that lie ahead. Lines are drawn as love and loyalty are tested, even among the truest friends and family, in an increasingly divided wizarding world.",
-            2018,
-            69,
-            "2h 14m",
-            "poster_crimes"))
-        movies.add(Movie(7,
-            "Glass",
-            "In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.",
-            2019,
-            65,
-            "2h 9m",
-            "poster_glass"))
-        movies.add(Movie(8,
-            "How to Train Your Dragon: The Hidden World",
-            "As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind.",
-            2019,
-            76,
-            "1h 44m",
-            "poster_how_to_train"))
-        movies.add(Movie(9,
-            "Avengers: Infinity War",
-            "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
-            2018,
-            83,
-            "1h 44m",
-            "poster_infinity_war"))
-        movies.add(Movie(10,
-            "Mary Queen of Scots",
-            "In 1561, Mary Stuart, widow of the King of France, returns to Scotland, reclaims her rightful throne and menaces the future of Queen Elizabeth I as ruler of England, because she has a legitimate claim to the English throne. Betrayals, rebellions, conspiracies and their own life choices imperil both Queens. They experience the bitter cost of power, until their tragic fate is finally fulfilled.",
-            2018,
-            66,
-            "2h 4m",
-            "poster_marry_queen"))
-        movies.add(Movie(11,
-            "Master Z: Ip Man Legacy",
-            "While keeping a low profile after his defeat by Ip Man, Cheung Tin Chi gets into trouble after getting in a fight with a powerful foreigner.",
-            2018,
-            52,
-            "1h 47m",
-            "poster_master_z"))
-        movies.add(Movie(12,
-            "Mortal Engines",
-            "Many thousands of years in the future, Earth’s cities roam the globe on huge wheels, devouring each other in a struggle for ever diminishing resources. On one of these massive traction cities, the old London, Tom Natsworthy has an unexpected encounter with a mysterious young woman from the wastelands who will change the course of his life forever.",
-            2018,
-            60,
-            "2h 9m",
-            "poster_mortal_engines"))
-        movies.add(Movie(13,
-            "Overlord",
-            "France, June 1944. On the eve of D-Day, some American paratroopers fall behind enemy lines after their aircraft crashes while on a mission to destroy a radio tower in a small village near the beaches of Normandy. After reaching their target, the surviving paratroopers realise that, in addition to fighting the Nazi troops that patrol the village, they also must fight against something else.",
-            2018,
-            66,
-            "1h 50m",
-            "poster_overlord"))
-        movies.add(Movie(14,
-            "Ralph Breaks the Internet",
-            "Video game bad guy Ralph and fellow misfit Vanellope von Schweetz must risk it all by traveling to the World Wide Web in search of a replacement part to save Vanellope's video game, \"Sugar Rush.\" In way over their heads, Ralph and Vanellope rely on the citizens of the internet -- the netizens -- to help navigate their way, including an entrepreneur named Yesss, who is the head algorithm and the heart and soul of trend-making site BuzzzTube.",
-            2018,
-            72,
-            "1h 52m",
-            "poster_ralph"))
-        movies.add(Movie(15,
-            "Robin Hood",
-            "A war-hardened Crusader and his Moorish commander mount an audacious revolt against the corrupt English crown.",
-            2018,
-            58,
-            "1h 56m",
-            "poster_robin_hood"))
-        movies.add(Movie(16,
-            "Serenity",
-            "Baker Dill is a fishing boat captain leading tours off a tranquil, tropical enclave called Plymouth Island. His quiet life is shattered, however, when his ex-wife Karen tracks him down with a desperate plea for help.",
-            2019,
-            51,
-            "1h 46m",
-            "poster_serenity"))
-        movies.add(Movie(17,
-            "Spider-Man: Into the Spider-Verse",
-            "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
-            2018,
-            84,
-            "1h 57m",
-            "poster_spiderman"))
-        movies.add(Movie(18,
-            "T-34",
-            "In 1944, a courageous group of Russian soldiers managed to escape from German captivity in a half-destroyed legendary T-34 tank. Those were the times of unforgettable bravery, fierce fighting, unbreakable love, and legendary miracles.",
-            2018,
-            49,
-            "2h 19m",
-            "poster_t34"))
+
+        // 1
+        movies.add(
+            Movie(
+                id = 420818,
+                title = "The Lion King",
+                voteAverage = 7.1,
+                overview = "Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
+                releaseDate = "2019-07-12",
+                runtime = 118,
+                posterPath = "/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg"
+            )
+        )
+
+        // 2
+        movies.add(
+            Movie(
+                id = 429617,
+                title = "Spider-Man: Far from Home",
+                voteAverage = 7.8,
+                overview = "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+                releaseDate = "2019-06-28",
+                runtime = 129,
+                posterPath = "/rjbNpRMoVvqHmhmksbokcyCr7wn.jpg"
+            )
+        )
+
+        // 3
+        movies.add(
+            Movie(
+                id = 299537,
+                title = "Captain Marvel",
+                voteAverage = 7.8,
+                overview = "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+                releaseDate = "2019-06-28",
+                runtime = 124,
+                posterPath = "/rjbNpRMoVvqHmhmksbokcyCr7wn.jpg"
+            )
+        )
+
+        // 4
+        movies.add(
+            Movie(
+                id = 447404,
+                title = "Pokémon Detective Pikachu",
+                voteAverage = 7.0,
+                overview = "In a world where people collect pocket-size monsters (Pokémon) to do battle, a boy comes across an intelligent monster who seeks to be a detective.",
+                releaseDate = "2019-05-03",
+                runtime = 105,
+                posterPath = "/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
+            )
+        )
+
+        // 5
+        movies.add(
+            Movie(
+                id = 566555,
+                title = "Detective Conan: The Fist of Blue Sapphire",
+                voteAverage = 5.0,
+                overview = "23rd movie in the \"Detective Conan\" franchise.",
+                releaseDate = "2019-04-12",
+                runtime = 95,
+                posterPath = "/86Y6qM8zTn3PFVfCm9J98Ph7JEB.jpg"
+            )
+        )
+
+        // 6
+        movies.add(
+            Movie(
+                id = 399579,
+                title = "Alita: Battle Angel",
+                voteAverage = 6.8,
+                overview = "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.",
+                releaseDate = "2019-01-31",
+                runtime = 119,
+                posterPath = "/xRWht48C2V8XNfzvPehyClOvDni.jpg"
+            )
+        )
+
+        // 7
+        movies.add(
+            Movie(
+                id = 458302,
+                title = "Remi, Nobody's Boy",
+                voteAverage = 7.6,
+                overview = "The adventures of the young Rémi, an orphan, collected by the gentle Madam Barberin. At the age of 10 years, he is snatched from his adoptive mother and entrusted to the signor Vitalis, a mysterious itinerant musician. Has its sides, he will learn the harsh life of acrobat and sing to win his bread. Accompanied by the faithful dog capi and of the small monkey Joli-Coeur, his long trip through France, made for meetings, friendships and mutual assistance, leads him to the secret of its origins.",
+                releaseDate = "2018-12-12",
+                runtime = 109,
+                posterPath = "/mQYXlxlUTmOP4FWt52qkZZb8JNM.jpg"
+            )
+        )
+
+        // 8
+        movies.add(
+            Movie(
+                id = 301528,
+                title = "Toy Story 4",
+                voteAverage = 7.7,
+                overview = "Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy.",
+                releaseDate = "2019-06-19",
+                runtime = 100,
+                posterPath = "/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg"
+            )
+        )
+
+        // 9
+        movies.add(
+            Movie(
+                id = 479455,
+                title = "Men in Black: International",
+                voteAverage = 5.9,
+                overview = "The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest, most global threat to date: a mole in the Men in Black organization.",
+                releaseDate = "2019-06-12",
+                runtime = 115,
+                posterPath = "/dPrUPFcgLfNbmDL8V69vcrTyEfb.jpg"
+            )
+        )
+
+        // 10
+        movies.add(
+            Movie(
+                id = 613473,
+                title = "Burglary",
+                voteAverage = 3.0,
+                overview = "While playing videogames Mike spots a mysterious masked man outside his building.",
+                releaseDate = "2019-07-19",
+                runtime = 6,
+                posterPath = "/xztkk3qwvjTfKArjTkhWUCuadFY.jpg"
+            )
+        )
+
+        // 11
+        movies.add(
+            Movie(
+                id = 459992,
+                title = "Long Shot",
+                voteAverage = 6.9,
+                overview = "When Fred Flarsky reunites with and charms his first crush, Charlotte Field—one of the most influential women in the world. As Charlotte prepares to make a run for the Presidency, she hires Fred as her speechwriter and sparks fly.",
+                releaseDate = "2019-05-02",
+                runtime = 125,
+                posterPath = "/m2ttWZ8rMRwIMT7zA48Jo6mTkDS.jpg"
+            )
+        )
+
+        // 12
+        movies.add(
+            Movie(
+                id = 299534,
+                title = "Avenger: Endgame",
+                voteAverage = 8.4,
+                overview = "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+                releaseDate = "2019-02-24",
+                runtime = 181,
+                posterPath = "/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+            )
+        )
+
+        // 13
+        movies.add(
+            Movie(
+                id = 287947,
+                title = "Shazam!",
+                voteAverage = 7.1,
+                overview = "A boy is given the ability to become an adult superhero in times of need with a single magic word.",
+                releaseDate = "2019-03-23",
+                runtime = 132,
+                posterPath = "/xnopI5Xtky18MPhK40cZAGAOVeV.jpg"
+            )
+        )
+
+        // 14
+        movies.add(
+            Movie(
+                id = 458156,
+                title = "John Wick: Chapter 3 – Parabellum",
+                voteAverage = 7.1,
+                overview = "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin’s guild, the High Table, John Wick is excommunicado, but the world’s most ruthless hit men and women await his every turn.",
+                releaseDate = "2019-05-15",
+                runtime = 131,
+                posterPath = "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg"
+            )
+        )
+
+        // 15
+        movies.add(
+            Movie(
+                id = 920,
+                title = "Cars",
+                voteAverage = 6.7,
+                overview = "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.",
+                releaseDate = "2006-06-08",
+                runtime = 117,
+                posterPath = "/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg"
+            )
+        )
+
+        // 16
+        movies.add(
+            Movie(
+                id = 456740,
+                title = "Hellboy",
+                voteAverage = 5.0,
+                overview = "Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away.",
+                releaseDate = "2019-04-10",
+                runtime = 121,
+                posterPath = "/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg"
+            )
+        )
+
+        // 17
+        movies.add(
+            Movie(
+                id = 553100,
+                title = "Wild and Free",
+                voteAverage = 6.0,
+                overview = "Ellie and Jake fall in love, but struggle with their relationship when they discover an unexpected connection between their pasts.",
+                releaseDate = "2018-10-10",
+                runtime = 106,
+                posterPath = "/jLGNqaymD0ygyhafhv5fM3nXcge.jpg"
+            )
+        )
+
+        // 18
+        movies.add(
+            Movie(
+                id = 66510,
+                title = "Madrasi",
+                voteAverage = 2.0,
+                overview = "Kasi (Arjun) comes to Mumbai to track his parents' killers. He is successful in finding the first two. In order to find the third one he joins a goon Ravi Bhai (Raj Kapoor). This Ravi Bhai is in loggerheads with his own brother, Mani Bhai (Fefsi Vijayn). Mani Bhai runs another gang and the leading goonda in this gang is Siva (Jagapati Babu). Once upon a time in some Jail, Siva and Kasi were good friends. But now they are thirsty for each other's blood. They unite finally when their loved ones are killed.They plot to kill sivas brother by killing vedhika and divert Arjun. Arjun and Vedhika die in the end.",
+                releaseDate = "2006-07-10",
+                runtime = 60,
+                posterPath = "/4F9Y9C5tQqoJbTQfJxLuDiqSOWI.jpg"
+            )
+        )
+
+        // 19
+        movies.add(
+            Movie(
+                id = 480414,
+                title = "The Curse of La Llorona",
+                voteAverage = 5.6,
+                overview = "A social worker dealing with the disappearance of two children fears for her own family after beginning the investigation.",
+                releaseDate = "2019-04-17",
+                runtime = 93,
+                posterPath = "/jhZlXSnFUpNiLAek9EkPrtLEWQI.jpg"
+            )
+        )
+
+        // 20
+        movies.add(
+            Movie(
+                id = 612152,
+                title = "Secret Obsession",
+                voteAverage = 5.7,
+                overview = "Newlywed Jennifer is brutally attacked at a dark rest stop. While healing from her injuries, she can’t recall anything from her past, including the ordeal. Her husband, Russell , is just thankful she’s alive and eager to get her home. As he reintroduces her to their secluded mountain estate, Detective Page  pursues Jennifer’s assailant — his own daughter went missing and was never found. The same fate now awaits Jennifer, unless someone realizes that her loving caretaker is actually her captor.",
+                releaseDate = "2019-07-18",
+                runtime = 97,
+                posterPath = "/iKMeE6oYzBVzhA6xLGb8PPWEruF.jpg"
+            )
+        )
+
         return movies
     }
 
-    fun listTVShows(): ArrayList<TVShow> {
+    fun generateTVShows(): ArrayList<TVShow> {
+
         val tvShows = ArrayList<TVShow>()
+
+        // 1
         tvShows.add(
             TVShow(
-                1,
-                "Arrow",
-                "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.\n\n",
-                2012,
-                58,
-                "42m",
-                "poster_arrow"
+                id = 11634,
+                name = "See No Evil: The Moors Murders",
+                voteAverage = 4.5,
+                overview = "The dramatisation of one of the most notorious killing sprees in British history.",
+                firstAirDate = "2006-05-14",
+                numberOfEpisodes = 2,
+                posterPath = "/b71BaRjp9TwxUZodLGgSRIlkfL8.jpg"
             )
         )
+
+        // 2
         tvShows.add(
             TVShow(
-                2,
-                "Doom Patrol",
-                "The Doom Patrol’s members each suffered horrible accidents that gave them superhuman abilities — but also left them scarred and disfigured. Traumatized and downtrodden, the team found purpose through The Chief, who brought them together to investigate the weirdest phenomena in existence — and to protect Earth from what they find.",
-                2019,
-                62,
-                "60m",
-                "poster_doom_patrol"
+                id = 71446,
+                name = "Money Heist",
+                voteAverage = 8.1,
+                overview = "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+                firstAirDate = "2017-05-02",
+                numberOfEpisodes = 23,
+                posterPath = "/MoEKaPFHABtA1xKoOteirGaHl1.jpg"
             )
         )
+
+        // 3
         tvShows.add(
             TVShow(
-                3,
-                "Dragon Ball",
-                "Long ago in the mountains, a fighting master known as Gohan discovered a strange boy whom he named Goku. Gohan raised him and trained Goku in martial arts until he died. The young and very strong boy was on his own, but easily managed. Then one day, Goku met a teenage girl named Bulma, whose search for the dragon balls brought her to Goku's home. Together, they set off to find all seven dragon balls in an adventure.\n\n",
-                1986,
-                71,
-                "25m",
-                "poster_dragon_ball"
+                id = 60735,
+                name = "The Flash",
+                voteAverage = 6.7,
+                overview = "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
+                firstAirDate = "2014-10-07",
+                numberOfEpisodes = 115,
+                posterPath = "/fki3kBlwJzFp8QohL43g9ReV455.jpg"
             )
         )
+
+        // 4
         tvShows.add(
             TVShow(
-                4,
-                "Fairy Tail",
-                "Lucy is a 17-year-old girl, who wants to be a full-fledged mage. One day when visiting Harujion Town, she meets Natsu, a young man who gets sick easily by any type of transportation. But Natsu isn't just any ordinary kid, he's a member of one of the world's most infamous mage guilds: Fairy Tail.",
-                2009,
-                64,
-                "25m",
-                "poster_fairytail"
+                id = 1412,
+                name = "Arrow",
+                voteAverage = 5.8,
+                overview = "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
+                firstAirDate = "2014-10-07",
+                numberOfEpisodes = 162,
+                posterPath = "/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg"
             )
         )
+
+        // 5
         tvShows.add(
             TVShow(
-                5,
-                "Family Guy",
-                "Sick, twisted, politically incorrect and Freakin' Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois have three kids. Stewie (a brilliant but sadistic baby bent on killing his mother and taking over the world), Meg (the oldest, and is the most unpopular girl in town) and Chris (the middle kid, he's not very bright but has a passion for movies). The final member of the family is Brian - a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.",
-                1999,
-                65,
-                "22m",
-                "poster_family_guy"
+                id = 67195,
+                name = "Legion",
+                voteAverage = 7.5,
+                overview = "David Haller, AKA Legion, is a troubled young man who may be more than human. Diagnosed as schizophrenic, David has been in and out of psychiatric hospitals for years. But after a strange encounter with a fellow patient, he’s confronted with the possibility that the voices he hears and the visions he sees might be real.",
+                firstAirDate = "2017-02-08",
+                numberOfEpisodes = 29,
+                posterPath = "/vT0Zsbm4GWd7llNjgWEtwY0CqOv.jpg"
             )
         )
+
+        // 6
         tvShows.add(
             TVShow(
-                6,
-                "The Flash",
-                "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.\n\n",
-                2014,
-                67,
-                "44m",
-                "poster_flash"
+                id = 66732,
+                name = "Stranger Things",
+                voteAverage = 8.3,
+                overview = "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+                firstAirDate = "2016-07-15",
+                numberOfEpisodes = 25,
+                posterPath = "/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
             )
         )
+
+        // 7
         tvShows.add(
             TVShow(
-                7,
-                "Game of Thrones",
-                "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
-                2011,
-                81,
-                "60m",
-                "poster_god"
+                id = 12609,
+                name = "Dragon Ball",
+                voteAverage = 7.1,
+                overview = "Long ago in the mountains, a fighting master known as Gohan discovered a strange boy whom he named Goku. Gohan raised him and trained Goku in martial arts until he died. The young and very strong boy was on his own, but easily managed. Then one day, Goku met a teenage girl named Bulma, whose search for the dragon balls brought her to Goku's home. Together, they set off to find all seven dragon balls in an adventure.",
+                firstAirDate = "2016-07-15",
+                numberOfEpisodes = 153,
+                posterPath = "/3wx3EAMtqnbSLhGG8NrqXriCUIQ.jpg"
             )
         )
+
+        // 8
         tvShows.add(
             TVShow(
-                8,
-                "Gotham",
-                "Before there was Batman, there was GOTHAM.\n\nEveryone knows the name Commissioner Gordon. He is one of the crime world's greatest foes, a man whose reputation is synonymous with law and order. But what is known of Gordon's story and his rise from rookie detective to Police Commissioner? What did it take to navigate the multiple layers of corruption that secretly ruled Gotham City, the spawning ground of the world's most iconic villains? And what circumstances created them – the larger-than-life personas who would become Catwoman, The Penguin, The Riddler, Two-Face and The Joker?",
-                2014,
-                68,
-                "43m",
-                "poster_gotham"
+                id = 1416,
+                name = "Grey's Anatomy",
+                voteAverage = 6.3,
+                overview = "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.",
+                firstAirDate = "2005-03-27",
+                numberOfEpisodes = 341,
+                posterPath = "/eqgIOObafPJitt8JNh1LuO2fvqu.jpg"
             )
         )
+
+        // 9
         tvShows.add(
             TVShow(
-                9,
-                "Grey's Anatomy",
-                "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.",
-                2005,
-                63,
-                "43m",
-                "poster_grey_anatomy"
+                id = 62286,
+                name = "Fear the Walking Dead",
+                voteAverage = 6.3,
+                overview = "What did the world look like as it was transforming into the horrifying apocalypse depicted in \"The Walking Dead\"? This spin-off set in Los Angeles, following new characters as they face the beginning of the end of the world, will answer that question.",
+                firstAirDate = "2005-08-23",
+                numberOfEpisodes = 69,
+                posterPath = "/aOdTWn8dXlS0tA5xl0ZBr8Ws15R.jpg"
             )
         )
+
+        // 10
         tvShows.add(
             TVShow(
-                10,
-                "Hanna",
-                "This thriller and coming-of-age drama follows the journey of an extraordinary young girl as she evades the relentless pursuit of an off-book CIA agent and tries to unearth the truth behind who she is. Based on the 2011 Joe Wright film.",
-                2019,
-                64,
-                "50m",
-                "poster_hanna"
+                id = 63926,
+                name = "One-Punch Man",
+                voteAverage = 8.0,
+                overview = "Saitama is a hero who only became a hero for fun. After three years of “special” training, though, he’s become so strong that he’s practically invincible. In fact, he’s too strong—even his mightiest opponents are taken out with a single punch, and it turns out that being devastatingly powerful is actually kind of a bore. With his passion for being a hero lost along with his hair, yet still faced with new enemies every day, how much longer can he keep it going?",
+                firstAirDate = "2005-08-23",
+                numberOfEpisodes = 69,
+                posterPath = "/iE3s0lG5QVdEHOEZnoAxjmMtvne.jpg"
             )
         )
+
+        // 11
         tvShows.add(
             TVShow(
-                11,
-                "Marvel's Iron Fist",
-                "Danny Rand resurfaces 15 years after being presumed dead. Now, with the power of the Iron Fist, he seeks to reclaim his past and fulfill his destiny.",
-                2017,
-                61,
-                "55m",
-                "poster_iron_fist"
+                id = 86816,
+                name = "Crímenes que cambiaron la historia",
+                voteAverage = 3.5,
+                overview = "",
+                firstAirDate = "2019-01-22",
+                numberOfEpisodes = 6,
+                posterPath = "/fMgPDXqSL4XILb0RKSXpDqc5tJ9.jpg"
             )
         )
+
+        // 12
         tvShows.add(
             TVShow(
-                12,
-                "Naruto Shippūden",
-                "Naruto Shippuuden is the continuation of the original animated TV series Naruto.The story revolves around an older and slightly more matured Uzumaki Naruto and his quest to save his friend Uchiha Sasuke from the grips of the snake-like Shinobi, Orochimaru. After 2 and a half years Naruto finally returns to his village of Konoha, and sets about putting his ambitions to work, though it will not be easy, as He has amassed a few (more dangerous) enemies, in the likes of the shinobi organization; Akatsuki.",
-                2007,
-                75,
-                "22m",
-                "poster_naruto_shipudden"
+                id = 1403,
+                name = "Marvel's Agents of S.H.I.E.L.D.",
+                voteAverage = 6.8,
+                overview = "Agent Phil Coulson of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics Division) puts together a team of agents to investigate the new, the strange and the unknown around the globe, protecting the ordinary from the extraordinary.",
+                firstAirDate = "2013-09-24",
+                numberOfEpisodes = 121,
+                posterPath = "/cXiETfFK1BTLest5fhTLfDLRdL6.jpg"
             )
         )
+
+        // 13
         tvShows.add(
             TVShow(
-                13,
-                "NCIS",
-                "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
-                2003,
-                67,
-                "45m",
-                "poster_ncis"
+                id = 1434,
+                name = "Family Guy",
+                voteAverage = 6.8,
+                overview = "Sick, twisted, politically incorrect and Freakin' Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois have three kids. Stewie (a brilliant but sadistic baby bent on killing his mother and taking over the world), Meg (the oldest, and is the most unpopular girl in town) and Chris (the middle kid, he's not very bright but has a passion for movies). The final member of the family is Brian - a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.",
+                firstAirDate = "1999-01-31",
+                numberOfEpisodes = 328,
+                posterPath = "/gBGUL1UTUNmdRQT8gA1LUV4yg39.jpg"
             )
         )
+
+        // 14
         tvShows.add(
             TVShow(
-                14,
-                "Riverdate",
-                "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale’s wholesome facade.",
-                2016,
-                69,
-                "45m",
-                "poster_riverdale"
+                id = 48866,
+                name = "The 100",
+                voteAverage = 6.5,
+                overview = "100 years in the future, when the Earth has been abandoned due to radioactivity, the last surviving humans live on an ark orbiting the planet — but the ark won't last forever. So the repressive regime picks 100 expendable juvenile delinquents to send down to Earth to see if the planet is still habitable.",
+                firstAirDate = "2014-03-19",
+                numberOfEpisodes = 84,
+                posterPath = "/wBzNjurA8ijJPF21Ggs9nbviIzi.jpg"
             )
         )
+
+        // 15
         tvShows.add(
             TVShow(
-                15,
-                "Shameless",
-                "Chicagoan Frank Gallagher is the proud single dad of six smart, industrious, independent kids, who without him would be... perhaps better off. When Frank's not at the bar spending what little money they have, he's passed out on the floor. But the kids have found ways to grow up in spite of him. They may not be like any family you know, but they make no apologies for being exactly who they are.",
-                2011,
-                78,
-                "55m",
-                "poster_shameless"
+                id = 86034,
+                name = "Arifureta: From Commonplace to World's Strongest",
+                voteAverage = 5.3,
+                overview = "Seventeen-year-old Hajime Nagumo is your average, everyday otaku. However, his simple life of pulling all-nighters and sleeping in school is suddenly turned upside down when he, along with the rest of his class, is summoned to a fantasy world! They're treated like heroes and tasked with the duty of saving the human race from utter extinction. But what should have been any otaku's wet dream quickly turns into Hajime's nightmare. While the rest of his class are blessed with godlike powers, Hajime's job, Synergist, only has a single transmutation skill. Ridiculed and bullied by his classmates for being weak, he soon finds himself in despair. Will he be able to survive in this dangerous world of monsters and demons with only a glorified blacksmith's level of strength?",
+                firstAirDate = "2019-07-08",
+                numberOfEpisodes = 12,
+                posterPath = "/cmMh8awgtRvLUKmYvIXtVCYINIv.jpg"
             )
         )
+
+        // 16
         tvShows.add(
             TVShow(
-                16,
-                "Supergirl",
-                "Twenty-four-year-old Kara Zor-El, who was taken in by the Danvers family when she was 13 after being sent away from Krypton, must learn to embrace her powers after previously hiding them. The Danvers teach her to be careful with her powers, until she has to reveal them during an unexpected disaster, setting her on her journey of heroism.\n\n",
-                2015,
-                58,
-                "42m",
-                "poster_supergirl"
+                id = 90670,
+                name = "Pandora",
+                voteAverage = 8.3,
+                overview = "Set in the year 2199, a young woman who has lost everything finds a new life at Earth's Space Training Academy where she learns to defend the galaxy from intergalactic threats.",
+                firstAirDate = "2019-07-16",
+                numberOfEpisodes = 4,
+                posterPath = "/tPsvhL45f1AjES5rycFIxnbaH8v.jpg"
             )
         )
+
+        // 17
         tvShows.add(
             TVShow(
-                17,
-                "American Super Natural",
-                "Small town Americana has been haunted for hundreds of years by monsters that weather created and folklore fostered.",
-                2014,
-                80,
-                "40m",
-                "poster_supernatural"
+                id = 60708,
+                name = "Gotham",
+                voteAverage = 6.8,
+                overview = "Before there was Batman, there was GOTHAM.\n\nEveryone knows the name Commissioner Gordon. He is one of the crime world's greatest foes, a man whose reputation is synonymous with law and order. But what is known of Gordon's story and his rise from rookie detective to Police Commissioner? What did it take to navigate the multiple layers of corruption that secretly ruled Gotham City, the spawning ground of the world's most iconic villains? And what circumstances created them – the larger-than-life personas who would become Catwoman, The Penguin, The Riddler, Two-Face and The Joker? ",
+                firstAirDate = "2014-09-22",
+                numberOfEpisodes = 100,
+                posterPath = "/4XddcRDtnNjYmLRMYpbrhFxsbuq.jpg"
             )
         )
+
+        // 18
         tvShows.add(
             TVShow(
-                18,
-                "The Simpsons",
-                "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.\n\n",
-                1989,
-                71,
-                "22m",
-                "poster_the_simpson"
+                id = 90215,
+                name = "Isekai Cheat Magician",
+                voteAverage = 6.8,
+                overview = "As regular high school students Taichi and Rin disappeared in a beam of light. When they came to, the two of them were already in a world of swords and magic. Finally getting away after experiencing an attack by monsters, following the suggestion of adventurers they headed on the path towards the guild. In the guild, the two of them found out that they possessed unbelievably powerful magic. Thus the regular high school students transformed into the strongest cheats...",
+                firstAirDate = "2019-07-10",
+                numberOfEpisodes = 12,
+                posterPath = "/bda9my9vSL78zO40hcHLzb0Ae4t.jpg"
             )
         )
+
+        // 19
         tvShows.add(
             TVShow(
-                19,
-                "The Umbrella Academy",
-                "A dysfunctional family of superheroes comes together to solve the mystery of their father's death, the threat of the apocalypse and more.",
-                2019,
-                76,
-                "60m",
-                "poster_the_umbrella"
+                id = 484,
+                name = "Murder, She Wrote",
+                voteAverage = 7.1,
+                overview = "An unassuming mystery writer turned sleuth uses her professional insight to help solve real-life homicide cases.",
+                firstAirDate = "1984-09-30",
+                numberOfEpisodes = 264,
+                posterPath = "/j6DC2Xe0SZS6xKS2d6LWL1EGwzX.jpg"
             )
         )
+
+        // 20
         tvShows.add(
             TVShow(
-                20,
-                "The Umbrella Academy",
-                "Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.",
-                2010,
-                73,
-                "42m",
-                "poster_the_walking_dead"
+                id = 456,
+                name = "The Simpsons",
+                voteAverage = 7.1,
+                overview = "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
+                firstAirDate = "1989-12-17",
+                numberOfEpisodes = 662,
+                posterPath = "/yTZQkSsxUFJZJe67IenRM0AEklc.jpg"
             )
         )
+
         return tvShows
     }
 
-    */
 }

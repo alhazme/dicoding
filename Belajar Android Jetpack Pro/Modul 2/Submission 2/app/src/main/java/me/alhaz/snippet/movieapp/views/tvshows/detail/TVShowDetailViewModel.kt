@@ -19,10 +19,11 @@ class TVShowDetailViewModel: ViewModel() {
         return tvShow
     }
 
-    fun getTVShowDetail(tvShowID: Long) {
+    fun getTVShowDetail(tvShowID: Long): MutableLiveData<TVShow>  {
         tvShowRepository?.let {
             tvShow = it.getDetailTVShow(tvShowID)
         }
+        return tvShow
     }
 
 }

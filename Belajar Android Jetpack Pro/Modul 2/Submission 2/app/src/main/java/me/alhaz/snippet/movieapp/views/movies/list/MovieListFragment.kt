@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,8 +29,7 @@ class MovieListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
-        viewModel.getMovieList()
-        viewModel.getMovies().observe(this, Observer {
+        viewModel.getMovieList().observe(this, Observer {
             movies.addAll(it)
             activity?.let {
                 showData(it)

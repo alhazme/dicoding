@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Movie (
+data class Movie(
 
     @SerializedName("adult")
     val adult: Boolean = false,
@@ -15,9 +15,6 @@ data class Movie (
 
     @SerializedName("budget")
     val budget: Long = 0,
-
-    @SerializedName("genres")
-    val genres: List<Genre>?,
 
     @SerializedName("homepage")
     val homepage: String = "",
@@ -43,12 +40,6 @@ data class Movie (
     @SerializedName("poster_path")
     val posterPath: String = "",
 
-    @SerializedName("production_companies")
-    val productionCompanies: List<ProductionCompany>? = null,
-
-    @SerializedName("production_countries")
-    val productionCountries: List<ProductionCountry>? = null,
-
     @SerializedName("release_date")
     val releaseDate: String = "",
 
@@ -57,9 +48,6 @@ data class Movie (
 
     @SerializedName("runtime")
     val runtime: Long = 0,
-
-    @SerializedName("spoken_languages")
-    val spokenLanguages: List<SpokenLanguage>? = null,
 
     @SerializedName("status")
     val status: String = "",

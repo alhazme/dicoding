@@ -45,8 +45,7 @@ class TVShowDetailActivity : AppCompatActivity() {
 
     private fun setupViewModel() {
         viewModel = ViewModelProviders.of(this).get(TVShowDetailViewModel::class.java)
-        viewModel.getTVShowDetail(tvShowID)
-        viewModel.getTVShow().observe(this, Observer {
+        viewModel.getTVShowDetail(tvShowID).observe(this, Observer {
             showDetailData(it)
             ly_loading.setVisibility(View.GONE)
             ly_content.setVisibility(View.VISIBLE)

@@ -36,7 +36,6 @@ class MovieRemoteRepository {
                             }
                         }
                     }
-                    Log.d("1234567890", movieResponses.toString())
                     movies.postValue(movieResponses)
                 }
             }

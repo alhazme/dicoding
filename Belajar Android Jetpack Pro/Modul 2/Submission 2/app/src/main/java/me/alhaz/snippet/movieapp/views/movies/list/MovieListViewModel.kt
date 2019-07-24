@@ -21,10 +21,11 @@ class MovieListViewModel: ViewModel() {
     }
 
 
-    fun getMovieList() {
+    fun getMovieList(): MutableLiveData<ArrayList<Movie>> {
         movieRepository?.let {
             movies = it.getListMovie()
         }
+        return movies
     }
 
 }

@@ -1,5 +1,10 @@
 package me.alhaz.snippet.movieapp.views.movies.detail
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import me.alhaz.snippet.movieapp.data.DataDummy
+import me.alhaz.snippet.movieapp.repositories.movies.MovieRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import org.junit.Test
 
@@ -7,41 +12,36 @@ import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.rules.ExpectedException
+import org.mockito.Mockito
 
 class MovieDetailViewModelTest {
 
     private lateinit var movieDetailViewModel: MovieDetailViewModel
-    private lateinit var dummyMovie: Movie
+    private var movieRepository: MovieRepository = Mockito.mock(MovieRepository::class.java)
+    private var dummyMovie: Movie = DataDummy.generateListMovie().get(0)
+    private var movieID: Long = dummyMovie.id
 
     @Rule
     @JvmField
-    var thrown = ExpectedException.none()
+    var instantTaskExecutorRule = InstantTaskExecutorRule()
 
     @Before
     fun init() {
         movieDetailViewModel = MovieDetailViewModel()
-        dummyMovie = Movie(8,
-            "How to Train Your Dragon: The Hidden World",
-            "As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind.",
-            2019,
-            76,
-            "1h 44m",
-            "poster_how_to_train"
-        )
+        movieDetailViewModel.movieRepository = movieRepository
     }
 
     @Test
     fun getMovieDetail() {
-        val movie = movieDetailViewModel.getMovieDetail(dummyMovie.id)
-        assertNotNull(movie)
-        movie?.let {
-            assertEquals(dummyMovie.id, it.id)
-            assertEquals(dummyMovie.title, it.title)
-            assertEquals(dummyMovie.overview, it.overview)
-            assertEquals(dummyMovie.year, it.year)
-            assertEquals(dummyMovie.score, it.score)
-            assertEquals(dummyMovie.runtime, it.runtime)
-            assertEquals(dummyMovie.photo, it.photo)
-        }
+
+        var movie = MutableLiveData<Movie>()
+        movie.value = dummyMovie
+
+        Mockito.`when`(movieRepository.getDetailMovie(movieID)).thenReturn(movie)
+
+        val observer = Mockito.mock(Observer::class.java) as Observer<Movie>
+        movieDetailViewModel?.getMovieDetail(movieID).observeForever(observer)
+
+        Mockito.verify(movieRepository).getDetailMovie(movieID)
     }
 }

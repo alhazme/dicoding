@@ -4,7 +4,6 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import me.alhaz.snippet.movieapp.BuildConfig
 import me.alhaz.snippet.movieapp.helper.RetrofitConfig
-import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.remote.response.TVShowPopularResponse
 import retrofit2.Call
@@ -20,7 +19,6 @@ class TVShowRemoteRepository {
         RetrofitConfig().getTVShowService().getListTVShow(BuildConfig.API_KEY).enqueue(object: Callback<TVShowPopularResponse> {
 
             override fun onResponse(call: Call<TVShowPopularResponse>, response: Response<TVShowPopularResponse>) {
-                Log.d("1234567890", response.toString())
                 if (response.isSuccessful) {
                     val tvShowResponses = ArrayList<TVShow>()
                     val responseData = response.body()
@@ -35,7 +33,6 @@ class TVShowRemoteRepository {
                             }
                         }
                     }
-                    Log.d("1234567890", tvShowResponses.toString())
                     tvShows.postValue(tvShowResponses)
                 }
             }

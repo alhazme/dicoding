@@ -19,10 +19,11 @@ class MovieDetailViewModel: ViewModel() {
         return movie
     }
 
-    fun getMovieDetail(movieID: Long) {
+    fun getMovieDetail(movieID: Long): MutableLiveData<Movie> {
         movieRepository?.let {
             movie = it.getDetailMovie(movieID)
         }
+        return movie
     }
 
 }

@@ -15,7 +15,7 @@ import org.junit.Test
 
 class MovieDetailActivityTest {
 
-    var dummyMovie: Movie = DataDummy.listMovies().get(7)
+    var dummyMovie: Movie = DataDummy.generateListMovie().get(0)
 
     @Rule
     @JvmField var activityRule: ActivityTestRule<MovieDetailActivity> =
@@ -30,13 +30,16 @@ class MovieDetailActivityTest {
 
     @Test
     fun loadMovieDetail() {
+        try {
+            Thread.sleep(3000)
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
         onView(withId(R.id.tv_title)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_title)).check(matches(withText(dummyMovie.title)))
         onView(withId(R.id.tv_year)).check(matches(isDisplayed()))
-        onView(withId(R.id.tv_year)).check(matches(withText(dummyMovie.year.toString())))
-        onView(withId(R.id.tv_rating)).check(matches(isDisplayed()))
-        onView(withId(R.id.tv_rating)).check(matches(withText(dummyMovie.score.toString())))
-        onView(withId(R.id.tv_runtime)).check(matches(isDisplayed()))
-        onView(withId(R.id.tv_runtime)).check(matches(withText(dummyMovie.runtime)))
+        onView(withId(R.id.tv_year)).check(matches(withText(dummyMovie.releaseDate.split("-").get(0))))
+        onView(withId(R.id.tv_description)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_description)).check(matches(withText(dummyMovie.overview)))
     }
 }

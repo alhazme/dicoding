@@ -12,14 +12,8 @@ data class TVShow (
     @SerializedName("backdrop_path")
     val backdropPath: String = "",
 
-    @SerializedName("episode_run_time")
-    val episodeRunTime: List<Long>?,
-
     @SerializedName("first_air_date")
     val firstAirDate: String = "",
-
-    @SerializedName("genres")
-    val genres: List<Genre>,
 
     @SerializedName("homepage")
     val homepage: String = "",
@@ -28,31 +22,19 @@ data class TVShow (
     val id: Long = 0,
 
     @SerializedName("in_production")
-    val inProduction: Boolean,
-
-    @SerializedName("languages")
-    val languages: List<String>? = null,
+    val inProduction: Boolean = false,
 
     @SerializedName("last_air_date")
-    val lastAirDate: String,
-
-    @SerializedName("last_episode_to_air")
-    val lastEpisodeToAir: LastEpisodeToAir?,
+    val lastAirDate: String = "",
 
     @SerializedName("name")
-    val name: String,
-
-    @SerializedName("networks")
-    val networks: List<Network>?,
+    val name: String = "",
 
     @SerializedName("number_of_episodes")
     val numberOfEpisodes: Long = 0,
 
     @SerializedName("number_of_seasons")
     val numberOfSeasons: Long = 0,
-
-    @SerializedName("origin_country")
-    val originCountry: List<String>,
 
     @SerializedName("original_language")
     val originalLanguage: String = "",
@@ -67,13 +49,7 @@ data class TVShow (
     val popularity: Double = 0.0,
 
     @SerializedName("poster_path")
-    val posterPath: String,
-
-    @SerializedName("production_companies")
-    val productionCompanies: List<ProductionCountry>,
-
-    @SerializedName("seasons")
-    val seasons: List<Season>,
+    val posterPath: String = "",
 
     @SerializedName("status")
     val status: String = "",

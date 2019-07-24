@@ -1,28 +1,42 @@
 package me.alhaz.snippet.movieapp.views.tvshows.list
 
-import junit.framework.Assert
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import me.alhaz.snippet.movieapp.data.DataDummy
+import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
+import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import org.junit.Test
 import org.junit.Before
 import org.junit.Rule
-import org.junit.rules.ExpectedException
+import org.mockito.Mockito
 
 class TVShowListViewModelTest {
 
-    private lateinit var tvShowListViewModel: TVShowListViewModel
-
     @Rule
     @JvmField
-    var thrown = ExpectedException.none()
+    var instantTaskExecutorRule = InstantTaskExecutorRule()
+
+    private var tvShowListViewModel: TVShowListViewModel? = null
+    private var tvShowRepository: TVShowRepository = Mockito.mock(TVShowRepository::class.java)
 
     @Before
     fun init() {
         tvShowListViewModel = TVShowListViewModel()
+        tvShowListViewModel?.tvShowRepository = tvShowRepository
     }
 
     @Test
     fun getTVShowList() {
-        tvShowListViewModel.getTVShowList()
-        Assert.assertNotNull(tvShowListViewModel)
-        Assert.assertEquals(20, tvShowListViewModel.tvShows.size)
+
+        var dummyTVShows = MutableLiveData<ArrayList<TVShow>>()
+        dummyTVShows.value = DataDummy.generateTVShows()
+
+        Mockito.`when`(tvShowRepository.getListTVShow()).thenReturn(dummyTVShows)
+
+        val observer = Mockito.mock(Observer::class.java) as Observer<ArrayList<TVShow>>
+        tvShowListViewModel?.getTVShowList()?.observeForever(observer)
+
+        Mockito.verify(tvShowRepository).getListTVShow()
     }
 }
