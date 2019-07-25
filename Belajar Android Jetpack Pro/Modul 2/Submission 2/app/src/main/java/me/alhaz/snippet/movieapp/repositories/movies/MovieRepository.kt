@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import me.alhaz.snippet.movieapp.repositories.movies.local.MovieLocalRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.remote.MovieRemoteRepository
 import me.alhaz.snippet.movieapp.repositories.movies.remote.response.MoviePopularResponse
@@ -24,13 +25,28 @@ class MovieRepository: MovieDataSource {
 
     }
 
+    var movieRemoteRepository: MovieRemoteRepository? = null
+    var movieLocalRepository: MovieLocalRepository? = null
+
+    private var movies = MutableLiveData<ArrayList<Movie>>()
+    private var movie = MutableLiveData<Movie>()
+
+    init {
+        movieRemoteRepository = MovieRemoteRepository()
+        movieLocalRepository = MovieLocalRepository()
+    }
+
     override fun getListMovie(): MutableLiveData<ArrayList<Movie>> {
-        val movies = MovieRemoteRepository().getListMovie()
+        movieRemoteRepository?.let {
+            movies = it.getListMovie()
+        }
         return movies
     }
 
     override fun getDetailMovie(movieID: Long): MutableLiveData<Movie> {
-        val movie = MovieRemoteRepository().getDetailMovie(movieID)
+        movieRemoteRepository?.let {
+            movie = it.getDetailMovie(movieID)
+        }
         return movie
     }
 
