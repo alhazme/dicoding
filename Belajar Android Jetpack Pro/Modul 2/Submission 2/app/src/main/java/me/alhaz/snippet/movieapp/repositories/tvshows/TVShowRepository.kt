@@ -2,6 +2,7 @@ package me.alhaz.snippet.movieapp.repositories.tvshows
 
 import androidx.lifecycle.MutableLiveData
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
+import me.alhaz.snippet.movieapp.repositories.tvshows.local.TVShowLocalRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.remote.TVShowRemoteRepository
 
@@ -19,13 +20,29 @@ class TVShowRepository: TVShowDataSource {
         }
 
     }
+
+    var tvShowRemoteRepository: TVShowRemoteRepository? = null
+    var tvShowLocalRepository: TVShowLocalRepository? = null
+
+    private var tvShows = MutableLiveData<ArrayList<TVShow>>()
+    private var tvShow = MutableLiveData<TVShow>()
+
+    init {
+        tvShowRemoteRepository = TVShowRemoteRepository()
+        tvShowLocalRepository = TVShowLocalRepository()
+    }
+
     override fun getListTVShow(): MutableLiveData<ArrayList<TVShow>> {
-        val tvShows = TVShowRemoteRepository().getListTVShow()
+        tvShowRemoteRepository?.let {
+            tvShows = it.getListTVShow()
+        }
         return tvShows
     }
 
     override fun getDetailTVShow(tvShowID: Long): MutableLiveData<TVShow> {
-        val tvShow = TVShowRemoteRepository().getDetailTVShow(tvShowID)
+        tvShowRemoteRepository?.let {
+            tvShow = it.getDetailTVShow(tvShowID)
+        }
         return tvShow
     }
 
