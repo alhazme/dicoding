@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import me.alhaz.snippet.movieapp.R
+import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailActivity
 
@@ -29,10 +30,14 @@ class MovieListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
+        EspressoIdlingResource.increment()
         viewModel.getMovieList().observe(this, Observer {
             movies.addAll(it)
             activity?.let {
                 showData(it)
+                if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow) {
+                    EspressoIdlingResource.decrement()
+                }
             }
         })
     }

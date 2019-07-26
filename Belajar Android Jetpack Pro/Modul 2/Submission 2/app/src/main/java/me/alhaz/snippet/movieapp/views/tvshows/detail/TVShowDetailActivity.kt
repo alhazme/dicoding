@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_tvshow_detail.tv_runtime
 import kotlinx.android.synthetic.main.activity_tvshow_detail.tv_title
 import kotlinx.android.synthetic.main.activity_tvshow_detail.tv_year
 import me.alhaz.snippet.movieapp.R
+import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 
 class TVShowDetailActivity : AppCompatActivity() {
@@ -45,10 +46,14 @@ class TVShowDetailActivity : AppCompatActivity() {
 
     private fun setupViewModel() {
         viewModel = ViewModelProviders.of(this).get(TVShowDetailViewModel::class.java)
+        EspressoIdlingResource.increment()
         viewModel.getTVShowDetail(tvShowID).observe(this, Observer {
             showDetailData(it)
             ly_loading.setVisibility(View.GONE)
             ly_content.setVisibility(View.VISIBLE)
+            if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow) {
+                EspressoIdlingResource.decrement()
+            }
         })
     }
 
