@@ -11,12 +11,12 @@ import retrofit2.http.Query
 
 interface TVShowAPIService {
 
-    @GET("tv/popular")
+    @GET("tvshow/popular.json")
     fun getListTVShow(
         @Query("api_key") api_key: String
     ): Call<TVShowPopularResponse>
 
-    @GET("tv/{tv_id}")
+    @GET("tvshow/{tv_id}.json")
     fun getDetailTVShow(
         @Path("tv_id") tv_id: Long,
         @Query("api_key") api_key: String

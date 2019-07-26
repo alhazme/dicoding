@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.data.DataDummy
+import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailActivity
 
@@ -31,10 +32,14 @@ class TVShowListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(TVShowListViewModel::class.java)
+        EspressoIdlingResource.increment()
         viewModel.getTVShowList().observe(this, Observer {
             tvShows.addAll(it)
             activity?.let {
                 showData(it)
+                if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow) {
+                    EspressoIdlingResource.decrement()
+                }
             }
         })
     }

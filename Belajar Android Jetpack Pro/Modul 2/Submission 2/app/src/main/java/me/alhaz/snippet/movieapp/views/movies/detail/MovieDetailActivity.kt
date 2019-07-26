@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import me.alhaz.snippet.movieapp.R
+import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 
 class MovieDetailActivity : AppCompatActivity() {
@@ -38,10 +39,15 @@ class MovieDetailActivity : AppCompatActivity() {
 
     private fun setupViewModel() {
         viewModel = ViewModelProviders.of(this).get(MovieDetailViewModel::class.java)
+        EspressoIdlingResource.increment()
         viewModel.getMovieDetail(movieID).observe(this, Observer {
             showDetailData(it)
             ly_loading.setVisibility(View.GONE)
             ly_content.setVisibility(View.VISIBLE)
+
+            if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow) {
+                EspressoIdlingResource.decrement()
+            }
         })
     }
 
