@@ -1,28 +1,28 @@
 package me.alhaz.snippet.movieapp.views.tvshows.list
 
+import android.app.Application
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.data.DataDummy
 import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
+import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 
-class TVShowListViewModel: ViewModel() {
+class TVShowListViewModel(application: Application): ViewModel() {
 
-    var tvShowRepository: TVShowRepository? = null
-    private var tvShows = MutableLiveData<ArrayList<TVShow>>()
+    private var tvShowRepository: TVShowRepository
 
     init {
-        tvShowRepository = TVShowRepository()
+        tvShowRepository = TVShowRepository(application)
     }
 
-    fun getTVShows(): MutableLiveData<ArrayList<TVShow>> {
-        return tvShows
+    fun getListTVShowFromServer() {
+        tvShowRepository.getListTVShowFromServer()
     }
 
-    fun getTVShowList(): MutableLiveData<ArrayList<TVShow>> {
-        tvShowRepository?.let {
-            tvShows = it.getListTVShow()
-        }
-        return tvShows
+    fun getTVShowList(): LiveData<PagedList<TVShowEntity>> {
+        return tvShowRepository.getListTVShow()
     }
 }

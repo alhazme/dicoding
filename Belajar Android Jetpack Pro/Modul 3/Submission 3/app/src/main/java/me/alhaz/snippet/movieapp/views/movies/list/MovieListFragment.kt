@@ -2,7 +2,9 @@ package me.alhaz.snippet.movieapp.views.movies.list
 
 import android.content.Context
 import android.content.Intent
+import android.mtp.MtpObjectInfo
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,11 @@ import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailActivity
+import me.alhaz.snippet.movieapp.helper.ViewModelFactory
+import androidx.fragment.app.FragmentActivity
+import androidx.paging.PagedList
+import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
+
 
 class MovieListFragment : Fragment() {
 
@@ -25,21 +32,8 @@ class MovieListFragment : Fragment() {
     private lateinit var movieListAdapter: MovieListAdapter
     private lateinit var viewModel: MovieListViewModel
 
-    private val movies = ArrayList<Movie>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
-        EspressoIdlingResource.increment()
-        viewModel.getMovieList().observe(this, Observer {
-            movies.addAll(it)
-            activity?.let {
-                showData(it)
-                if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow) {
-                    EspressoIdlingResource.decrement()
-                }
-            }
-        })
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -55,8 +49,25 @@ class MovieListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.let {
-            showData(it)
+            setupViewModel(it)
+            setupAdapter(it)
+            viewModel.getListMovieFromServer()
         }
+    }
+
+    private fun obtainViewModel(activity: FragmentActivity): MovieListViewModel {
+        val factory = ViewModelFactory.getInstance(activity.application)
+        return ViewModelProviders.of(activity, factory).get(MovieListViewModel::class.java)
+    }
+
+    private fun setupViewModel(activity: FragmentActivity) {
+        viewModel = obtainViewModel(activity)
+        EspressoIdlingResource.increment()
+        viewModel.getMovieList().observe(this, Observer {
+            showData(it)
+            movieListAdapter.submitList(null)
+            movieListAdapter.submitList(it)
+        })
     }
 
     private fun setupLayout(view: View) {
@@ -66,11 +77,14 @@ class MovieListFragment : Fragment() {
         rvMovies.layoutManager = LinearLayoutManager(activity)
     }
 
-    private fun showData(context: Context) {
-        movieListAdapter = MovieListAdapter(context, movies, clickListener = {
-            openDetailMoviePage(it.id)
+    private fun setupAdapter(context: Context) {
+        movieListAdapter = MovieListAdapter(context, clickListener = { movie ->
+            openDetailMoviePage(movie.id)
         })
         rvMovies.adapter = movieListAdapter
+    }
+
+    private fun showData(movies: PagedList<MovieEntity>) {
         if (movies.size > 0) {
             progressBar.visibility = View.GONE
             rvMovies.visibility = View.VISIBLE
@@ -82,6 +96,7 @@ class MovieListFragment : Fragment() {
     }
 
     private fun openDetailMoviePage(movieID: Long) {
+        Log.d("1234567890", "selected movie ID: ${movieID}")
         activity?.let {
             val intent = Intent(it, MovieDetailActivity::class.java)
             intent.putExtra("movie_id", movieID)

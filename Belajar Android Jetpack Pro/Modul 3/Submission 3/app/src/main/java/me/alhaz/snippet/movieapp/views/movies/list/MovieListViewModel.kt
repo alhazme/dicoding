@@ -1,31 +1,28 @@
 package me.alhaz.snippet.movieapp.views.movies.list
 
-import android.util.Log
+import android.app.Application
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import me.alhaz.snippet.movieapp.data.DataDummy
+import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.repositories.movies.MovieRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
+import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
-class MovieListViewModel: ViewModel() {
+class MovieListViewModel(application: Application): ViewModel() {
 
-    var movieRepository: MovieRepository? = null
-    private var movies = MutableLiveData<ArrayList<Movie>>()
+    private var movieRepository: MovieRepository
 
     init {
-        movieRepository = MovieRepository()
+        movieRepository = MovieRepository(application)
     }
 
-    fun getMovies(): MutableLiveData<ArrayList<Movie>> {
-        return movies
+    fun getListMovieFromServer() {
+        movieRepository.getListMovieFromServer()
     }
 
-
-    fun getMovieList(): MutableLiveData<ArrayList<Movie>> {
-        movieRepository?.let {
-            movies = it.getListMovie()
-        }
-        return movies
+    fun getMovieList(): LiveData<PagedList<MovieEntity>> {
+        return movieRepository.getListMovie()
     }
 
 }

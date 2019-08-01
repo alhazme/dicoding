@@ -15,37 +15,9 @@ import retrofit2.await
 
 class MovieRemoteRepository {
 
-    fun getListMovie(): MutableLiveData<ArrayList<Movie>> {
+    fun getListMovie(callback: Callback<MoviePopularResponse>) {
 
-        val movies = MutableLiveData<ArrayList<Movie>>()
-
-        RetrofitConfig().getMovieService().getListMovie(BuildConfig.API_KEY).enqueue(object: Callback<MoviePopularResponse> {
-
-            override fun onResponse(call: Call<MoviePopularResponse>, response: Response<MoviePopularResponse>) {
-                if (response.isSuccessful) {
-                    val movieResponses = ArrayList<Movie>()
-                    val responseData = response.body()
-                    responseData?.let {
-                        val moviePopularResponse: MoviePopularResponse = it
-                        moviePopularResponse.results?.let {
-                            val data: List<Movie> = it
-                            if (data.isNotEmpty()) {
-                                data.forEach {
-                                    movieResponses.add(it)
-                                }
-                            }
-                        }
-                    }
-                    movies.postValue(movieResponses)
-                }
-            }
-
-            override fun onFailure(call: Call<MoviePopularResponse>, t: Throwable) {
-
-            }
-        })
-
-        return movies
+        RetrofitConfig().getMovieService().getListMovie(BuildConfig.API_KEY).enqueue(callback)
     }
 
     fun getDetailMovie(movieID: Long): MutableLiveData<Movie> {

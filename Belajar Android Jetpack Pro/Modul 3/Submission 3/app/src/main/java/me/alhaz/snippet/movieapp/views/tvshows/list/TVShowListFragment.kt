@@ -9,15 +9,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.data.DataDummy
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
+import me.alhaz.snippet.movieapp.helper.ViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
+import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailActivity
 
 class TVShowListFragment : Fragment() {
@@ -27,21 +31,8 @@ class TVShowListFragment : Fragment() {
     private lateinit var tvShowListAdapter: TVShowListAdapter
     private lateinit var viewModel: TVShowListViewModel
 
-    private val tvShows = ArrayList<TVShow>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(TVShowListViewModel::class.java)
-        EspressoIdlingResource.increment()
-        viewModel.getTVShowList().observe(this, Observer {
-            tvShows.addAll(it)
-            activity?.let {
-                showData(it)
-                if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow) {
-                    EspressoIdlingResource.decrement()
-                }
-            }
-        })
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -57,8 +48,25 @@ class TVShowListFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.let {
-            showData(it)
+            setupViewModel(it)
+            setupAdapter(it)
+            viewModel.getListTVShowFromServer()
         }
+    }
+
+    private fun obtainViewModel(activity: FragmentActivity): TVShowListViewModel {
+        val factory = ViewModelFactory.getInstance(activity.application)
+        return ViewModelProviders.of(activity, factory).get(TVShowListViewModel::class.java)
+    }
+
+    private fun setupViewModel(activity: FragmentActivity) {
+        viewModel = obtainViewModel(activity)
+        EspressoIdlingResource.increment()
+        viewModel.getTVShowList().observe(this, Observer {
+            showData(it)
+            tvShowListAdapter.submitList(null)
+            tvShowListAdapter.submitList(it)
+        })
     }
 
     private fun setupLayout(view: View) {
@@ -68,12 +76,15 @@ class TVShowListFragment : Fragment() {
         rvTVShows.layoutManager = LinearLayoutManager(activity)
     }
 
-    private fun showData(context: Context) {
-        tvShowListAdapter = TVShowListAdapter(context, tvShows, clickListener = {
-            openDetailTVShowPage(it.id)
+    private fun setupAdapter(context: Context) {
+        tvShowListAdapter = TVShowListAdapter(context, clickListener = { tvShow ->
+            openDetailTVShowPage(tvShow.id)
         })
         rvTVShows.adapter = tvShowListAdapter
-        if (tvShows.size > 0) {
+    }
+
+    private fun showData(movies: PagedList<TVShowEntity>) {
+        if (movies.size > 0) {
             progressBar.visibility = View.GONE
             rvTVShows.visibility = View.VISIBLE
         }
