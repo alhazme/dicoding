@@ -1,4 +1,4 @@
-package me.alhaz.snippet.movieapp.views.tvshows.list
+package me.alhaz.snippet.movieapp.views.tvshows.favorite
 
 import android.content.Context
 import android.content.Intent
@@ -15,21 +15,17 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import me.alhaz.snippet.movieapp.R
-import me.alhaz.snippet.movieapp.data.DataDummy
-import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.helper.ViewModelFactory
-import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailActivity
 
-class TVShowListFragment : Fragment() {
+class TVShowFavoriteFragment : Fragment() {
 
     private lateinit var progressBar: ProgressBar
     private lateinit var rvTVShows: RecyclerView
-    private lateinit var tvShowListAdapter: TVShowListAdapter
-    private lateinit var viewModel: TVShowListViewModel
+    private lateinit var tvShowFavoriteAdapter: TVShowFavoriteAdapter
+    private lateinit var viewModel: TVShowFavoriteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +33,7 @@ class TVShowListFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tvshow_list, container, false)
+        return inflater.inflate(R.layout.fragment_tvshow_favorite, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -53,17 +49,17 @@ class TVShowListFragment : Fragment() {
         }
     }
 
-    private fun obtainViewModel(activity: FragmentActivity): TVShowListViewModel {
+    private fun obtainViewModel(activity: FragmentActivity): TVShowFavoriteViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
-        return ViewModelProviders.of(activity, factory).get(TVShowListViewModel::class.java)
+        return ViewModelProviders.of(activity, factory).get(TVShowFavoriteViewModel::class.java)
     }
 
     private fun setupViewModel(activity: FragmentActivity) {
         viewModel = obtainViewModel(activity)
-        viewModel.getTVShowList().observe(this, Observer {
+        viewModel.getTVShowFavorite().observe(this, Observer {
+            tvShowFavoriteAdapter.submitList(null)
+            tvShowFavoriteAdapter.submitList(it)
             showData(it)
-            tvShowListAdapter.submitList(null)
-            tvShowListAdapter.submitList(it)
         })
     }
 
@@ -75,14 +71,15 @@ class TVShowListFragment : Fragment() {
     }
 
     private fun setupAdapter(context: Context) {
-        tvShowListAdapter = TVShowListAdapter(context, clickListener = { tvShow ->
+        tvShowFavoriteAdapter = TVShowFavoriteAdapter(context, clickListener = { tvShow ->
             openDetailTVShowPage(tvShow.id)
         })
-        rvTVShows.adapter = tvShowListAdapter
+        rvTVShows.adapter = tvShowFavoriteAdapter
     }
 
-    private fun showData(movies: PagedList<TVShowEntity>) {
-        if (movies.size > 0) {
+    private fun showData(tvShows: PagedList<TVShowEntity>) {
+        Log.d("1234567890", "showData tvShows.size: ${tvShows.size}")
+        if (tvShows.size > 0) {
             progressBar.visibility = View.GONE
             rvTVShows.visibility = View.VISIBLE
         }

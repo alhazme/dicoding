@@ -15,9 +15,7 @@ import kotlinx.android.synthetic.main.activity_movie_detail.*
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.helper.ViewModelFactory
-import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
-import me.alhaz.snippet.movieapp.views.movies.list.MovieListViewModel
 
 class MovieDetailActivity : AppCompatActivity() {
 
@@ -80,6 +78,7 @@ class MovieDetailActivity : AppCompatActivity() {
 
     private fun setMenuIsMovieFavorite(movie: MovieEntity) {
         menuItem?.let { menuItem ->
+            Log.d("1234567890", "isFavorite ${movie.favorite}")
             if (movie.favorite == 1) {
                 menuItem.get(0).setIcon(R.drawable.ic_favorite)
             }

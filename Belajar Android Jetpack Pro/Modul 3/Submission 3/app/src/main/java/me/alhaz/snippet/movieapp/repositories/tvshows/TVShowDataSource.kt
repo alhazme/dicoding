@@ -15,6 +15,8 @@ interface TVShowDataSource {
 
     fun getDetailTVShow(tvShowID: Long): TVShowEntity
 
+    fun getFavoriteTVShow(): LiveData<PagedList<TVShowEntity>>
+
     fun setFavorite(movieID: Long)
 
     fun setUnfavorite(movieID: Long)

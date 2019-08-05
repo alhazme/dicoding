@@ -4,8 +4,10 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailViewModel
+import me.alhaz.snippet.movieapp.views.movies.favorite.MovieFavoriteViewModel
 import me.alhaz.snippet.movieapp.views.movies.list.MovieListViewModel
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailViewModel
+import me.alhaz.snippet.movieapp.views.tvshows.favorite.TVShowFavoriteViewModel
 import me.alhaz.snippet.movieapp.views.tvshows.list.TVShowListViewModel
 
 class ViewModelFactory private constructor(private val application: Application) : ViewModelProvider.NewInstanceFactory() {
@@ -34,11 +36,17 @@ class ViewModelFactory private constructor(private val application: Application)
         else if (modelClass.isAssignableFrom(MovieDetailViewModel::class.java)) {
             return MovieDetailViewModel(application) as T
         }
+        else if (modelClass.isAssignableFrom(MovieFavoriteViewModel::class.java)) {
+            return MovieFavoriteViewModel(application) as T
+        }
         else if (modelClass.isAssignableFrom(TVShowListViewModel::class.java)) {
             return TVShowListViewModel(application) as T
         }
         else if (modelClass.isAssignableFrom(TVShowDetailViewModel::class.java)) {
             return TVShowDetailViewModel(application) as T
+        }
+        else if (modelClass.isAssignableFrom(TVShowFavoriteViewModel::class.java)) {
+            return TVShowFavoriteViewModel(application) as T
         }
 
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

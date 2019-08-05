@@ -29,6 +29,10 @@ interface TVShowEntityDAO {
     @Query("DELETE FROM tvshow")
     fun deleteAll()
 
+    // 6. Select All
+    @Query("SELECT * FROM tvshow WHERE favorite = '1' ORDER BY id ASC")
+    fun getTVShowFavorite(): DataSource.Factory<Int, TVShowEntity>
+
     // 7. Set Favorite
     @Query("UPDATE tvshow SET favorite = '1' WHERE id = :id")
     fun setFavorite(id: Long)

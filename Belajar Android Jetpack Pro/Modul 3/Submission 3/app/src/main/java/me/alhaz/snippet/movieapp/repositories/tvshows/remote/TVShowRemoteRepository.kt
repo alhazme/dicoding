@@ -1,6 +1,7 @@
 package me.alhaz.snippet.movieapp.repositories.tvshows.remote
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import me.alhaz.snippet.movieapp.BuildConfig
 import me.alhaz.snippet.movieapp.helper.RetrofitConfig
@@ -13,44 +14,32 @@ import retrofit2.Response
 
 class TVShowRemoteRepository {
 
-    fun getListTVShow(callback: Callback<TVShowPopularResponse>) {
-
-        RetrofitConfig().getTVShowService().getListTVShow(BuildConfig.API_KEY).enqueue(callback)
-
-    }
-
-//    fun getListTVShow(): MutableLiveData<ArrayList<TVShow>> {
-//
-//        val tvShows = MutableLiveData<ArrayList<TVShow>>()
-//
-//        RetrofitConfig().getTVShowService().getListTVShow(BuildConfig.API_KEY).enqueue(object: Callback<TVShowPopularResponse> {
-//
-//            override fun onResponse(call: Call<TVShowPopularResponse>, response: Response<TVShowPopularResponse>) {
-//                if (response.isSuccessful) {
-//                    val tvShowResponses = ArrayList<TVShow>()
-//                    val responseData = response.body()
-//                    responseData?.let {
-//                        val tvShowPopularResponse: TVShowPopularResponse = it
-//                        tvShowPopularResponse.results?.let {
-//                            val data: List<TVShow> = it
-//                            if (data.isNotEmpty()) {
-//                                data.forEach {
-//                                    tvShowResponses.add(it)
-//                                }
-//                            }
-//                        }
-//                    }
-//                    tvShows.postValue(tvShowResponses)
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<TVShowPopularResponse>, t: Throwable) {
-//
-//            }
-//        })
-//
-//        return tvShows
+//    fun getListTVShow(callback: Callback<TVShowPopularResponse>) {
+//        RetrofitConfig().getTVShowService().getListTVShow(BuildConfig.API_KEY).enqueue(callback)
 //    }
+
+    fun getListTVShow(): LiveData<ArrayList<TVShow>> {
+        val tvShowsLiveData = MutableLiveData<ArrayList<TVShow>>()
+        val tvShows = ArrayList<TVShow>()
+        RetrofitConfig().getTVShowService().getListTVShow(BuildConfig.API_KEY).enqueue(object: Callback<TVShowPopularResponse> {
+            override fun onResponse(call: Call<TVShowPopularResponse>, response: Response<TVShowPopularResponse>) {
+                if (response.isSuccessful) {
+                    val responseData = response.body()
+                    responseData?.let { tvShowPopularResponse ->
+                        tvShowPopularResponse.results?.let { tvShowsResult ->
+                            tvShows.addAll(tvShowsResult)
+                            tvShowsLiveData.value = tvShows
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<TVShowPopularResponse>, t: Throwable) {
+
+            }
+        })
+        return tvShowsLiveData
+    }
 
     fun getDetailTVShow(tvShowID: Long): MutableLiveData<TVShow> {
 
@@ -68,7 +57,7 @@ class TVShowRemoteRepository {
             }
 
             override fun onFailure(call: Call<TVShow>, t: Throwable) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
         })
 

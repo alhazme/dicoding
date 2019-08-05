@@ -1,8 +1,7 @@
-package me.alhaz.snippet.movieapp.views.movies.list
+package me.alhaz.snippet.movieapp.views.movies.favorite
 
 import android.content.Context
 import android.content.Intent
-import android.mtp.MtpObjectInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,30 +9,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import me.alhaz.snippet.movieapp.R
-import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
-import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
-import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailActivity
 import me.alhaz.snippet.movieapp.helper.ViewModelFactory
-import androidx.fragment.app.FragmentActivity
-import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
+import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailActivity
 
-class MovieListFragment : Fragment() {
+class MovieFavoriteFragment : Fragment() {
 
     private lateinit var progressBar: ProgressBar
     private lateinit var rvMovies: RecyclerView
-    private lateinit var movieListAdapter: MovieListAdapter
-    private lateinit var viewModel: MovieListViewModel
+    private lateinit var movieFavoriteAdapter: MovieFavoriteAdapter
+    private lateinit var viewModel: MovieFavoriteViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movie_list, container, false)
+        return inflater.inflate(R.layout.fragment_movie_favorite, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,17 +45,17 @@ class MovieListFragment : Fragment() {
         }
     }
 
-    private fun obtainViewModel(activity: FragmentActivity): MovieListViewModel {
+    private fun obtainViewModel(activity: FragmentActivity): MovieFavoriteViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
-        return ViewModelProviders.of(activity, factory).get(MovieListViewModel::class.java)
+        return ViewModelProviders.of(activity, factory).get(MovieFavoriteViewModel::class.java)
     }
 
     private fun setupViewModel(activity: FragmentActivity) {
         viewModel = obtainViewModel(activity)
-        viewModel.getMovieList().observe(this, Observer {
+        viewModel.getMovieFavorites().observe(this, Observer {
+            movieFavoriteAdapter.submitList(null)
+            movieFavoriteAdapter.submitList(it)
             showData(it)
-            movieListAdapter.submitList(null)
-            movieListAdapter.submitList(it)
         })
     }
 
@@ -71,13 +67,14 @@ class MovieListFragment : Fragment() {
     }
 
     private fun setupAdapter(context: Context) {
-        movieListAdapter = MovieListAdapter(context, clickListener = { movie ->
+        movieFavoriteAdapter = MovieFavoriteAdapter(context, clickListener = { movie ->
             openDetailMoviePage(movie.id)
         })
-        rvMovies.adapter = movieListAdapter
+        rvMovies.adapter = movieFavoriteAdapter
     }
 
     private fun showData(movies: PagedList<MovieEntity>) {
+        Log.d("1234567890", "showData movies.size: ${movies.size}")
         if (movies.size > 0) {
             progressBar.visibility = View.GONE
             rvMovies.visibility = View.VISIBLE

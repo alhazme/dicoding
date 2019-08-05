@@ -23,40 +23,28 @@ class TVShowRepository(application: Application): TVShowDataSource {
     init {
         tvShowRemoteRepository = TVShowRemoteRepository()
         tvShowLocalRepository = TVShowLocalRepository(application)
+        getListTVShowFromServer()
     }
 
     override fun getListTVShowFromServer() {
         tvShowRemoteRepository.let { remoteRepository ->
-            remoteRepository.getListTVShow(object: Callback<TVShowPopularResponse> {
-                override fun onResponse(call: Call<TVShowPopularResponse>, response: Response<TVShowPopularResponse>) {
-                    if (response.isSuccessful) {
-                        val responseData = response.body()
-                        responseData?.let { tvShowPopularResponse ->
-                            tvShowPopularResponse.results?.let { tvShows ->
-                                if (tvShows.isNotEmpty()) {
-                                    tvShowLocalRepository.deleteAll()
-                                    tvShows.forEach { tvShow ->
-                                        val tvShowEntity = TVShowEntity(
-                                            id = tvShow.id,
-                                            name = tvShow.name,
-                                            voteAverage = tvShow.voteAverage,
-                                            overview = tvShow.overview,
-                                            firstAirDate = tvShow.firstAirDate,
-                                            numberOfEpisodes = tvShow.numberOfEpisodes,
-                                            posterPath = tvShow.posterPath
-                                        )
-                                        tvShowLocalRepository?.insert(tvShowEntity)
-                                    }
-                                }
-                            }
-                        }
+            val listTVShow = remoteRepository.getListTVShow()
+            tvShowLocalRepository.let { localRepository ->
+                listTVShow.value?.let { tvShows ->
+                    tvShows.forEach { tvShow ->
+                        val tvShowEntity = TVShowEntity(
+                            id = tvShow.id,
+                            name = tvShow.name,
+                            voteAverage = tvShow.voteAverage,
+                            overview = tvShow.overview,
+                            firstAirDate = tvShow.firstAirDate,
+                            numberOfEpisodes = tvShow.numberOfEpisodes,
+                            posterPath = tvShow.posterPath
+                        )
+                        localRepository.insert(tvShowEntity)
                     }
                 }
-
-                override fun onFailure(call: Call<TVShowPopularResponse>, t: Throwable) {
-
-                }
-            })
+            }
         }
     }
 
@@ -66,6 +54,10 @@ class TVShowRepository(application: Application): TVShowDataSource {
 
     override fun getDetailTVShow(tvShowID: Long): TVShowEntity {
         return tvShowLocalRepository.find(tvShowID)
+    }
+
+    override fun getFavoriteTVShow(): LiveData<PagedList<TVShowEntity>> {
+        return LivePagedListBuilder(tvShowLocalRepository.getTVShowFavorite(), 10).build()
     }
 
     override fun setFavorite(tvShowID: Long) {

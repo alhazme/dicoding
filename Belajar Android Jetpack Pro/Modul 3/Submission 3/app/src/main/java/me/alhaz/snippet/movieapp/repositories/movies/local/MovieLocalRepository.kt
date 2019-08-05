@@ -36,6 +36,10 @@ class MovieLocalRepository(application: Application) {
         movieEntityDao.deleteAll()
     }
 
+    fun getMovieFavorites(): DataSource.Factory<Int, MovieEntity> {
+        return movieEntityDao.getMovieFavorites()
+    }
+
     fun setFavorite(id: Long) {
         movieEntityDao.setFavorite(id)
     }

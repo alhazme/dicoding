@@ -18,7 +18,6 @@ import retrofit2.await
 class MovieRemoteRepository {
 
 //    fun getListMovie(callback: Callback<MoviePopularResponse>) {
-//
 //        RetrofitConfig().getMovieService().getListMovie(BuildConfig.API_KEY).enqueue(callback)
 //    }
 
@@ -42,10 +41,6 @@ class MovieRemoteRepository {
 
             }
         })
-//        RetrofitConfig().getMovieService().getListMovie(BuildConfig.API_KEY).results?.let { movieResponses ->
-//            movies.addAll(movieResponses)
-//            moviesLiveData.value = movies
-//        }
         return moviesLiveData
     }
 
@@ -65,7 +60,7 @@ class MovieRemoteRepository {
             }
 
             override fun onFailure(call: Call<Movie>, t: Throwable) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
             }
         })
 

@@ -14,6 +14,8 @@ interface MovieDataSource {
 
     fun getDetailMovie(movieID: Long): MovieEntity
 
+    fun getFavoriteMovies(): LiveData<PagedList<MovieEntity>>
+
     fun setFavorite(movieID: Long)
 
     fun setUnfavorite(movieID: Long)

@@ -35,6 +35,10 @@ class TVShowLocalRepository(application: Application) {
         tvShowEntityDao.deleteAll()
     }
 
+    fun getTVShowFavorite(): DataSource.Factory<Int, TVShowEntity> {
+        return tvShowEntityDao.getTVShowFavorite()
+    }
+
     fun setFavorite(id: Long) {
         tvShowEntityDao.setFavorite(id)
     }

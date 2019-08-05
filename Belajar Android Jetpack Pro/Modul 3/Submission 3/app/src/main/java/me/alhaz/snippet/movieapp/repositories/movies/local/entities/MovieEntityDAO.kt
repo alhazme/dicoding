@@ -29,11 +29,15 @@ interface MovieEntityDAO {
     @Query("DELETE FROM movie")
     fun deleteAll()
 
-    // 6. Set Favorite
+    // 6. Select All
+    @Query("SELECT * FROM movie WHERE favorite = '1' ORDER BY id ASC")
+    fun getMovieFavorites(): DataSource.Factory<Int, MovieEntity>
+
+    // 7. Set Favorite
     @Query("UPDATE movie SET favorite = '1' WHERE id = :id")
     fun setFavorite(id: Long)
 
-    // 7 Set Unfavorite
+    // 8 Set Unfavorite
     @Query("UPDATE movie SET favorite = '0' WHERE id = :id")
     fun setUnfavorite(id: Long)
 

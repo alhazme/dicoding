@@ -57,6 +57,11 @@ class MovieRepository(application: Application): MovieDataSource {
     override fun getDetailMovie(movieID: Long): MovieEntity {
         return movieLocalRepository.find(movieID)
     }
+
+    override fun getFavoriteMovies(): LiveData<PagedList<MovieEntity>> {
+        return LivePagedListBuilder(movieLocalRepository.getMovieFavorites(), 10).build()
+    }
+
     override fun setFavorite(movieID: Long) {
         movieLocalRepository.setFavorite(movieID)
     }
