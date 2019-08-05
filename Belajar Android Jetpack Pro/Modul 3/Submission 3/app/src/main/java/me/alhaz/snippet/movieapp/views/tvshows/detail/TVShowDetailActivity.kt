@@ -69,14 +69,14 @@ class TVShowDetailActivity : AppCompatActivity() {
     }
 
     private fun setFavorite(tvShowID: Long) {
-        menuItem?.let { menuItem ->
+        menuItem?.let {
             viewModel.setTVShowFavorite(tvShowID)
             setMenuIsTVShowFavorite(tvShow)
         }
     }
 
     private fun setUnfavorite(tvShowID: Long) {
-        menuItem?.let { menuItem ->
+        menuItem?.let {
             viewModel.setTVShowUnfavorite(tvShowID)
             setMenuIsTVShowFavorite(tvShow)
         }

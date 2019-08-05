@@ -16,7 +16,7 @@ class MovieLocalRepository(application: Application) {
         movieEntityDao = db.movieDao()
     }
 
-    fun getMovieList(): DataSource.Factory<Integer, MovieEntity> {
+    fun getMovieList(): DataSource.Factory<Int, MovieEntity> {
         return movieEntityDao.getMovieList()
     }
 

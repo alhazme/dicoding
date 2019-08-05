@@ -51,8 +51,13 @@ class MovieListFragment : Fragment() {
         activity?.let {
             setupViewModel(it)
             setupAdapter(it)
-            viewModel.getListMovieFromServer()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("1234567890", "movieListFrament onResume")
+        viewModel.getMovieList()
     }
 
     private fun obtainViewModel(activity: FragmentActivity): MovieListViewModel {

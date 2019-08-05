@@ -65,14 +65,14 @@ class MovieDetailActivity : AppCompatActivity() {
     }
 
     private fun setFavorite(movieID: Long) {
-        menuItem?.let { menuItem ->
+        menuItem?.let {
             viewModel.setMovieFavorite(movieID)
             setMenuIsMovieFavorite(movie)
         }
     }
 
     private fun setUnfavorite(movieID: Long) {
-        menuItem?.let { menuItem ->
+        menuItem?.let {
             viewModel.setMovieUnfavorite(movieID)
             setMenuIsMovieFavorite(movie)
         }

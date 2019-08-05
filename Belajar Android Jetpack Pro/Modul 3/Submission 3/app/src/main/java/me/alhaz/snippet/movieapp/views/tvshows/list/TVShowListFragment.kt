@@ -54,6 +54,11 @@ class TVShowListFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        Log.d("1234567890", "tvShowListFrament onResume")
+    }
+
     private fun obtainViewModel(activity: FragmentActivity): TVShowListViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(TVShowListViewModel::class.java)

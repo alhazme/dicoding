@@ -11,7 +11,7 @@ interface TVShowEntityDAO {
 
     // 1. Select All
     @Query("SELECT * FROM tvshow ORDER BY id ASC")
-    fun getTVShowList(): DataSource.Factory<Integer, TVShowEntity>
+    fun getTVShowList(): DataSource.Factory<Int, TVShowEntity>
 
     // 2. Select by ID
     @Query("SELECT * FROM tvshow WHERE id = :id")

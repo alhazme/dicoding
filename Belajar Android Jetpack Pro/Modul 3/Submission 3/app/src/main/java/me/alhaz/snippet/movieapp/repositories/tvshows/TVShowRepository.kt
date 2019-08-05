@@ -67,6 +67,7 @@ class TVShowRepository(application: Application): TVShowDataSource {
     override fun getDetailTVShow(tvShowID: Long): TVShowEntity {
         return tvShowLocalRepository.find(tvShowID)
     }
+
     override fun setFavorite(tvShowID: Long) {
         tvShowLocalRepository.setFavorite(tvShowID)
     }

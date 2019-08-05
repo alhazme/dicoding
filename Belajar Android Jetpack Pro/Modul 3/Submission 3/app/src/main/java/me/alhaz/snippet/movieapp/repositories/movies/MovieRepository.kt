@@ -25,40 +25,28 @@ class MovieRepository(application: Application): MovieDataSource {
     init {
         movieRemoteRepository = MovieRemoteRepository()
         movieLocalRepository = MovieLocalRepository(application)
+        getListMovieFromServer()
     }
 
     override fun getListMovieFromServer() {
         movieRemoteRepository.let { remoteRepository ->
-            remoteRepository.getListMovie(object: Callback<MoviePopularResponse> {
-                override fun onResponse(call: Call<MoviePopularResponse>, response: Response<MoviePopularResponse>) {
-                    if (response.isSuccessful) {
-                        val responseData = response.body()
-                        responseData?.let { moviePopularResponse ->
-                            moviePopularResponse.results?.let { movies ->
-                                if (movies.isNotEmpty()) {
-                                    movieLocalRepository.deleteAll()
-                                    movies.forEach {movie ->
-                                        val movieEntity = MovieEntity(
-                                            id = movie.id,
-                                            title = movie.title,
-                                            voteAverage = movie.voteAverage,
-                                            overview = movie.overview,
-                                            releaseDate = movie.releaseDate,
-                                            runtime = movie.runtime,
-                                            posterPath = movie.posterPath
-                                        )
-                                        movieLocalRepository?.insert(movieEntity)
-                                    }
-                                }
-                            }
-                        }
+            val listMovie = remoteRepository.getListMovie()
+            movieLocalRepository.let { localRepository ->
+                listMovie.value?.let { movies ->
+                    movies.forEach { movie ->
+                        val movieEntity = MovieEntity(
+                            id = movie.id,
+                            title = movie.title,
+                            voteAverage = movie.voteAverage,
+                            overview = movie.overview,
+                            releaseDate = movie.releaseDate,
+                            runtime = movie.runtime,
+                            posterPath = movie.posterPath
+                        )
+                        localRepository.insert(movieEntity)
                     }
                 }
-
-                override fun onFailure(call: Call<MoviePopularResponse>, t: Throwable) {
-
-                }
-            })
+            }
         }
     }
 

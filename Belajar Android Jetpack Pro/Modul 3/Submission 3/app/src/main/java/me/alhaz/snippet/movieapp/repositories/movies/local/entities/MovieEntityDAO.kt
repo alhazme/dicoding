@@ -11,7 +11,7 @@ interface MovieEntityDAO {
 
     // 1. Select All
     @Query("SELECT * FROM movie ORDER BY id ASC")
-    fun getMovieList(): DataSource.Factory<Integer, MovieEntity>
+    fun getMovieList(): DataSource.Factory<Int, MovieEntity>
 
     // 2. Select by ID
     @Query("SELECT * FROM movie WHERE id = :id")
