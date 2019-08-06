@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -14,7 +13,7 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_movie_detail.*
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
-import me.alhaz.snippet.movieapp.helper.ViewModelFactory
+import me.alhaz.snippet.movieapp.viewmodels.MovieViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
 class MovieDetailActivity : AppCompatActivity() {
@@ -104,7 +103,7 @@ class MovieDetailActivity : AppCompatActivity() {
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): MovieDetailViewModel {
-        val factory = ViewModelFactory.getInstance(activity.application)
+        val factory = MovieViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(MovieDetailViewModel::class.java)
     }
 

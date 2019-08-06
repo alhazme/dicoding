@@ -3,6 +3,7 @@ package me.alhaz.snippet.movieapp.repositories.tvshows.local
 import android.app.Application
 import androidx.paging.DataSource
 import me.alhaz.snippet.movieapp.database.MovieAppDatabase
+import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntityDAO
 
@@ -39,12 +40,14 @@ class TVShowLocalRepository(application: Application) {
         return tvShowEntityDao.getTVShowFavorite()
     }
 
-    fun setFavorite(id: Long) {
+    fun setFavorite(id: Long) : TVShowEntity  {
         tvShowEntityDao.setFavorite(id)
+        return tvShowEntityDao.find(id)
     }
 
-    fun setUnfavorite(id: Long) {
+    fun setUnfavorite(id: Long) : TVShowEntity {
         tvShowEntityDao.setUnfavorite(id)
+        return tvShowEntityDao.find(id)
     }
 
 }

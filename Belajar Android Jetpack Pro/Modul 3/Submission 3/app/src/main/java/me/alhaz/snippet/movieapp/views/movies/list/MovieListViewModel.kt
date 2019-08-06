@@ -11,12 +11,12 @@ import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 import okhttp3.Dispatcher
 
-class MovieListViewModel(application: Application): ViewModel() {
+class MovieListViewModel(movieRepository: MovieRepository): ViewModel() {
 
-    private var movieRepository: MovieRepository
+    var movieRepository: MovieRepository
 
     init {
-        movieRepository = MovieRepository(application)
+        this.movieRepository = movieRepository
         movieRepository.getListMovieFromServer()
     }
 

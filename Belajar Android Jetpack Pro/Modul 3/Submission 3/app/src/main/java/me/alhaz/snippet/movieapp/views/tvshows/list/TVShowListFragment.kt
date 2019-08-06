@@ -3,7 +3,6 @@ package me.alhaz.snippet.movieapp.views.tvshows.list
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,10 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import me.alhaz.snippet.movieapp.R
-import me.alhaz.snippet.movieapp.data.DataDummy
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
-import me.alhaz.snippet.movieapp.helper.ViewModelFactory
-import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
+import me.alhaz.snippet.movieapp.viewmodels.TVShowViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailActivity
 
@@ -54,13 +51,17 @@ class TVShowListFragment : Fragment() {
     }
 
     private fun obtainViewModel(activity: FragmentActivity): TVShowListViewModel {
-        val factory = ViewModelFactory.getInstance(activity.application)
+        val factory = TVShowViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(TVShowListViewModel::class.java)
     }
 
     private fun setupViewModel(activity: FragmentActivity) {
         viewModel = obtainViewModel(activity)
+        EspressoIdlingResource.increment()
         viewModel.getTVShowList().observe(this, Observer {
+            if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow()) {
+                EspressoIdlingResource.decrement();
+            }
             showData(it)
             tvShowListAdapter.submitList(null)
             tvShowListAdapter.submitList(it)
@@ -69,7 +70,7 @@ class TVShowListFragment : Fragment() {
 
     private fun setupLayout(view: View) {
         progressBar = view.findViewById(R.id.progressbar)
-        rvTVShows = view.findViewById(R.id.rv_tvshows)
+        rvTVShows = view.findViewById(R.id.rv_home_tvshows)
         rvTVShows.setHasFixedSize(true)
         rvTVShows.layoutManager = LinearLayoutManager(activity)
     }

@@ -16,7 +16,7 @@ import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import me.alhaz.snippet.movieapp.R
-import me.alhaz.snippet.movieapp.helper.ViewModelFactory
+import me.alhaz.snippet.movieapp.viewmodels.TVShowViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailActivity
 
@@ -50,7 +50,7 @@ class TVShowFavoriteFragment : Fragment() {
     }
 
     private fun obtainViewModel(activity: FragmentActivity): TVShowFavoriteViewModel {
-        val factory = ViewModelFactory.getInstance(activity.application)
+        val factory = TVShowViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(TVShowFavoriteViewModel::class.java)
     }
 
@@ -65,7 +65,7 @@ class TVShowFavoriteFragment : Fragment() {
 
     private fun setupLayout(view: View) {
         progressBar = view.findViewById(R.id.progressbar)
-        rvTVShows = view.findViewById(R.id.rv_tvshows)
+        rvTVShows = view.findViewById(R.id.rv_favorite_tvshows)
         rvTVShows.setHasFixedSize(true)
         rvTVShows.layoutManager = LinearLayoutManager(activity)
     }

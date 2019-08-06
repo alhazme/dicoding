@@ -40,12 +40,14 @@ class MovieLocalRepository(application: Application) {
         return movieEntityDao.getMovieFavorites()
     }
 
-    fun setFavorite(id: Long) {
+    fun setFavorite(id: Long) : MovieEntity {
         movieEntityDao.setFavorite(id)
+        return movieEntityDao.find(id)
     }
 
-    fun setUnfavorite(id: Long) {
+    fun setUnfavorite(id: Long) : MovieEntity {
         movieEntityDao.setUnfavorite(id)
+        return movieEntityDao.find(id)
     }
 
 }

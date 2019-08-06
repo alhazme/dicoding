@@ -46,7 +46,7 @@ class MovieRemoteRepository {
 
     fun getDetailMovie(movieID: Long): MutableLiveData<Movie> {
 
-        var movie = MutableLiveData<Movie>()
+        val movie = MutableLiveData<Movie>()
 
         RetrofitConfig().getMovieService().getDetailMovie(movieID, BuildConfig.API_KEY).enqueue(object: Callback<Movie> {
 

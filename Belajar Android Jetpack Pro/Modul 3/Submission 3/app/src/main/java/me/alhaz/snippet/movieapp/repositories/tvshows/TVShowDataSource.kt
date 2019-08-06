@@ -9,7 +9,7 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntit
 
 interface TVShowDataSource {
 
-    fun getListTVShowFromServer()
+    fun getListTVShowFromServer(): MutableLiveData<ArrayList<TVShow>>
 
     fun getListTVShow(): LiveData<PagedList<TVShowEntity>>
 
@@ -17,8 +17,8 @@ interface TVShowDataSource {
 
     fun getFavoriteTVShow(): LiveData<PagedList<TVShowEntity>>
 
-    fun setFavorite(movieID: Long)
+    fun setFavorite(movieID: Long) : TVShowEntity
 
-    fun setUnfavorite(movieID: Long)
+    fun setUnfavorite(movieID: Long) : TVShowEntity
 
 }

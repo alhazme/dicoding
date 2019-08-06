@@ -8,13 +8,13 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 
-class TVShowDetailViewModel(application: Application): ViewModel() {
+class TVShowDetailViewModel(tvShowRepository: TVShowRepository): ViewModel() {
 
-    private var tvShowRepository: TVShowRepository
+    var tvShowRepository: TVShowRepository
     private var tvShow = MutableLiveData<TVShowEntity>()
 
     init {
-        tvShowRepository = TVShowRepository(application)
+        this.tvShowRepository = tvShowRepository
     }
 
     fun getTVShow(): MutableLiveData<TVShowEntity> {
@@ -27,14 +27,12 @@ class TVShowDetailViewModel(application: Application): ViewModel() {
     }
 
     fun setTVShowFavorite(tvShowID: Long): MutableLiveData<TVShowEntity> {
-        tvShowRepository.setFavorite(tvShowID)
-        tvShow.postValue(tvShowRepository.getDetailTVShow(tvShowID))
+        tvShow.postValue(tvShowRepository.setFavorite(tvShowID))
         return tvShow
     }
 
     fun setTVShowUnfavorite(tvShowID: Long): MutableLiveData<TVShowEntity> {
-        tvShowRepository.setUnfavorite(tvShowID)
-        tvShow.postValue(tvShowRepository.getDetailTVShow(tvShowID))
+        tvShow.postValue(tvShowRepository.setUnfavorite(tvShowID))
         return tvShow
     }
 

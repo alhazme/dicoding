@@ -10,12 +10,12 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 
-class TVShowListViewModel(application: Application): ViewModel() {
+class TVShowListViewModel(tvShowRepository: TVShowRepository): ViewModel() {
 
-    private var tvShowRepository: TVShowRepository
+    var tvShowRepository: TVShowRepository
 
     init {
-        tvShowRepository = TVShowRepository(application)
+        this.tvShowRepository = tvShowRepository
     }
 
     fun getTVShowList(): LiveData<PagedList<TVShowEntity>> {

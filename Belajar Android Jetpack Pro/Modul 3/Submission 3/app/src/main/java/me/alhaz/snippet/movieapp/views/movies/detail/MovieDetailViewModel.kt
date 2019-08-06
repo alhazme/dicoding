@@ -8,17 +8,13 @@ import me.alhaz.snippet.movieapp.repositories.movies.MovieRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
-class MovieDetailViewModel(application: Application): ViewModel() {
+class MovieDetailViewModel(movieRepository: MovieRepository): ViewModel() {
 
-    private var movieRepository: MovieRepository
+    var movieRepository: MovieRepository
     private var movie = MutableLiveData<MovieEntity>()
 
     init {
-        movieRepository = MovieRepository(application)
-    }
-
-    fun getMovie(): MutableLiveData<MovieEntity> {
-        return movie
+        this.movieRepository = movieRepository
     }
 
     fun getMovieDetail(movieID: Long): MutableLiveData<MovieEntity> {
@@ -27,14 +23,12 @@ class MovieDetailViewModel(application: Application): ViewModel() {
     }
 
     fun setMovieFavorite(movieID: Long): MutableLiveData<MovieEntity> {
-        movieRepository.setFavorite(movieID)
-        movie.postValue(movieRepository.getDetailMovie(movieID))
+        movie.postValue(movieRepository.setFavorite(movieID))
         return movie
     }
 
     fun setMovieUnfavorite(movieID: Long): MutableLiveData<MovieEntity> {
-        movieRepository.setUnfavorite(movieID)
-        movie.postValue(movieRepository.getDetailMovie(movieID))
+        movie.postValue(movieRepository.setUnfavorite(movieID))
         return movie
     }
 

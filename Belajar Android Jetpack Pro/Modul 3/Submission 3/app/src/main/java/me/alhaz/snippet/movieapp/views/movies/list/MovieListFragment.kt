@@ -2,7 +2,6 @@ package me.alhaz.snippet.movieapp.views.movies.list
 
 import android.content.Context
 import android.content.Intent
-import android.mtp.MtpObjectInfo
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -16,12 +15,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import me.alhaz.snippet.movieapp.R
-import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
-import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailActivity
-import me.alhaz.snippet.movieapp.helper.ViewModelFactory
 import androidx.fragment.app.FragmentActivity
 import androidx.paging.PagedList
+import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
+import me.alhaz.snippet.movieapp.viewmodels.MovieViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
 class MovieListFragment : Fragment() {
@@ -50,13 +48,17 @@ class MovieListFragment : Fragment() {
     }
 
     private fun obtainViewModel(activity: FragmentActivity): MovieListViewModel {
-        val factory = ViewModelFactory.getInstance(activity.application)
+        val factory = MovieViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(MovieListViewModel::class.java)
     }
 
     private fun setupViewModel(activity: FragmentActivity) {
         viewModel = obtainViewModel(activity)
+        EspressoIdlingResource.increment()
         viewModel.getMovieList().observe(this, Observer {
+            if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow()) {
+                EspressoIdlingResource.decrement();
+            }
             showData(it)
             movieListAdapter.submitList(null)
             movieListAdapter.submitList(it)
@@ -65,7 +67,7 @@ class MovieListFragment : Fragment() {
 
     private fun setupLayout(view: View) {
         progressBar = view.findViewById(R.id.progressbar)
-        rvMovies = view.findViewById(R.id.rv_movies)
+        rvMovies = view.findViewById(R.id.rv_home_movies)
         rvMovies.setHasFixedSize(true)
         rvMovies.layoutManager = LinearLayoutManager(activity)
     }

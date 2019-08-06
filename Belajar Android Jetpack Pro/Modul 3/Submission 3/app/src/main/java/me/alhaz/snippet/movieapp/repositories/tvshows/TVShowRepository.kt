@@ -1,36 +1,32 @@
 package me.alhaz.snippet.movieapp.repositories.tvshows
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
+import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.TVShowLocalRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.repositories.tvshows.remote.TVShowRemoteRepository
-import me.alhaz.snippet.movieapp.repositories.tvshows.remote.response.TVShowPopularResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
-class TVShowRepository(application: Application): TVShowDataSource {
+class TVShowRepository(tvShowRemoteRepository: TVShowRemoteRepository, tvShowLocalRepository: TVShowLocalRepository): TVShowDataSource {
 
-    private var tvShowRemoteRepository: TVShowRemoteRepository
-    private var tvShowLocalRepository: TVShowLocalRepository
+    var tvShowRemoteRepository: TVShowRemoteRepository
+    var tvShowLocalRepository: TVShowLocalRepository
 
     init {
-        tvShowRemoteRepository = TVShowRemoteRepository()
-        tvShowLocalRepository = TVShowLocalRepository(application)
-        getListTVShowFromServer()
+        this.tvShowRemoteRepository = tvShowRemoteRepository
+        this.tvShowLocalRepository = tvShowLocalRepository
     }
 
-    override fun getListTVShowFromServer() {
+    override fun getListTVShowFromServer(): MutableLiveData<ArrayList<TVShow>> {
+        val tvShowLiveData = MutableLiveData<ArrayList<TVShow>>()
         tvShowRemoteRepository.let { remoteRepository ->
             val listTVShow = remoteRepository.getListTVShow()
             tvShowLocalRepository.let { localRepository ->
                 listTVShow.value?.let { tvShows ->
+                    tvShowLiveData.value = tvShows
                     tvShows.forEach { tvShow ->
                         val tvShowEntity = TVShowEntity(
                             id = tvShow.id,
@@ -46,6 +42,7 @@ class TVShowRepository(application: Application): TVShowDataSource {
                 }
             }
         }
+        return tvShowLiveData
     }
 
     override fun getListTVShow(): LiveData<PagedList<TVShowEntity>> {
@@ -60,12 +57,12 @@ class TVShowRepository(application: Application): TVShowDataSource {
         return LivePagedListBuilder(tvShowLocalRepository.getTVShowFavorite(), 10).build()
     }
 
-    override fun setFavorite(tvShowID: Long) {
-        tvShowLocalRepository.setFavorite(tvShowID)
+    override fun setFavorite(tvShowID: Long) : TVShowEntity {
+        return tvShowLocalRepository.setFavorite(tvShowID)
     }
 
-    override fun setUnfavorite(tvShowID: Long) {
-        tvShowLocalRepository.setUnfavorite(tvShowID)
+    override fun setUnfavorite(tvShowID: Long) : TVShowEntity {
+        return tvShowLocalRepository.setUnfavorite(tvShowID)
     }
 
 }

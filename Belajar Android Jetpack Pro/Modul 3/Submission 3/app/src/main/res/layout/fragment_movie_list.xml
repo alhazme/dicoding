@@ -8,7 +8,7 @@
     tools:context=".views.movies.list.MovieListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_movies"
+        android:id="@+id/rv_home_movies"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"

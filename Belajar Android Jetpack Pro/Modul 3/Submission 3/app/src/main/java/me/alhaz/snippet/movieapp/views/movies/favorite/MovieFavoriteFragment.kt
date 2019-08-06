@@ -16,7 +16,7 @@ import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import me.alhaz.snippet.movieapp.R
-import me.alhaz.snippet.movieapp.helper.ViewModelFactory
+import me.alhaz.snippet.movieapp.viewmodels.MovieViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 import me.alhaz.snippet.movieapp.views.movies.detail.MovieDetailActivity
 
@@ -46,7 +46,7 @@ class MovieFavoriteFragment : Fragment() {
     }
 
     private fun obtainViewModel(activity: FragmentActivity): MovieFavoriteViewModel {
-        val factory = ViewModelFactory.getInstance(activity.application)
+        val factory = MovieViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(MovieFavoriteViewModel::class.java)
     }
 
@@ -61,7 +61,7 @@ class MovieFavoriteFragment : Fragment() {
 
     private fun setupLayout(view: View) {
         progressBar = view.findViewById(R.id.progressbar)
-        rvMovies = view.findViewById(R.id.rv_movies)
+        rvMovies = view.findViewById(R.id.rv_favorite_movies)
         rvMovies.setHasFixedSize(true)
         rvMovies.layoutManager = LinearLayoutManager(activity)
     }

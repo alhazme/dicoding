@@ -1,16 +1,18 @@
 package me.alhaz.snippet.movieapp.views.tvshows.detail
 
 import android.content.Intent
-import androidx.test.espresso.Espresso
+import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.IdlingRegistry
+import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.assertion.ViewAssertions
-import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.data.DataDummy
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
+import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -18,7 +20,7 @@ import org.junit.Test
 
 class TVShowDetailActivityTest {
 
-    var dummyTVShow: TVShow = DataDummy.generateTVShows().get(0)
+    var dummyTVShow: TVShowEntity = DataDummy.generateTVShowsEntity().get(0)
 
     @Rule
     @JvmField var activityRule: ActivityTestRule<TVShowDetailActivity> =
@@ -43,14 +45,12 @@ class TVShowDetailActivityTest {
 
     @Test
     fun loadTVShowDetail() {
-        Espresso.onView(ViewMatchers.withId(R.id.tv_title)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_title)).check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.name)))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_year)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_year)).check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.firstAirDate.split("-").get(0))))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_rating)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_rating)).check(ViewAssertions.matches(ViewMatchers.withText(dummyTVShow.voteAverage.toString())))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_runtime)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.tv_runtime)).check(ViewAssertions.matches(ViewMatchers.withText("${dummyTVShow.numberOfEpisodes} Episodes")))
+        onView(withId(R.id.tv_title)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_title)).check(matches(withText(dummyTVShow.name)))
+        onView(withId(R.id.tv_year)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_year)).check(matches(withText(dummyTVShow.firstAirDate.split("-").get(0))))
+        onView(withId(R.id.tv_rating)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_rating)).check(matches(withText(dummyTVShow.voteAverage.toString())))
     }
 
 }

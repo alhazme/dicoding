@@ -2,7 +2,6 @@ package me.alhaz.snippet.movieapp.views.tvshows.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -19,8 +18,7 @@ import kotlinx.android.synthetic.main.activity_tvshow_detail.tv_title
 import kotlinx.android.synthetic.main.activity_tvshow_detail.tv_year
 import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
-import me.alhaz.snippet.movieapp.helper.ViewModelFactory
-import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
+import me.alhaz.snippet.movieapp.viewmodels.TVShowViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 
 class TVShowDetailActivity : AppCompatActivity() {
@@ -109,7 +107,7 @@ class TVShowDetailActivity : AppCompatActivity() {
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): TVShowDetailViewModel {
-        val factory = ViewModelFactory.getInstance(activity.application)
+        val factory = TVShowViewModelFactory.getInstance(activity.application)
         return ViewModelProviders.of(activity, factory).get(TVShowDetailViewModel::class.java)
     }
 

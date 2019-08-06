@@ -8,7 +8,7 @@ import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
 interface MovieDataSource {
 
-    fun getListMovieFromServer()
+    fun getListMovieFromServer(): MutableLiveData<ArrayList<Movie>>
 
     fun getListMovie(): LiveData<PagedList<MovieEntity>>
 
@@ -16,8 +16,8 @@ interface MovieDataSource {
 
     fun getFavoriteMovies(): LiveData<PagedList<MovieEntity>>
 
-    fun setFavorite(movieID: Long)
+    fun setFavorite(movieID: Long) : MovieEntity
 
-    fun setUnfavorite(movieID: Long)
+    fun setUnfavorite(movieID: Long) : MovieEntity
 
 }

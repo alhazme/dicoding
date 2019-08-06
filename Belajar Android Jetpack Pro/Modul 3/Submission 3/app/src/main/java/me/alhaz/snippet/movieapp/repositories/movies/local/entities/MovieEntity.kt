@@ -13,86 +13,86 @@ data class MovieEntity(
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id")
 //    @SerializedName("id")
-    val id: Long = 0,
+    var id: Long = 0,
 
     @ColumnInfo(name = "adult")
 //    @SerializedName("adult")
-    val adult: Boolean = false,
+    var adult: Boolean = false,
 
     @ColumnInfo(name = "backdrop_path")
 //    @SerializedName("backdrop_path")
-    val backdropPath: String = "",
+    var backdropPath: String = "",
 
     @ColumnInfo(name = "budget")
 //    @SerializedName("budget")
-    val budget: Long = 0,
+    var budget: Long = 0,
 
     @ColumnInfo(name = "homepage")
 //    @SerializedName("homepage")
-    val homepage: String = "",
+    var homepage: String = "",
 
     @ColumnInfo(name = "imdbID")
 //    @SerializedName("imdbID")
-    val imdbID: String = "",
+    var imdbID: String = "",
 
     @ColumnInfo(name = "original_language")
 //    @SerializedName("original_language")
-    val originalLanguage: String = "",
+    var originalLanguage: String = "",
 
     @ColumnInfo(name = "original_title")
 //    @SerializedName("original_title")
-    val originalTitle: String = "",
+    var originalTitle: String = "",
 
     @ColumnInfo(name = "overview")
 //    @SerializedName("overview")
-    val overview: String = "",
+    var overview: String = "",
 
     @ColumnInfo(name = "popularity")
 //    @SerializedName("popularity")
-    val popularity: Double = 0.0,
+    var popularity: Double = 0.0,
 
     @ColumnInfo(name = "poster_path")
 //    @SerializedName("poster_path")
-    val posterPath: String = "",
+    var posterPath: String = "",
 
     @ColumnInfo(name = "release_date")
 //    @SerializedName("release_date")
-    val releaseDate: String = "",
+    var releaseDate: String = "",
 
     @ColumnInfo(name = "revenue")
 //    @SerializedName("revenue")
-    val revenue: Long = 0,
+    var revenue: Long = 0,
 
     @ColumnInfo(name = "runtime")
 //    @SerializedName("runtime")
-    val runtime: Long = 0,
+    var runtime: Long = 0,
 
     @ColumnInfo(name = "status")
 //    @SerializedName("status")
-    val status: String = "",
+    var status: String = "",
 
     @ColumnInfo(name = "tagline")
 //    @SerializedName("tagline")
-    val tagline: String = "",
+    var tagline: String = "",
 
     @ColumnInfo(name = "title")
 //    @SerializedName("title")
-    val title: String,
+    var title: String = "",
 
     @ColumnInfo(name = "video")
 //    @SerializedName("video")
-    val video: Boolean = false,
+    var video: Boolean = false,
 
     @ColumnInfo(name = "vote_average")
 //    @SerializedName("vote_average")
-    val voteAverage: Double = 0.0,
+    var voteAverage: Double = 0.0,
 
     @ColumnInfo(name = "vote_count")
 //    @SerializedName("vote_count")
-    val voteCount: Long = 0,
+    var voteCount: Long = 0,
 
     @ColumnInfo(name = "favorite")
 //    @SerializedName("favorite")
-    val favorite: Int = 0
+    var favorite: Int = 0
 
 ): Parcelable
