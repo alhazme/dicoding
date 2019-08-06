@@ -1,0 +1,72 @@
+package me.alhaz.snippet.movieapp.views.movies.list
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.paging.PagedListAdapter
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import me.alhaz.snippet.movieapp.R
+import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
+import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
+
+class MovieListAdapter(val context: Context, val clickListener: (MovieEntity) -> Unit) : PagedListAdapter<MovieEntity, MovieListViewHolder>(diffCallback) { // For Pagination
+
+    // For Pagination
+
+    companion object {
+        private val diffCallback = object: DiffUtil.ItemCallback<MovieEntity>() {
+            override fun areItemsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {
+                return oldItem.id == newItem.id
+            }
+
+            override fun areContentsTheSame(oldItem: MovieEntity, newItem: MovieEntity): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieListViewHolder {
+        return MovieListViewHolder(
+            LayoutInflater.from(context).inflate(
+                R.layout.row_movie,
+                parent,
+                false
+            )
+        )
+    }
+
+    override fun onBindViewHolder(holder: MovieListViewHolder, position: Int) {
+        val movie = getItem(position)
+        holder.bindItem(context, holder.itemView, movie, clickListener)
+    }
+
+}
+
+class MovieListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+    private val tvYear: TextView = view.findViewById(R.id.tv_year)
+    private val tvTitle: TextView = view.findViewById(R.id.tv_title)
+    private val tvRating: TextView = view.findViewById(R.id.tv_rating)
+    private val tvDescription: TextView = view.findViewById(R.id.tv_description)
+    private val ivPhoto: ImageView = view.findViewById(R.id.iv_photo)
+
+    fun bindItem(context: Context, view: View, movieEntity: MovieEntity?, clickListener: (MovieEntity) -> Unit) {
+        movieEntity?.let { movie ->
+            tvYear.text = movie.releaseDate.split("-").get(0)
+            tvTitle.text = movie.title
+            tvRating.text = movie.voteAverage.toString()
+            tvDescription.text = movie.overview
+            Glide.with(context).load("https://image.tmdb.org/t/p/w300_and_h450_bestv2" + movie.posterPath).into(ivPhoto)
+            view.setOnClickListener {
+                clickListener(movie)
+            }
+        }
+    }
+
+
+}
