@@ -13,10 +13,9 @@ import okhttp3.Dispatcher
 
 class MovieListViewModel(movieRepository: MovieRepository): ViewModel() {
 
-    var movieRepository: MovieRepository
+    val movieRepository: MovieRepository = movieRepository
 
     init {
-        this.movieRepository = movieRepository
         movieRepository.getListMovieFromServer()
     }
 

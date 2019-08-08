@@ -13,7 +13,6 @@ import me.alhaz.snippet.movieapp.repositories.movies.remote.response.MoviePopula
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.await
 
 class MovieRemoteRepository {
 
@@ -21,7 +20,7 @@ class MovieRemoteRepository {
 //        RetrofitConfig().getMovieService().getListMovie(BuildConfig.API_KEY).enqueue(callback)
 //    }
 
-    fun getListMovie() : LiveData<ArrayList<Movie>> {
+    fun getListMovie() : MutableLiveData<ArrayList<Movie>> {
         val moviesLiveData = MutableLiveData<ArrayList<Movie>>()
         val movies = ArrayList<Movie>()
         RetrofitConfig().getMovieService().getListMovie(BuildConfig.API_KEY).enqueue(object: Callback<MoviePopularResponse> {
@@ -31,14 +30,14 @@ class MovieRemoteRepository {
                     responseData?.let { moviePopularResponse ->
                         moviePopularResponse.results?.let { moviesResult ->
                             movies.addAll(moviesResult)
-                            moviesLiveData.value = movies
+                            moviesLiveData.postValue(movies)
                         }
                     }
                 }
             }
 
             override fun onFailure(call: Call<MoviePopularResponse>, t: Throwable) {
-
+                moviesLiveData.postValue(null)
             }
         })
         return moviesLiveData

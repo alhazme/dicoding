@@ -12,36 +12,47 @@ import me.alhaz.snippet.movieapp.repositories.movies.remote.MovieRemoteRepositor
 
 class MovieRepository(movieRemoteRepository: MovieRemoteRepository, movieLocalRepository: MovieLocalRepository): MovieDataSource {
 
-    var movieRemoteRepository: MovieRemoteRepository
-    var movieLocalRepository: MovieLocalRepository
-
-    init {
-        this.movieRemoteRepository = movieRemoteRepository
-        this.movieLocalRepository = movieLocalRepository
-    }
+    val movieRemoteRepository: MovieRemoteRepository = movieRemoteRepository
+    val movieLocalRepository: MovieLocalRepository = movieLocalRepository
 
     override fun getListMovieFromServer(): MutableLiveData<ArrayList<Movie>> {
         var movieLiveData = MutableLiveData<ArrayList<Movie>>()
-        movieRemoteRepository.let { remoteRepository ->
-            val listMovie = remoteRepository.getListMovie()
-            movieLocalRepository.let { localRepository ->
-                listMovie.value?.let { movies ->
-                    movieLiveData.value = movies
-                    movies.forEach { movie ->
-                        val movieEntity = MovieEntity(
-                            id = movie.id,
-                            title = movie.title,
-                            voteAverage = movie.voteAverage,
-                            overview = movie.overview,
-                            releaseDate = movie.releaseDate,
-                            runtime = movie.runtime,
-                            posterPath = movie.posterPath
-                        )
-                        localRepository.insert(movieEntity)
-                    }
-                }
+        val listMovies =  movieRemoteRepository.getListMovie()
+        listMovies.value?.let { movies ->
+            movies.forEach { movie ->
+                val movieEntity = MovieEntity(
+                    id = movie.id,
+                    title = movie.title,
+                    voteAverage = movie.voteAverage,
+                    overview = movie.overview,
+                    releaseDate = movie.releaseDate,
+                    runtime = movie.runtime,
+                    posterPath = movie.posterPath
+                )
+                movieLocalRepository.insert(movieEntity)
             }
         }
+        movieLiveData = listMovies
+//        movieRemoteRepository.let { remoteRepository ->
+//            val listMovie = remoteRepository.getListMovie()
+//            movieLocalRepository.let { localRepository ->
+//                listMovie.value?.let { movies ->
+//                    movieLiveData.value = movies
+//                    movies.forEach { movie ->
+//                        val movieEntity = MovieEntity(
+//                            id = movie.id,
+//                            title = movie.title,
+//                            voteAverage = movie.voteAverage,
+//                            overview = movie.overview,
+//                            releaseDate = movie.releaseDate,
+//                            runtime = movie.runtime,
+//                            posterPath = movie.posterPath
+//                        )
+//                        localRepository.insert(movieEntity)
+//                    }
+//                }
+//            }
+//        }
         return movieLiveData
     }
 

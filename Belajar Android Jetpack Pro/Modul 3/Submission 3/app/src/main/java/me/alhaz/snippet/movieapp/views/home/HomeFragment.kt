@@ -32,15 +32,8 @@ class HomeFragment : Fragment() {
         setupLayout()
     }
 
-    override fun onResume() {
-        super.onResume()
-        Log.d("1234567890", "onResume home fragment: " + vp_container.adapter.toString())
-
-    }
-
     private fun setupLayout() {
         activity?.let { fragmentActivity ->
-//            val adapter = MainViewPagerAdapter(fragmentActivity.supportFragmentManager)
             val adapter = MainViewPagerAdapter(childFragmentManager)
             adapter.addFragment(movieListFragment)
             adapter.addFragment(tvShowListFragment)

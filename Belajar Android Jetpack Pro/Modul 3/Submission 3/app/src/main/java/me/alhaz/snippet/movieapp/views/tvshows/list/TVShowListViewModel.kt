@@ -16,6 +16,7 @@ class TVShowListViewModel(tvShowRepository: TVShowRepository): ViewModel() {
 
     init {
         this.tvShowRepository = tvShowRepository
+        tvShowRepository.getListTVShowFromServer()
     }
 
     fun getTVShowList(): LiveData<PagedList<TVShowEntity>> {

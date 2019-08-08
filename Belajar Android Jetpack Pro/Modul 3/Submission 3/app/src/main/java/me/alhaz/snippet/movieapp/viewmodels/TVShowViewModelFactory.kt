@@ -32,6 +32,7 @@ class TVShowViewModelFactory private constructor(private val tvShowRepository: T
 
     }
 
+    @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(TVShowListViewModel::class.java)) {
             return TVShowListViewModel(tvShowRepository) as T

@@ -57,7 +57,7 @@ class MovieListFragment : Fragment() {
         EspressoIdlingResource.increment()
         viewModel.getMovieList().observe(this, Observer {
             if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow()) {
-                EspressoIdlingResource.decrement();
+                EspressoIdlingResource.decrement()
             }
             showData(it)
             movieListAdapter.submitList(null)
