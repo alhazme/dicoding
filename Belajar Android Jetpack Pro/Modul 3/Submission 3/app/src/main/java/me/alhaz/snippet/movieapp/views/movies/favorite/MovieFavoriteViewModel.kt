@@ -7,13 +7,7 @@ import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.repositories.movies.MovieRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
-class MovieFavoriteViewModel(movieRepository: MovieRepository): ViewModel() {
-
-    var movieRepository: MovieRepository
-
-    init {
-        this.movieRepository = movieRepository
-    }
+class MovieFavoriteViewModel(private val movieRepository: MovieRepository): ViewModel() {
 
     fun getMovieFavorites(): LiveData<PagedList<MovieEntity>> {
         return movieRepository.getFavoriteMovies()

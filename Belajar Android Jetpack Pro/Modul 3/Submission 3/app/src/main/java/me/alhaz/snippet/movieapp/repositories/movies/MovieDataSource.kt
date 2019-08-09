@@ -9,9 +9,6 @@ import me.alhaz.snippet.movieapp.valueobject.Resource
 
 interface MovieDataSource {
 
-    // fun getListMovieFromServer(): MutableLiveData<ArrayList<Movie>>
-
-//    fun getListMovie(): LiveData<PagedList<MovieEntity>>
     fun getListMovie(): LiveData<Resource<PagedList<MovieEntity>>>
 
     fun getDetailMovie(movieID: Long): MovieEntity

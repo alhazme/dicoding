@@ -24,7 +24,7 @@ class Injection {
             val appExecutors = AppExecutors()
             val tvShowRemoteRepository = TVShowRemoteRepository()
             val tvShowLocalRepository = TVShowLocalRepository(application)
-            val tvShowRepository = TVShowRepository(tvShowRemoteRepository, tvShowLocalRepository)
+            val tvShowRepository = TVShowRepository(appExecutors, tvShowRemoteRepository, tvShowLocalRepository)
             return tvShowRepository
         }
     }

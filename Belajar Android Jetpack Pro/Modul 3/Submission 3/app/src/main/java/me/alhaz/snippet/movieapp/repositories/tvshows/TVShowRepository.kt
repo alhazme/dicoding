@@ -4,49 +4,50 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
+import me.alhaz.snippet.movieapp.helper.AppExecutors
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
+import me.alhaz.snippet.movieapp.repositories.NetworkBoundResource
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.TVShowLocalRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.repositories.tvshows.remote.TVShowRemoteRepository
+import me.alhaz.snippet.movieapp.valueobject.ApiResponse
+import me.alhaz.snippet.movieapp.valueobject.Resource
 
-class TVShowRepository(tvShowRemoteRepository: TVShowRemoteRepository, tvShowLocalRepository: TVShowLocalRepository): TVShowDataSource {
+class TVShowRepository(private val appExecutors: AppExecutors, private val tvShowRemoteRepository: TVShowRemoteRepository, private val tvShowLocalRepository: TVShowLocalRepository): TVShowDataSource {
 
-    var tvShowRemoteRepository: TVShowRemoteRepository
-    var tvShowLocalRepository: TVShowLocalRepository
+    override fun getListTVShow(): LiveData<Resource<PagedList<TVShowEntity>>> {
 
-    init {
-        this.tvShowRemoteRepository = tvShowRemoteRepository
-        this.tvShowLocalRepository = tvShowLocalRepository
-    }
+        return object: NetworkBoundResource<PagedList<TVShowEntity>, ArrayList<TVShow>>(appExecutors) {
 
-    override fun getListTVShowFromServer(): MutableLiveData<ArrayList<TVShow>> {
-        val tvShowLiveData = MutableLiveData<ArrayList<TVShow>>()
-        tvShowRemoteRepository.let { remoteRepository ->
-            val listTVShow = remoteRepository.getListTVShow()
-            tvShowLocalRepository.let { localRepository ->
-                listTVShow.value?.let { tvShows ->
-                    tvShowLiveData.value = tvShows
-                    tvShows.forEach { tvShow ->
-                        val tvShowEntity = TVShowEntity(
-                            id = tvShow.id,
-                            name = tvShow.name,
-                            voteAverage = tvShow.voteAverage,
-                            overview = tvShow.overview,
-                            firstAirDate = tvShow.firstAirDate,
-                            numberOfEpisodes = tvShow.numberOfEpisodes,
-                            posterPath = tvShow.posterPath
-                        )
-                        localRepository.insert(tvShowEntity)
-                    }
+            override fun shouldFetch(data: PagedList<TVShowEntity>?): Boolean {
+                return (tvShowLocalRepository.counts() == 0)
+            }
+
+            override fun createCall(): LiveData<ApiResponse<ArrayList<TVShow>>> {
+                return tvShowRemoteRepository.getListTVShow()
+            }
+
+            override fun saveCallResult(item: ArrayList<TVShow>) {
+                item.forEach { tvShow ->
+                    val tvShowEntity = TVShowEntity(
+                        id = tvShow.id,
+                        name = tvShow.name,
+                        voteAverage = tvShow.voteAverage,
+                        overview = tvShow.overview,
+                        firstAirDate = tvShow.firstAirDate,
+                        numberOfEpisodes = tvShow.numberOfEpisodes,
+                        posterPath = tvShow.posterPath
+                    )
+                    tvShowLocalRepository.insert(tvShowEntity)
                 }
             }
-        }
-        return tvShowLiveData
-    }
 
-    override fun getListTVShow(): LiveData<PagedList<TVShowEntity>> {
-        return LivePagedListBuilder(tvShowLocalRepository.getTVShowList(), 10).build()
+            override fun loadFromDb(): LiveData<PagedList<TVShowEntity>> {
+                return LivePagedListBuilder(tvShowLocalRepository.getTVShowList(), 10).build()
+            }
+
+        }.asLiveData()
     }
 
     override fun getDetailTVShow(tvShowID: Long): TVShowEntity {

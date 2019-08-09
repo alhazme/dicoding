@@ -8,14 +8,9 @@ import me.alhaz.snippet.movieapp.repositories.movies.MovieRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 
-class MovieDetailViewModel(movieRepository: MovieRepository): ViewModel() {
+class MovieDetailViewModel(private val movieRepository: MovieRepository): ViewModel() {
 
-    var movieRepository: MovieRepository
     private var movie = MutableLiveData<MovieEntity>()
-
-    init {
-        this.movieRepository = movieRepository
-    }
 
     fun getMovieDetail(movieID: Long): MutableLiveData<MovieEntity> {
         movie.postValue(movieRepository.getDetailMovie(movieID))
