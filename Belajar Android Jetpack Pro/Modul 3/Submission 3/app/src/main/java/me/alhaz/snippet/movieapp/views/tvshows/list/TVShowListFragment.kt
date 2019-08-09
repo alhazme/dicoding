@@ -57,10 +57,6 @@ class TVShowListFragment : Fragment() {
         viewModel.getTVShowList().observe(this, Observer { data ->
             data?.let { response ->
                 when (response.status) {
-                    Status.LOADING -> {
-                        progressBar.visibility = View.VISIBLE
-                        rvTVShows.visibility = View.GONE
-                    }
                     Status.SUCCESS -> {
                         response.data?.let { tvshows ->
                             progressBar.visibility = View.GONE

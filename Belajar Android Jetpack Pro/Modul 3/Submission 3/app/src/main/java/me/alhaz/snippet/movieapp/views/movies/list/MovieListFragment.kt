@@ -58,10 +58,6 @@ class MovieListFragment : Fragment() {
         viewModel.getListMovie().observe(this, Observer { data ->
             data?.let { response ->
                 when (response.status) {
-                    Status.LOADING -> {
-                        progressBar.visibility = View.VISIBLE
-                        rvMovies.visibility = View.GONE
-                    }
                     Status.SUCCESS -> {
                         response.data?.let { movies ->
                             progressBar.visibility = View.GONE

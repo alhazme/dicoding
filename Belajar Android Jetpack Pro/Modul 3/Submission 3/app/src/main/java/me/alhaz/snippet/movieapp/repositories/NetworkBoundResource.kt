@@ -15,7 +15,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>
     private val result = MediatorLiveData<Resource<ResultType>>()
 
     init {
-        result.value = Resource.loading(null)
+        result.value = Resource.empty(null)
         @Suppress("LeakingThis")
         val dbSource = loadFromDb()
         result.addSource(dbSource) { data ->
@@ -44,7 +44,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>
 
         // we re-attach dbSource as a new source, it will dispatch its latest value quickly
         result.addSource(dbSource) { newData ->
-            setValue(Resource.loading(newData))
+            setValue(Resource.empty(newData))
         }
 
         result.addSource(apiResponse) { response ->
@@ -53,6 +53,14 @@ abstract class NetworkBoundResource<ResultType, RequestType>
             result.removeSource(dbSource)
 
             when (response.status) {
+
+                Status.EMPTY -> {
+                    appExecutor.mainThread().execute {
+                        result.addSource(loadFromDb()) { newData ->
+                            setValue(Resource.success(newData))
+                        }
+                    }
+                }
 
                 Status.SUCCESS -> {
                     appExecutor.diskIO().execute {

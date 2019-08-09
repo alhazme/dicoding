@@ -3,20 +3,19 @@ package me.alhaz.snippet.movieapp.repositories.movies
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
-import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.data.DataDummy
+import me.alhaz.snippet.movieapp.helper.AppExecutors
 import me.alhaz.snippet.movieapp.repositories.movies.local.MovieLocalRepository
-import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
 import me.alhaz.snippet.movieapp.repositories.movies.remote.MovieRemoteRepository
+import me.alhaz.snippet.movieapp.views.utils.InstantAppExecutors
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.Mockito
-import me.alhaz.snippet.movieapp.views.utils.LiveDataTestUtil
-import org.mockito.ArgumentMatchers
 import org.mockito.Mockito.*
+import org.mockito.Mockito.`when`
 
 class MovieRepositoryTest {
 
@@ -24,9 +23,10 @@ class MovieRepositoryTest {
     @JvmField
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
+    private var appExecutors: AppExecutors = Mockito.mock(InstantAppExecutors::class.java)
     private var localRepository: MovieLocalRepository = Mockito.mock(MovieLocalRepository::class.java)
     private var remoteRepository: MovieRemoteRepository = Mockito.mock(MovieRemoteRepository::class.java)
-    private var movieRepository: MovieRepository? = null
+    private var movieRepository: FakeMovieRepository? = null
 
     private var movies = DataDummy.generateListMovie()
     private var movie = movies.get(0)
@@ -38,21 +38,7 @@ class MovieRepositoryTest {
 
     @Before
     fun init() {
-        movieRepository = MovieRepository(remoteRepository, localRepository)
-    }
-
-    @Test
-    fun getListMovieFromServer() {
-
-        var dummyMovies = MutableLiveData<ArrayList<Movie>>()
-        dummyMovies.value = movies
-
-        `when`(remoteRepository.getListMovie()).thenReturn(dummyMovies)
-        val result = LiveDataTestUtil.getValue(movieRepository!!.getListMovieFromServer())
-        verify(remoteRepository, times(1)).getListMovie()
-
-        assertEquals(dummyMovies.value?.size, result.size)
-
+        movieRepository = FakeMovieRepository(appExecutors, remoteRepository, localRepository)
     }
 
     @Test
