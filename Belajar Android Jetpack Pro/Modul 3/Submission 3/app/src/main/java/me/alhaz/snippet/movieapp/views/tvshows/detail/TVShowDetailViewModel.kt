@@ -8,14 +8,9 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 
-class TVShowDetailViewModel(tvShowRepository: TVShowRepository): ViewModel() {
+class TVShowDetailViewModel(private val tvShowRepository: TVShowRepository): ViewModel() {
 
-    var tvShowRepository: TVShowRepository
     private var tvShow = MutableLiveData<TVShowEntity>()
-
-    init {
-        this.tvShowRepository = tvShowRepository
-    }
 
     fun getTVShow(): MutableLiveData<TVShowEntity> {
         return tvShow

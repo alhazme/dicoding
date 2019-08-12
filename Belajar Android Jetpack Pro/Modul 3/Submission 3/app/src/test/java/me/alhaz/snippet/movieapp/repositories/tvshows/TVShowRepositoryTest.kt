@@ -4,10 +4,12 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import me.alhaz.snippet.movieapp.data.DataDummy
+import me.alhaz.snippet.movieapp.helper.AppExecutors
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.TVShowLocalRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 import me.alhaz.snippet.movieapp.repositories.tvshows.remote.TVShowRemoteRepository
+import me.alhaz.snippet.movieapp.views.utils.InstantAppExecutors
 import me.alhaz.snippet.movieapp.views.utils.LiveDataTestUtil
 import org.junit.Assert.*
 import org.junit.Before
@@ -22,9 +24,10 @@ class TVShowRepositoryTest {
     @JvmField
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
+    private var appExecutors: AppExecutors = Mockito.mock(InstantAppExecutors::class.java)
     private var localRepository: TVShowLocalRepository = Mockito.mock(TVShowLocalRepository::class.java)
     private var remoteRepository: TVShowRemoteRepository = Mockito.mock(TVShowRemoteRepository::class.java)
-    private var tvShowRepository: TVShowRepository? = null
+    private var tvShowRepository: FakeTVShowRepository? = null
 
     private var tvShows = DataDummy.generateTVShows()
     private var tvShow = tvShows.get(0)
@@ -36,21 +39,7 @@ class TVShowRepositoryTest {
 
     @Before
     fun init() {
-        tvShowRepository = TVShowRepository(remoteRepository, localRepository)
-    }
-
-    @Test
-    fun getListTVShowFromServer() {
-
-        var dummyTVShows = MutableLiveData<ArrayList<TVShow>>()
-        dummyTVShows.value = tvShows
-
-        `when`(remoteRepository.getListTVShow()).thenReturn(dummyTVShows)
-        val result = LiveDataTestUtil.getValue(tvShowRepository!!.getListTVShowFromServer())
-        verify(remoteRepository, times(1)).getListTVShow()
-
-        assertEquals(dummyTVShows.value?.size, result.size)
-
+        tvShowRepository = FakeTVShowRepository(appExecutors, remoteRepository, localRepository)
     }
 
     @Test

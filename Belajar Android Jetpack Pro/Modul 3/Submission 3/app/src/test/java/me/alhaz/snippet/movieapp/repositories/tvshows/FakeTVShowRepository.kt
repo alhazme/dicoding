@@ -1,11 +1,9 @@
 package me.alhaz.snippet.movieapp.repositories.tvshows
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.helper.AppExecutors
-import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.NetworkBoundResource
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.TVShowLocalRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
@@ -14,7 +12,7 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.remote.TVShowRemoteReposit
 import me.alhaz.snippet.movieapp.valueobject.ApiResponse
 import me.alhaz.snippet.movieapp.valueobject.Resource
 
-class TVShowRepository(private val appExecutors: AppExecutors, private val tvShowRemoteRepository: TVShowRemoteRepository, private val tvShowLocalRepository: TVShowLocalRepository): TVShowDataSource {
+class FakeTVShowRepository(private val appExecutors: AppExecutors, private val tvShowRemoteRepository: TVShowRemoteRepository, private val tvShowLocalRepository: TVShowLocalRepository): TVShowDataSource {
 
     override fun getListTVShow(): LiveData<Resource<PagedList<TVShowEntity>>> {
 

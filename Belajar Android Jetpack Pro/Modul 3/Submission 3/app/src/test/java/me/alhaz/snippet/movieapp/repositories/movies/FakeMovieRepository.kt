@@ -1,12 +1,9 @@
 package me.alhaz.snippet.movieapp.repositories.movies
 
-import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.helper.AppExecutors
-import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.repositories.NetworkBoundResource
 import me.alhaz.snippet.movieapp.repositories.movies.local.MovieLocalRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
@@ -15,7 +12,7 @@ import me.alhaz.snippet.movieapp.repositories.movies.remote.MovieRemoteRepositor
 import me.alhaz.snippet.movieapp.valueobject.ApiResponse
 import me.alhaz.snippet.movieapp.valueobject.Resource
 
-class MovieRepository(private val appExecutors: AppExecutors, private val movieRemoteRepository: MovieRemoteRepository, private val movieLocalRepository: MovieLocalRepository): MovieDataSource {
+class FakeMovieRepository(private val appExecutors: AppExecutors, private val movieRemoteRepository: MovieRemoteRepository, private val movieLocalRepository: MovieLocalRepository): MovieDataSource {
 
     override fun getListMovie(): LiveData<Resource<PagedList<MovieEntity>>> {
 
@@ -66,5 +63,4 @@ class MovieRepository(private val appExecutors: AppExecutors, private val movieR
     override fun setUnfavorite(movieID: Long) : MovieEntity {
         return movieLocalRepository.setUnfavorite(movieID)
     }
-
 }

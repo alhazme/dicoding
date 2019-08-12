@@ -19,6 +19,7 @@ import me.alhaz.snippet.movieapp.R
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.viewmodels.TVShowViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
+import me.alhaz.snippet.movieapp.valueobject.Status
 import me.alhaz.snippet.movieapp.views.tvshows.detail.TVShowDetailActivity
 
 class TVShowListFragment : Fragment() {
@@ -27,10 +28,6 @@ class TVShowListFragment : Fragment() {
     private lateinit var rvTVShows: RecyclerView
     private lateinit var tvShowListAdapter: TVShowListAdapter
     private lateinit var viewModel: TVShowListViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -57,14 +54,26 @@ class TVShowListFragment : Fragment() {
 
     private fun setupViewModel(activity: FragmentActivity) {
         viewModel = obtainViewModel(activity)
-        EspressoIdlingResource.increment()
-        viewModel.getTVShowList().observe(this, Observer {
-            if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow()) {
-                EspressoIdlingResource.decrement();
+        viewModel.getTVShowList().observe(this, Observer { data ->
+            data?.let { response ->
+                when (response.status) {
+                    Status.SUCCESS -> {
+                        response.data?.let { tvshows ->
+                            progressBar.visibility = View.GONE
+                            rvTVShows.visibility = View.VISIBLE
+                            tvShowListAdapter.submitList(tvshows)
+                        }
+                    }
+                    Status.EMPTY -> {
+                        progressBar.visibility = View.GONE
+                        rvTVShows.visibility = View.GONE
+                    }
+                    Status.ERROR -> {
+                        progressBar.visibility = View.GONE
+                        rvTVShows.visibility = View.GONE
+                    }
+                }
             }
-            showData(it)
-            tvShowListAdapter.submitList(null)
-            tvShowListAdapter.submitList(it)
         })
     }
 
@@ -80,17 +89,6 @@ class TVShowListFragment : Fragment() {
             openDetailTVShowPage(tvShow.id)
         })
         rvTVShows.adapter = tvShowListAdapter
-    }
-
-    private fun showData(movies: PagedList<TVShowEntity>) {
-        if (movies.size > 0) {
-            progressBar.visibility = View.GONE
-            rvTVShows.visibility = View.VISIBLE
-        }
-        else {
-            progressBar.visibility = View.GONE
-            rvTVShows.visibility = View.GONE
-        }
     }
 
     private fun openDetailTVShowPage(tvShowID: Long) {

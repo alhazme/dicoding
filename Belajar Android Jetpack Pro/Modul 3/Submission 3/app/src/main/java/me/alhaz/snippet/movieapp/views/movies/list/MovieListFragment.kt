@@ -21,6 +21,7 @@ import androidx.paging.PagedList
 import me.alhaz.snippet.movieapp.helper.EspressoIdlingResource
 import me.alhaz.snippet.movieapp.viewmodels.MovieViewModelFactory
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
+import me.alhaz.snippet.movieapp.valueobject.Status
 
 class MovieListFragment : Fragment() {
 
@@ -54,14 +55,26 @@ class MovieListFragment : Fragment() {
 
     private fun setupViewModel(activity: FragmentActivity) {
         viewModel = obtainViewModel(activity)
-        EspressoIdlingResource.increment()
-        viewModel.getMovieList().observe(this, Observer {
-            if (!EspressoIdlingResource.getEspressoIdlingResourceForMainActivity().isIdleNow()) {
-                EspressoIdlingResource.decrement();
+        viewModel.getListMovie().observe(this, Observer { data ->
+            data?.let { response ->
+                when (response.status) {
+                    Status.SUCCESS -> {
+                        response.data?.let { movies ->
+                            progressBar.visibility = View.GONE
+                            rvMovies.visibility = View.VISIBLE
+                            movieListAdapter.submitList(movies)
+                        }
+                    }
+                    Status.EMPTY -> {
+                        progressBar.visibility = View.GONE
+                        rvMovies.visibility = View.GONE
+                    }
+                    Status.ERROR -> {
+                        progressBar.visibility = View.GONE
+                        rvMovies.visibility = View.GONE
+                    }
+                }
             }
-            showData(it)
-            movieListAdapter.submitList(null)
-            movieListAdapter.submitList(it)
         })
     }
 
@@ -77,17 +90,6 @@ class MovieListFragment : Fragment() {
             openDetailMoviePage(movie.id)
         })
         rvMovies.adapter = movieListAdapter
-    }
-
-    private fun showData(movies: PagedList<MovieEntity>) {
-        if (movies.size > 0) {
-            progressBar.visibility = View.GONE
-            rvMovies.visibility = View.VISIBLE
-        }
-        else {
-            progressBar.visibility = View.GONE
-            rvMovies.visibility = View.GONE
-        }
     }
 
     private fun openDetailMoviePage(movieID: Long) {

@@ -8,6 +8,7 @@ import me.alhaz.snippet.movieapp.data.DataDummy
 import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
+import me.alhaz.snippet.movieapp.valueobject.Resource
 import org.junit.Test
 import org.junit.Before
 import org.junit.Rule
@@ -30,13 +31,13 @@ class TVShowListViewModelTest {
     @Test
     fun getTVShowList() {
 
-        val dummyTVShows = MutableLiveData<PagedList<TVShowEntity>>()
+        val dummyTVShows = MutableLiveData<Resource<PagedList<TVShowEntity>>>()
         val pagedList = Mockito.mock(PagedList::class.java) as PagedList<TVShowEntity>
-        dummyTVShows.value = pagedList
+        dummyTVShows.value = Resource.success(pagedList)
 
         Mockito.`when`(tvShowRepository.getListTVShow()).thenReturn(dummyTVShows)
 
-        val observer = Mockito.mock(Observer::class.java) as Observer<PagedList<TVShowEntity>>
+        val observer = Mockito.mock(Observer::class.java) as Observer<Resource<PagedList<TVShowEntity>>>
         tvShowListViewModel?.getTVShowList()?.observeForever(observer)
 
         Mockito.verify(tvShowRepository).getListTVShow()

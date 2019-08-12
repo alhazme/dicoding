@@ -31,14 +31,8 @@ class FavoriteFragment : Fragment() {
         setupLayout()
     }
 
-    override fun onResume() {
-        super.onResume()
-        Log.d("1234567890", "onResume favorite fragment")
-    }
-
     private fun setupLayout() {
         activity?.let { fragmentActivity ->
-//            val adapter = MainViewPagerAdapter(fragmentActivity.supportFragmentManager)
             val adapter = MainViewPagerAdapter(childFragmentManager)
             adapter.addFragment(movieFavoriteFragment)
             adapter.addFragment(tvShowFavoriteFragment)

@@ -8,13 +8,7 @@ import me.alhaz.snippet.movieapp.repositories.tvshows.TVShowRepository
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShow
 import me.alhaz.snippet.movieapp.repositories.tvshows.local.entities.TVShowEntity
 
-class TVShowFavoriteViewModel(tvShowRepository: TVShowRepository): ViewModel() {
-
-    var tvShowRepository: TVShowRepository
-
-    init {
-        this.tvShowRepository = tvShowRepository
-    }
+class TVShowFavoriteViewModel(private val tvShowRepository: TVShowRepository): ViewModel() {
 
     fun getTVShowFavorite(): LiveData<PagedList<TVShowEntity>> {
         return tvShowRepository.getFavoriteTVShow()

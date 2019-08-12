@@ -12,6 +12,7 @@ import me.alhaz.snippet.movieapp.data.DataDummy
 import me.alhaz.snippet.movieapp.repositories.movies.MovieRepository
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.Movie
 import me.alhaz.snippet.movieapp.repositories.movies.local.entities.MovieEntity
+import me.alhaz.snippet.movieapp.valueobject.Resource
 import org.junit.Test
 import org.junit.Before
 import org.junit.Rule
@@ -35,14 +36,14 @@ class MovieListViewModelTest {
     @Test
     fun getMovieList() {
 
-        val dummyMovies = MutableLiveData<PagedList<MovieEntity>>()
+        val dummyMovies = MutableLiveData<Resource<PagedList<MovieEntity>>>()
         val pagedList = Mockito.mock(PagedList::class.java) as PagedList<MovieEntity>
-        dummyMovies.value = pagedList
+        dummyMovies.value = Resource.success(pagedList)
 
         `when`(movieRepository.getListMovie()).thenReturn(dummyMovies)
 
-        val observer = Mockito.mock(Observer::class.java) as Observer<PagedList<MovieEntity>>
-        movieListViewModel?.getMovieList()?.observeForever(observer)
+        val observer = Mockito.mock(Observer::class.java) as Observer<Resource<PagedList<MovieEntity>>>
+        movieListViewModel?.getListMovie()?.observeForever(observer)
 
         verify(movieRepository).getListMovie()
 
