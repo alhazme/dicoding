@@ -10,8 +10,6 @@ import me.alhaz.moviecatalog.model.TVShow
 
 class TVShowDetailActivity : AppCompatActivity() {
 
-    private lateinit var tvShow: TVShow
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tvshow_detail)
@@ -37,7 +35,7 @@ class TVShowDetailActivity : AppCompatActivity() {
         getSupportActionBar()?.let {
             it.setDisplayHomeAsUpEnabled(true)
         }
-        tvshow?.let {
+        tvshow?.let {tvShow ->
             Glide.with(this).load("https://image.tmdb.org/t/p/w300_and_h450_bestv2" + tvShow.posterPath).into(iv_photo)
             tv_year.text = tvShow.firstAirDate.split("-").get(0)
             tv_title.text = tvShow.name

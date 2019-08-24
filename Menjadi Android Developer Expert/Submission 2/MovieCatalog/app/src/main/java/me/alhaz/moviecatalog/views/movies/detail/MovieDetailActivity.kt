@@ -10,8 +10,6 @@ import me.alhaz.snippet.movieapp.models.Movie
 
 class MovieDetailActivity : AppCompatActivity() {
 
-    private lateinit var movie: Movie
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
