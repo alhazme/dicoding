@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Katalog Film</string>
+    <string name="tv_show">Acara TV</string>
+    <string name="movie">Film</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="detail">Detil</string>
+    <string name="episodes">Episode</string>
+    <string name="score">Nilai</string>
+</resources>
