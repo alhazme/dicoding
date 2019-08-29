@@ -10,4 +10,6 @@
     <string name="detail">Detil</string>
     <string name="episodes">Episode</string>
     <string name="score">Nilai</string>
+    <string name="appwidget_text">Film Favorite</string>
+    <string name="empty_text">Data Kosong</string>
 </resources>

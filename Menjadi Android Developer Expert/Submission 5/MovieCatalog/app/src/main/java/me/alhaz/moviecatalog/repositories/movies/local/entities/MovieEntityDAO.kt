@@ -49,4 +49,8 @@ interface MovieEntityDAO {
     @Query("SELECT * FROM movie WHERE title = :title ORDER BY id ASC")
     fun searchMovie(title: String): DataSource.Factory<Int, MovieEntity>
 
+    // 11. Select All Favorite images
+    @Query("SELECT * FROM movie WHERE favorite = '1' ORDER BY id ASC")
+    fun getMoviePosterFavorites(): List<MovieEntity>
+
 }

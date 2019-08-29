@@ -65,4 +65,8 @@ class TVShowLocalRepository(application: Application) {
         return tvShowEntityDao.searchTVShow(name)
     }
 
+    fun getTVShowPosterFavorites(): List<TVShowEntity> {
+        return tvShowEntityDao.getTVShowPosterFavorites()
+    }
+
 }

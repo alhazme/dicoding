@@ -48,4 +48,8 @@ interface TVShowEntityDAO {
     // 10 Search TVShow
     @Query("SELECT * FROM tvshow WHERE name = :name ORDER BY id ASC")
     fun searchTVShow(name: String): DataSource.Factory<Int, TVShowEntity>
+
+    // 11. Select All Favorite images
+    @Query("SELECT * FROM tvshow WHERE favorite = '1' ORDER BY id ASC")
+    fun getTVShowPosterFavorites(): List<TVShowEntity>
 }

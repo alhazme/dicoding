@@ -64,4 +64,8 @@ class MovieLocalRepository(application: Application) {
         return movieEntityDao.searchMovie(title)
     }
 
+    fun getMoviePosterFavorites(): List<MovieEntity> {
+        return movieEntityDao.getMoviePosterFavorites()
+    }
+
 }
