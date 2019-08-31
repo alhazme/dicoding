@@ -2,6 +2,7 @@
     <string name="app_name">Katalog Film</string>
     <string name="home">Beranda</string>
     <string name="favorite">Favorit</string>
+    <string name="setting">Pengaturan</string>
     <string name="movie">Film</string>
     <string name="movies">Film</string>
     <string name="tv_show">Acara TV</string>
@@ -12,4 +13,12 @@
     <string name="score">Nilai</string>
     <string name="appwidget_text">Film Favorite</string>
     <string name="empty_text">Data Kosong</string>
+
+    <string name="reminder_daily_title">Pengingat Harian</string>
+    <string name="reminder_daily_message">Movie Catalogue merindukanmu</string>
+    <string name="reminder_daily_actived">Pengingat harian diaktifkan</string>
+    <string name="reminder_release_title">Pengingat Rilis</string>
+    <string name="reminder_release_message"> telah dirilis hari ini!</string>
+    <string name="reminder_release_actived">Pengingat Rilis diaktifkan</string>
+    <string name="reminder_deactived">Pengingat dinonaktifkan</string>
 </resources>

@@ -28,4 +28,11 @@ interface MovieAPIService {
         @Query("api_key") api_key: String,
         @Query("language") language: String
     ): Call<Movie>
+
+    @GET("discover/{movie_id}")
+    fun getReleaseMovie(
+        @Query("api_key") api_key: String,
+        @Query("primary_release_date.gte=") primary_release_date_gte: String,
+        @Query("primary_release_date.lte=") primary_release_date_lte: String
+    ): Call<Movie>
 }

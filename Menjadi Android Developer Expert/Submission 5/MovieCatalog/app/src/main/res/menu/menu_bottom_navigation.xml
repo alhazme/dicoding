@@ -21,4 +21,9 @@
         android:title="@string/favorite"
         android:icon="@drawable/ic_star"/>
 
+    <item
+        android:id="@+id/setting_menu"
+        android:title="@string/setting"
+        android:icon="@drawable/ic_settings"/>
+
 </menu>
