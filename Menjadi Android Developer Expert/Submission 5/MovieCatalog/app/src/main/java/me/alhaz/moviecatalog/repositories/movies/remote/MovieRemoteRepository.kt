@@ -115,4 +115,10 @@ class MovieRemoteRepository {
         return moviesLiveData
     }
 
+    fun getTodayReleaseMovie(date: String, callback: Callback<MoviePopularResponse>) {
+        EspressoIdlingResource.increment()
+        RetrofitConfig().getMovieService().getTodayReleaseMovie(BuildConfig.API_KEY, date, date).enqueue(callback)
+
+    }
+
 }

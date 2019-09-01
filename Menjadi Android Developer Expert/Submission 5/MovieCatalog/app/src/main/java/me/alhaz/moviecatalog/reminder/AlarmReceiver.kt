@@ -16,24 +16,78 @@ import androidx.core.content.ContextCompat
 import android.media.RingtoneManager
 import androidx.core.app.NotificationCompat
 import me.alhaz.moviecatalog.R
+import me.alhaz.moviecatalog.repositories.movies.remote.MovieRemoteRepository
+import me.alhaz.moviecatalog.repositories.movies.remote.response.MoviePopularResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+
 
 
 class AlarmReceiver: BroadcastReceiver() {
 
-    val repeatingTime = "07:00"
-    val requestCode = 101
+    private val DAILY_REMINDER = 100
+    private val RELEASE_REMINDER = 101
+
+//    val repeatingTime = "07:00"
+//    val requestCode = 101
+
+    private val movieRemoteRepository = MovieRemoteRepository()
 
     override fun onReceive(context: Context?, intent: Intent?) {
 
         context?.let { context ->
             intent?.let { intent ->
                 val message = intent.getStringExtra("message")
-                showAlarmNotification(context, context.resources.getString(R.string.reminder_daily_title), message, requestCode)
+                val requestCode = intent.getIntExtra("request_code", 0)
+                if (requestCode == DAILY_REMINDER) {
+                    showAlarmNotification(
+                        context,
+                        context.resources.getString(R.string.reminder_daily_title),
+                        message,
+                        requestCode
+                    )
+                }
+                else {
+                    getTodayReleaseMovie(context, requestCode)
+                }
             }
         }
     }
 
-    fun cancelAlarm(context: Context) {
+    fun getTodayReleaseMovie(context: Context, requestCode: Int) {
+        var date = ""
+        val c = Calendar.getInstance().time
+        val df = SimpleDateFormat("yyyy-MM-dd")
+        date = df.format(c)
+        movieRemoteRepository.getTodayReleaseMovie(date, object: Callback<MoviePopularResponse> {
+            override fun onResponse(call: Call<MoviePopularResponse>, response: Response<MoviePopularResponse>) {
+                if (response.isSuccessful) {
+                    val responseData = response.body()
+                    responseData?.let { moviePopularResponse ->
+                        moviePopularResponse.results?.let { moviesResult ->
+                            val movie = moviesResult.get(0)
+                            showAlarmNotification(
+                                context,
+                                context.resources.getString(R.string.reminder_release_title),
+                                movie.title + " " + context.resources.getString(R.string.reminder_release_message),
+                                requestCode
+                            )
+                        }
+                    }
+
+                }
+
+            }
+
+            override fun onFailure(call: Call<MoviePopularResponse>, t: Throwable) {
+                // do nothing
+            }
+        })
+    }
+
+    fun cancelAlarm(context: Context, requestCode: Int) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
 
@@ -47,20 +101,21 @@ class AlarmReceiver: BroadcastReceiver() {
         Toast.makeText(context, context.resources.getString(R.string.reminder_deactived), Toast.LENGTH_SHORT).show();
     }
 
-    fun isAlarmSet(context: Context) : Boolean {
+    fun isAlarmSet(context: Context, requestCode: Int) : Boolean {
         val intent = Intent(context, AlarmReceiver::class.java)
         return (PendingIntent.getBroadcast(context, requestCode, intent ,PendingIntent.FLAG_NO_CREATE) != null)
     }
 
-    fun setRepeatingAlarm(context: Context, message: String) {
+    fun setRepeatingAlarm(context: Context, requestCode: Int, message: String, repeatingTime: String) {
 
         // Validasi inputan waktu terlebih dahulu
         if (isDateInvalid(repeatingTime, "HH:mm")) return
 
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
-        intent.putExtra("message", message)
         intent.putExtra("type", "RepeatingAlarm")
+        intent.putExtra("request_code", requestCode)
+        intent.putExtra("message", message)
 
         val timeArray = repeatingTime.split(":".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
 
@@ -77,7 +132,12 @@ class AlarmReceiver: BroadcastReceiver() {
             pendingIntent
         )
 
-        Toast.makeText(context, context.resources.getString(R.string.reminder_daily_actived), Toast.LENGTH_SHORT).show()
+        if (requestCode == DAILY_REMINDER) {
+            Toast.makeText(context, context.resources.getString(R.string.reminder_daily_actived), Toast.LENGTH_SHORT).show()
+        }
+        else {
+            Toast.makeText(context, context.resources.getString(R.string.reminder_release_actived), Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun isDateInvalid(date: String, format: String): Boolean {

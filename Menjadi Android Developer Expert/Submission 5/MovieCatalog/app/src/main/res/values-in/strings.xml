@@ -18,7 +18,7 @@
     <string name="reminder_daily_message">Movie Catalogue merindukanmu</string>
     <string name="reminder_daily_actived">Pengingat harian diaktifkan</string>
     <string name="reminder_release_title">Pengingat Rilis</string>
-    <string name="reminder_release_message"> telah dirilis hari ini!</string>
+    <string name="reminder_release_message">telah dirilis hari ini!</string>
     <string name="reminder_release_actived">Pengingat Rilis diaktifkan</string>
     <string name="reminder_deactived">Pengingat dinonaktifkan</string>
 </resources>
