@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!--<item-->
+        <!--android:id="@+id/home_menu"-->
+        <!--android:title="@string/home"-->
+        <!--android:icon="@drawable/ic_home"/>-->
+
+    <item
+        android:id="@+id/movie_menu"
+        android:title="@string/movies"
+        android:icon="@drawable/ic_movies"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tvshow_menu"
+        android:title="@string/tv_shows"
+        android:icon="@drawable/ic_tvshow"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/favorite_menu"
+        android:title="@string/favorite"
+        android:icon="@drawable/ic_star"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/setting_menu"
+        android:title="@string/setting"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/provider_menu"
+        android:title="@string/provider"
+        android:icon="@drawable/ic_star"
+        app:showAsAction="ifRoom" />
+
+</menu>

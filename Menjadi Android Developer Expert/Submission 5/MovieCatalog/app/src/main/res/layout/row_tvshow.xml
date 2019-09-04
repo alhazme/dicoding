@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:padding="16dp">
+
+    <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/poster_dragon_ball"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingRight="16dp"
+            android:paddingEnd="16dp">
+
+        <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018"
+                android:textSize="12dp"
+                android:textColor="@color/colorGray"/>
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Title"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:maxLines="2"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+            <ImageView
+                    android:id="@+id/iv_rating"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:tint="@color/colorGray"
+                    android:src="@drawable/ic_star" />
+
+            <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="85"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorGray"/>
+
+            <ImageView
+                    android:id="@+id/iv_runtime"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:tint="@color/colorGray"
+                    android:src="@drawable/ic_time" />
+
+            <TextView
+                    android:id="@+id/tv_runtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="1h 59m"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorGray"/>
+
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+                android:textSize="12dp"
+                android:textColor="@color/colorGray"
+                android:ellipsize="end"
+                android:maxLines="4" />
+
+    </LinearLayout>
+
+</LinearLayout>
