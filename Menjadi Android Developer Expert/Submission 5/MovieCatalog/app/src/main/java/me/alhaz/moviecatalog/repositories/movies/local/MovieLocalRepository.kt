@@ -12,7 +12,8 @@ class MovieLocalRepository(application: Application) {
     private var movieEntityDao: MovieEntityDAO
 
     init {
-        val db = MovieAppDatabase.getInstance(application)
+        val context = application.applicationContext
+        val db = MovieAppDatabase.getInstance(context)
         movieEntityDao = db.movieDao()
     }
 

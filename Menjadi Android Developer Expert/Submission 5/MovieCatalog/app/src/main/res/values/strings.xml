@@ -3,6 +3,7 @@
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
     <string name="setting">Setting</string>
+    <string name="provider">Provider</string>
     <string name="movie">Movie</string>
     <string name="movies">Movies</string>
     <string name="tv_show">TV Show</string>
@@ -21,4 +22,7 @@
     <string name="reminder_release_message">has been release today!</string>
     <string name="reminder_release_actived">Release reminder actived</string>
     <string name="reminder_deactived">Reminder deactived</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

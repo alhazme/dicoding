@@ -3,6 +3,7 @@
     <string name="home">Beranda</string>
     <string name="favorite">Favorit</string>
     <string name="setting">Pengaturan</string>
+    <string name="provider">Provider</string>
     <string name="movie">Film</string>
     <string name="movies">Film</string>
     <string name="tv_show">Acara TV</string>

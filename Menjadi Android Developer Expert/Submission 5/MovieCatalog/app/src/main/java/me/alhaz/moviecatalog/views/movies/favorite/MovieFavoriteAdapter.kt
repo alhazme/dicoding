@@ -60,21 +60,7 @@ class MovieFavoriteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             tvYear.text = movie.releaseDate.split("-").get(0)
             tvTitle.text = movie.title
             tvRating.text = movie.voteAverage.toString()
-
-            var locale = ""
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                locale = context.resources.configuration.locales.get(0).language
-            } else {
-                //noinspection deprecation
-                locale = context.resources.configuration.locale.language
-            }
-
-            if (locale == "in") {
-                tvDescription.text = movie.overview_id
-            } else {
-                tvDescription.text = movie.overview
-            }
-
+            tvDescription.text = movie.overview
             Glide.with(context).load("https://image.tmdb.org/t/p/w300_and_h450_bestv2" + movie.posterPath).into(ivPhoto)
             view.setOnClickListener {
                 clickListener(movie)

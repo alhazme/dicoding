@@ -12,7 +12,8 @@ class TVShowLocalRepository(application: Application) {
     private var tvShowEntityDao: TVShowEntityDAO
 
     init {
-        val db = MovieAppDatabase.getInstance(application)
+        val context = application.applicationContext
+        val db = MovieAppDatabase.getInstance(context)
         tvShowEntityDao = db.tvShowDao()
     }
 

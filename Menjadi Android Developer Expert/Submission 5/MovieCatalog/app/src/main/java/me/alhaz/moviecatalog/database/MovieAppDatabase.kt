@@ -1,6 +1,7 @@
 package me.alhaz.moviecatalog.database
 
 import android.app.Application
+import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -21,11 +22,11 @@ abstract class MovieAppDatabase: RoomDatabase() {
         private const val DB_NAME = "movieapp.db"
         private var INSTANCE: MovieAppDatabase? = null
 
-        fun getInstance(application: Application): MovieAppDatabase {
+        fun getInstance(context: Context): MovieAppDatabase {
             if (INSTANCE == null) {
                 synchronized(MovieAppDatabase::class) {
                     if (INSTANCE == null) {
-                        INSTANCE = Room.databaseBuilder(application.applicationContext, MovieAppDatabase::class.java, DB_NAME).allowMainThreadQueries().build()
+                        INSTANCE = Room.databaseBuilder(context, MovieAppDatabase::class.java, DB_NAME).allowMainThreadQueries().build()
                     }
                 }
             }

@@ -1,5 +1,6 @@
 package me.alhaz.moviecatalog.repositories.movies.local.entities
 
+import android.database.Cursor
 import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Insert
@@ -52,5 +53,13 @@ interface MovieEntityDAO {
     // 11. Select All Favorite images
     @Query("SELECT * FROM movie WHERE favorite = '1' ORDER BY id ASC")
     fun getMoviePosterFavorites(): List<MovieEntity>
+
+    // 12. Select All Favorite Movie for Content Provider
+    @Query("SELECT * FROM movie WHERE favorite = '1' ORDER BY id ASC")
+    fun getMovieFavoriteForContentProvider(): Cursor
+
+    // 13. Select Detail Favorite Movie for Content Provider
+    @Query("SELECT * FROM movie WHERE id = :id")
+    fun getMovieFavoriteDetailForContentProvider(id: Long): Cursor
 
 }
