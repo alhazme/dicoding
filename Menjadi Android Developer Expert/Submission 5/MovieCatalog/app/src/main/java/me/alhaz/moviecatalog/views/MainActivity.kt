@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvShowListFragment: TVShowListFragment
     private lateinit var favoriteFragment: FavoriteFragment
     private lateinit var settingFragment: SettingFragment
-    private lateinit var movieProviderFragment: MovieProviderFragment
+//    private lateinit var movieProviderFragment: MovieProviderFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         tvShowListFragment = TVShowListFragment()
         favoriteFragment = FavoriteFragment()
         settingFragment = SettingFragment()
-        movieProviderFragment = MovieProviderFragment()
+//        movieProviderFragment = MovieProviderFragment()
 
         movieListFragment?.let {
             val manager = supportFragmentManager
@@ -98,16 +98,16 @@ class MainActivity : AppCompatActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
             }
-            R.id.provider_menu -> {
-                movieProviderFragment?.let {
-                    val manager = supportFragmentManager
-                    val transaction = manager.beginTransaction()
-                    transaction.replace(R.id.fl_container, it)
-                    transaction.addToBackStack(null)
-                    transaction.commit()
-                    return@OnNavigationItemSelectedListener true
-                }
-            }
+//            R.id.provider_menu -> {
+//                movieProviderFragment?.let {
+//                    val manager = supportFragmentManager
+//                    val transaction = manager.beginTransaction()
+//                    transaction.replace(R.id.fl_container, it)
+//                    transaction.addToBackStack(null)
+//                    transaction.commit()
+//                    return@OnNavigationItemSelectedListener true
+//                }
+//            }
         }
         false
     }

@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <permission android:name="me.alhaz.moviecatalog.READ_DATABASE" android:protectionLevel="normal" />
+    <permission android:name="me.alhaz.moviecatalog.WRITE_DATABASE" android:protectionLevel="normal" />
 
     <application
             android:allowBackup="true"

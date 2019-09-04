@@ -31,10 +31,10 @@
         android:icon="@drawable/ic_settings"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/provider_menu"
-        android:title="@string/provider"
-        android:icon="@drawable/ic_star"
-        app:showAsAction="ifRoom" />
+    <!--<item-->
+        <!--android:id="@+id/provider_menu"-->
+        <!--android:title="@string/provider"-->
+        <!--android:icon="@drawable/ic_star"-->
+        <!--app:showAsAction="ifRoom" />-->
 
 </menu>
