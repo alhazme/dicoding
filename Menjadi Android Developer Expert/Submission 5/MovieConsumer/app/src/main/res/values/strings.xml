@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MovieConsumer</string>
+    <string name="score">Score</string>
+</resources>
